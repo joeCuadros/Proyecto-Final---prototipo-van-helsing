@@ -1,19 +1,16 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerStats : MonoBehaviour
 {
-    [Header("Salud")]
+    [Header("Stats")]
     public int maxHealth = 3;
-    private int currentHealth;
-
-    [Header("Resistencia")]
     public float maxStamina = 100f;
-    private float currentStamina;
-
-    [Header("Inmunidad")]
     public float invulnerabilityDuration = 1.5f;
-    private float nextDamageTime = 0f;
 
+    private int currentHealth;
+    private float currentStamina;
+    private float nextDamageTime = 0f;
     private PlayerMovement playerMovement;
 
     void Start()
@@ -21,6 +18,10 @@ public class PlayerStats : MonoBehaviour
         currentHealth = maxHealth;
         currentStamina = maxStamina;
         playerMovement = GetComponent<PlayerMovement>();
+        if (SystemManager.Instance != null)
+        {
+            SystemManager.Instance.RegisterPlayer(GetComponent<PlayerInput>());
+        }
     }
 
     public void DrainStamina(float amount)
@@ -71,21 +72,10 @@ public class PlayerStats : MonoBehaviour
         return currentHealth == maxHealth;
     }
 
-    public void SetAllControls(bool state)
-    {
-        if (playerMovement != null) playerMovement.SetMovementEnabled(state);
-
-        PlayerCombat combat = GetComponent<PlayerCombat>();
-        if (combat != null) combat.SetCombatEnabled(state);
-
-        PlayerInteract interact = GetComponent<PlayerInteract>();
-        if (interact != null) interact.SetInteractEnabled(state);
-    }
-
     // Muerte
     private void Die()
     {
         Debug.Log("Stats: ¡Murio!"); // mandar a UI
-        SetAllControls(false);
+        // Notificar a SystemMananger
     }
 }

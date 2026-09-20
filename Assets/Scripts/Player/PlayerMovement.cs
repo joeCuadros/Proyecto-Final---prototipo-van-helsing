@@ -13,7 +13,6 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private bool isSprinting = false;
-    private bool canMove = true; // interruptor maestro
 
     private PlayerStats stats;
 
@@ -35,19 +34,8 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log($"Sprint es {isSprinting.ToString()}");
     }
 
-    public void SetMovementEnabled(bool state)
-    {
-        canMove = state;
-        if (!canMove)
-        {
-            moveInput = Vector2.zero; // Desactivar movimiento
-        }
-    }
-
     void FixedUpdate()
     {
-        if (!canMove) return;
-
         float staminaCostThisFrame = staminaCostPerSecond * Time.fixedDeltaTime;
         if (isSprinting && moveInput != Vector2.zero && stats.HasEnoughStamina(staminaCostThisFrame))
         {
