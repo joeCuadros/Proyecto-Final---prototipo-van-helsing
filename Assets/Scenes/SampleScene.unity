@@ -396,6 +396,7 @@ GameObject:
   - component: {fileID: 556267157}
   - component: {fileID: 556267156}
   - component: {fileID: 556267155}
+  - component: {fileID: 556267160}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -533,7 +534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCombat
   currentWeapon: 0
   actionCooldown: 1
-  hasDagger: 0
+  hasDagger: 1
   woodenStakes: 0
   silverBullets: 0
   holyWaterFlasks: 0
@@ -583,6 +584,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &556267160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556267150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f9a0b771766220429768b1250e36c87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimation
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0

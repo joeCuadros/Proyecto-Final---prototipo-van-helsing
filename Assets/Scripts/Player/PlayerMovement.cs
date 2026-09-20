@@ -1,6 +1,6 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static Unity.U2D.Physics.PhysicsQuery;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -15,8 +15,10 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 moveInput;
     private Vector2 lastInput;
     private bool isSprinting = false;
-
     private PlayerStats stats;
+    // eventos
+    public event Action<Vector2> OnDirectionChanged;
+    public event Action<bool> OnSprintChanged;
 
     void Start()
     {
@@ -33,18 +35,22 @@ public class PlayerMovement : MonoBehaviour
             if (Mathf.Abs(lastInput.x) > 0)
             {
                 moveInput.x = 0f;
+                moveInput.y = 1f;
             }
             else
             {
                 moveInput.y = 0f;
+                moveInput.x = 1f;
             }
         }
         lastInput = moveInput;
+        OnDirectionChanged?.Invoke(moveInput);
     }
 
     void OnSprint(InputValue value)
     {
         isSprinting = value.isPressed;
+        OnSprintChanged?.Invoke(isSprinting);
     }
 
     void FixedUpdate()
