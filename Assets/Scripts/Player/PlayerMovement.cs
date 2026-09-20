@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static Unity.U2D.Physics.PhysicsQuery;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private float currentSpeed;
     private Rigidbody2D rb;
     private Vector2 moveInput;
+    private Vector2 lastInput;
     private bool isSprinting = false;
 
     private PlayerStats stats;
@@ -26,6 +28,18 @@ public class PlayerMovement : MonoBehaviour
     void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
+        if (Mathf.Abs(moveInput.x) > 0 && Mathf.Abs(moveInput.y) > 0)
+        {
+            if (Mathf.Abs(lastInput.x) > 0)
+            {
+                moveInput.x = 0f;
+            }
+            else
+            {
+                moveInput.y = 0f;
+            }
+        }
+        lastInput = moveInput;
     }
 
     void OnSprint(InputValue value)
