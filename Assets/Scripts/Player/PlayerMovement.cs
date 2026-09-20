@@ -31,7 +31,6 @@ public class PlayerMovement : MonoBehaviour
     void OnSprint(InputValue value)
     {
         isSprinting = value.isPressed;
-        Debug.Log($"Sprint es {isSprinting.ToString()}");
     }
 
     void FixedUpdate()
