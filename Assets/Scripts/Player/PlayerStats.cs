@@ -1,21 +1,20 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static EnemyBase;
 
-public class PlayerStats : MonoBehaviour
+public class PlayerStats : EntityBase
 {
     [Header("Stats")]
-    public int maxHealth = 3;
     public float maxStamina = 100f;
     public float invulnerabilityDuration = 1.5f;
 
-    private int currentHealth;
     private float currentStamina;
     private float nextDamageTime = 0f;
     private PlayerMovement playerMovement;
 
-    void Start()
+    protected override void Start()
     {
-        currentHealth = maxHealth;
+        base.Start();
         currentStamina = maxStamina;
         playerMovement = GetComponent<PlayerMovement>();
         if (SystemManager.Instance != null)
@@ -40,24 +39,14 @@ public class PlayerStats : MonoBehaviour
         return currentStamina >= cost;
     }
 
-    public void TakeDamage(int damage)
+    public override void TakeDamage(int damage)
     {
-        if (Time.time < nextDamageTime)
-        {
-            Debug.Log("Stats: Inmune temporalmente, daño ignorado."); // quitar debug
-            return;
-        }
+        if (Time.time < nextDamageTime) return;
 
-        currentHealth = Mathf.Clamp(currentHealth - damage, 0, maxHealth);
-        Debug.Log($"Stats: ¡Daño recibido! Salud restante: {currentHealth}"); // mandar a UI
-
-        if (currentHealth == 0)
+        base.TakeDamage(damage);
+        if (currentHealth > 0)
         {
-            Die();
-        }
-        else
-        {
-            nextDamageTime = Time.time + invulnerabilityDuration; //otorgar inmunidad
+            nextDamageTime = Time.time + invulnerabilityDuration;
         }
     }
 
@@ -72,10 +61,11 @@ public class PlayerStats : MonoBehaviour
         return currentHealth == maxHealth;
     }
 
-    // Muerte
-    private void Die()
+    protected override void Die()
     {
-        Debug.Log("Stats: ¡Murio!"); // mandar a UI
-        // Notificar a SystemMananger
+        if (SystemManager.Instance != null)
+        {
+            SystemManager.Instance.GameOver();
+        }
     }
 }

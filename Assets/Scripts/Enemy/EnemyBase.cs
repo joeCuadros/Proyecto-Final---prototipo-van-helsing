@@ -1,35 +1,63 @@
 using UnityEngine;
 
-public abstract class EnemyBase : MonoBehaviour
+public abstract class EnemyBase : EntityBase
 {
-    [Header("Stats")]
-    public int maxHealth;
-    protected int currentHealth;
-    public int attackDamage = 1; // Daño base
-
-    protected virtual void Start()
+    public enum EnemyState
     {
-        currentHealth = maxHealth;
+        Idle,       // Quedarse quieto o inactivo
+        Wander,     // Patrullar 
+        Seek,       // Perseguir a un objetivo
+        Flee,       // Huir de un objetivo
+        PreAttack,  // Antes de atacar avisar
+        Attack,     // Atacar al objetivo
+        Cooldown,   // Tiempo despues de atacar
+        Stun,       // Stun dejarlo quieto por Stun
+        Die         // Muer
     }
 
-    public virtual void TakeDamage(int damage, WeaponType weapon)
+    [Header("Configuracion IA")]
+    public EnemyState currentState = EnemyState.Idle;
+    public float moveSpeed = 3f;
+    public int attackDamage = 1;
+    protected Transform target;
+
+    public EnemyState combatState;
+
+    protected virtual void Update()
     {
-        currentHealth -= damage;
-        Debug.Log($"{gameObject.name} recibió {damage} de daño. Salud restante: {currentHealth}");
-        if (currentHealth <= 0)
+        if (currentState == EnemyState.Die) return;
+
+        switch (currentState)
         {
-            Die();
+            case EnemyState.Idle: UpdateIdle(); break;
+            case EnemyState.Wander: UpdateWander(); break;
+            case EnemyState.Seek: UpdateSeek(); break;
+            case EnemyState.Flee: UpdateFlee(); break;
+            case EnemyState.PreAttack: UpdatePreAttack(); break;
+            case EnemyState.Attack: UpdateAttack(); break;
+            case EnemyState.Cooldown: UpdateCooldown(); break;
+            case EnemyState.Stun: UpdateStun(); break;
         }
     }
 
-    public virtual void Attack(PlayerStats player)
-    {
-        player.TakeDamage(attackDamage);
-    }
+    // Metodos a sobre escribir
+    protected virtual void UpdateIdle() { }
+    protected virtual void UpdateWander() { }
+    protected virtual void UpdateSeek() { }
+    protected virtual void UpdateFlee() { }
+    protected virtual void UpdatePreAttack() { }
+    protected virtual void UpdateAttack() { }
+    protected virtual void UpdateCooldown() { }
+    protected virtual void UpdateStun() { }
 
-    protected virtual void Die()
+    public virtual void AttackTarget(EntityBase target)
     {
-        Debug.Log($"{gameObject.name} ha muerto.");
-        Destroy(gameObject);
+        target.TakeDamage(attackDamage);
+    }
+    protected override void Die()
+    {
+        currentState = EnemyState.Die;
+        Debug.Log($"{gameObject.name} murió.");
+        Destroy(gameObject, 0.5f);
     }
 }
