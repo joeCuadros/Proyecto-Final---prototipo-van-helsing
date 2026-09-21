@@ -39,12 +39,12 @@ public class PlayerAnimation : MonoBehaviour
 
     private void UpdateMoveAnimation(Vector2 dir)
     {
-        Debug.Log($"Direccion x={dir.x}, y={dir.y}");
+        //Debug.Log($"Direccion x={dir.x}, y={dir.y}");
     }
 
     private void UpdateSprintAnimation(bool isSprinting)
     {
-        Debug.Log($"Sprint es {isSprinting}");
+        //Debug.Log($"Sprint es {isSprinting}");
     }
     private void TriggerAttackAnimation(WeaponType weaponUsed)
     {

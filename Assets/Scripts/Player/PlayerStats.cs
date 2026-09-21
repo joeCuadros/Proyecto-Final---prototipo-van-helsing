@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static EnemyBase;
 
 public class PlayerStats : EntityBase
 {

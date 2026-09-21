@@ -51,7 +51,7 @@ public class SystemManager : MonoBehaviour
     {
         if (playerInput == null) return;
         isGameOver = true;
-        playerInput.SwitchCurrentActionMap("UI");   
+        playerInput.SwitchCurrentActionMap("System");   
         Debug.Log("Sistema: ¡Game Over! Controles de jugador desactivados.");
     }
 }
