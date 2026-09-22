@@ -274,9 +274,16 @@ MonoBehaviour:
   maxHealth: 3
   currentState: 1
   attackDamage: 1
+  attackRange: 1.5
+  preAttackDuration: 1
+  attackCooldown: 1
   wanderRadius: 2
   wanderDistance: 2
   wanderChange: 10
+  patrolPoints:
+  - {x: 7, y: 0}
+  - {x: -7, y: 0}
+  patrolPointDistance: 0.2
   maxSpeed: 3
   acceleration: 10
   deceleration: 8
@@ -541,7 +548,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &556267151
 Transform:
   m_ObjectHideFlags: 0
@@ -676,6 +683,12 @@ MonoBehaviour:
   woodenStakes: 0
   silverBullets: 0
   holyWaterFlasks: 0
+  daggerRange: 1.5
+  daggerAngle: 90
+  daggerDamage: 1
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!61 &556267159
 BoxCollider2D:
   m_ObjectHideFlags: 0

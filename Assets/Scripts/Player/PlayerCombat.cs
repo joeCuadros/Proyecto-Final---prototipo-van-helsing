@@ -18,7 +18,37 @@ public class PlayerCombat : MonoBehaviour
     public int silverBullets = 0;
     public int holyWaterFlasks = 0;
 
+    [Header("Daga")]
+    public float daggerRange = 1.5f;
+    public float daggerAngle = 90f;
+    public int daggerDamage = 1;
+    public LayerMask enemyLayer;
+
+    private PlayerMovement movement;
+    private Vector2 attackDirection = Vector2.down;
     public event Action<WeaponType> OnAttackFired;
+
+    void Awake()
+    {
+        movement = GetComponent<PlayerMovement>();
+    }
+
+    void OnEnable()
+    {
+        if (movement != null)
+            movement.OnDirectionChanged += UpdateAttackDirection;
+    }
+
+    void OnDisable()
+    {
+        if (movement != null)
+            movement.OnDirectionChanged -= UpdateAttackDirection;
+    }
+    void UpdateAttackDirection(Vector2 direction)
+    {
+        if (direction != Vector2.zero)
+            attackDirection = direction.normalized;
+    }
 
     // CAMBIOS DIRECTOS (TECLAS 1, 2, 3, 4)
     void OnEquipDagger() => EquipWeapon(WeaponType.Dagger);
@@ -60,6 +90,32 @@ public class PlayerCombat : MonoBehaviour
 
     private void UseDagger()
     {
+        Collider2D[] enemies = Physics2D.OverlapCircleAll(
+            transform.position,
+            daggerRange,
+            enemyLayer
+        );
+
+        foreach (Collider2D enemyCollider in enemies)
+        {
+            EntityBase enemy = enemyCollider.GetComponentInParent<EntityBase>();
+
+            if (enemy == null)
+                continue;
+
+            Vector2 directionToEnemy =
+                (enemy.transform.position - transform.position).normalized;
+
+            float angle = Vector2.Angle(
+                attackDirection,
+                directionToEnemy
+            );
+
+            if (angle <= daggerAngle / 2f)
+            {
+                enemy.TakeDamage(daggerDamage);
+            }
+        }
         nextActionTime = Time.time + actionCooldown;
     }
 
@@ -79,5 +135,45 @@ public class PlayerCombat : MonoBehaviour
     {
         holyWaterFlasks--;
         nextActionTime = Time.time + actionCooldown;
+    }
+    // DEBUG
+    private void OnDrawGizmosSelected()
+    {
+        if (currentWeapon != WeaponType.Dagger)
+            return;
+
+        Gizmos.color = Color.red;
+
+        Gizmos.DrawWireSphere(
+            transform.position,
+            daggerRange
+        );
+
+        Vector2 leftDirection = Quaternion.Euler(
+            0f,
+            0f,
+            daggerAngle / 2f
+        ) * attackDirection;
+
+        Vector2 rightDirection = Quaternion.Euler(
+            0f,
+            0f,
+            -daggerAngle / 2f
+        ) * attackDirection;
+
+        Gizmos.DrawLine(
+            transform.position,
+            transform.position + (Vector3)leftDirection * daggerRange
+        );
+
+        Gizmos.DrawLine(
+            transform.position,
+            transform.position + (Vector3)rightDirection * daggerRange
+        );
+
+        Gizmos.DrawLine(
+            transform.position,
+            transform.position + (Vector3)attackDirection * daggerRange
+        );
     }
 }
