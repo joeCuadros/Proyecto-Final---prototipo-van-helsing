@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyTest
   maxHealth: 3
-  currentState: 1
+  currentState: 5
   attackDamage: 1
   attackRange: 1.5
   preAttackDuration: 1
