@@ -4,55 +4,79 @@ public abstract class EnemyBase : EntityBase
 {
     public enum EnemyState
     {
-        Idle,       // Quedarse quieto o inactivo
-        Wander,     // Patrullar 
-        Seek,       // Perseguir a un objetivo
-        Flee,       // Huir de un objetivo
-        PreAttack,  // Antes de atacar avisar
-        Attack,     // Atacar al objetivo
-        Cooldown,   // Tiempo despues de atacar
-        Stun,       // Stun dejarlo quieto por Stun
-        Die         // Muerte 
+        Die,        // Muere y deja de ejecutar comportamientos
+        Idle,       // Permanece quieto
+        Seek,       // Acercarse al objetivo
+        Flee,       // Alejarse del objetivo
+        Wander,     // Deambular libremente por el area
+        Patrol,     // Patrullar puntos especificos en el mapa
+        Arrive,     // Se acerca al objetivo reduciendo progresivamente la velocidad
+        Attack,     // Ejecutar el ataque contra el objetivo
+        Cooldown,   // Espera antes de poder realizar otro ataque
+        Stun,       // Que incapacitado temporalmente
+    }
+    public enum TargetPriority
+    {
+        None,
+        Player,
+        NPC
     }
 
     [Header("Configuracion IA")]
     public EnemyState currentState = EnemyState.Idle;
-    public float moveSpeed = 3f;
-    public int attackDamage = 1;
-    [Header("Combate")]
-    public float attackRange = 1.5f;
-    public float preAttackTime = 0.4f;
-    public float cooldownTime = 1.0f;
-    [Header("Patrullaje (Wander)")]
-    public Vector2[] patrolPoints;
-    public float visionDistance = 5f;
-    public LayerMask visionMask;
     
-    [Header("Evasión")]
-    public float obstacleCheck = 0.6f;
+    [Header("Combate")]
+    public int attackDamage = 1;
+    public float attackRange = 1.5f;
+    public float preAttackDuration = 1f;
+    public float attackCooldown = 1f;
 
-    protected EntityBase target;
-    protected float timer = 0f;
+    [Header("Wander")]
+    public float wanderRadius = 2f;
+    public float wanderDistance = 2f;
+    public float wanderChange = 10f;
+    protected Vector2 wanderDirection; // no publico
+
+    [Header("Patrol")]
+    public Vector2[] patrolPoints;
+    public float patrolPointDistance = 0.2f;
+    protected int currentPatrolPoint = 0; // no publico
+
+    [Header("Movimiento")]
+    public float maxSpeed = 3f;
+    public float acceleration = 4f;
+    public float deceleration = 6f;
+    protected Vector2 velocity; // no publico
+
+    [Header("Deteccion")]
+    public float detectionRadius = 5f;
+    public LayerMask npcLayer;
+    public LayerMask playerLayer;
+    public TargetPriority targetPriority;
+    public bool changeTarget = true;
+    protected EntityBase target; // no publico
+
+    // GENERALES
     protected Rigidbody2D rb;
-    protected int currentPointIndex = 0;
-    protected Vector2 facingDirection = Vector2.down;
-
+    protected float timer = 0f;
+        
     protected override void Start()
     {
         base.Start();
         rb = GetComponent<Rigidbody2D>();
     }
-    protected virtual void Update()
+    protected virtual void FixedUpdate()
     {
         if (currentState == EnemyState.Die) return;
 
         switch (currentState)
         {
             case EnemyState.Idle: UpdateIdle(); break;
-            case EnemyState.Wander: UpdateWander(); break;
             case EnemyState.Seek: UpdateSeek(); break;
             case EnemyState.Flee: UpdateFlee(); break;
-            case EnemyState.PreAttack: UpdatePreAttack(); break;
+            case EnemyState.Wander: UpdateWander(); break;
+            case EnemyState.Patrol: UpdatePatrol(); break;
+            case EnemyState.Arrive: UpdateArrive(); break;
             case EnemyState.Attack: UpdateAttack(); break;
             case EnemyState.Cooldown: UpdateCooldown(); break;
             case EnemyState.Stun: UpdateStun(); break;
@@ -61,88 +85,132 @@ public abstract class EnemyBase : EntityBase
 
     // Metodos a sobre escribir
     protected virtual void UpdateIdle() { /* AGREGAR O SOBRE ESCRIBIR */ }
-    protected virtual void UpdateWander() 
-    {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, facingDirection, visionDistance, visionMask);
-
-        if (hit.collider != null)
-        {
-            // Si el rayo choca con un Player o NPC
-            if (hit.collider.CompareTag("Player") || hit.collider.CompareTag("NPC"))
-            {
-                target = hit.collider.GetComponent<EntityBase>();
-                if (target != null)
-                {
-                    currentState = EnemyState.Seek;
-                    return;
-                }
-            }
-        }
-
-        if (patrolPoints == null || patrolPoints.Length == 0) return;
-
-        Vector2 targetPoint = patrolPoints[currentPointIndex];
-        Vector2 offset = targetPoint - (Vector2)transform.position;
-
-        if (Mathf.Abs(offset.x) < 0.1f && Mathf.Abs(offset.y) < 0.1f) // llegar punto
-        {
-            currentPointIndex++;
-            if (currentPointIndex >= patrolPoints.Length) currentPointIndex = 0;
-            return;
-        }
-        Vector2 direction = GetFourDirectionMovement(offset);
-        rb.linearVelocity = direction * (moveSpeed * 0.75f);
-    }
     protected virtual void UpdateSeek() 
     {
-        if (target == null) return;
-        Vector2 offset = target.transform.position - transform.position;
-        float manhattanDistance = Mathf.Abs(offset.x) + Mathf.Abs(offset.y);
-
-        // Seek -> PreAttack
-        if (manhattanDistance <= attackRange)
+        // Si no hay un objetivo o fuera de rango (Seek -> Patrol)
+        if (target == null ||
+        Vector2.Distance(transform.position, target.transform.position) > detectionRadius + 1f)
         {
-            timer = preAttackTime;
-            currentState = EnemyState.PreAttack;
+            target = null;
+            currentState = EnemyState.Patrol;
             return;
         }
+        // Si estamos cerca preparamos un pre ataque
+        if (Vector2.Distance(transform.position, target.transform.position) <= attackRange + 1f)
+        {
+            timer = preAttackDuration;
+            currentState = EnemyState.Arrive;
+            return;
+        }
+
         // Ejecutar seek
-        Vector2 direction = GetFourDirectionMovement(offset);
-        rb.linearVelocity = direction * moveSpeed;
+        Vector2 direction = (target.transform.position - transform.position).normalized;
+        Vector2 desiredVelocity = direction * maxSpeed;
+        Move(desiredVelocity);
     }
     protected virtual void UpdateFlee() { /* AGREGAR O SOBRE ESCRIBIR */ }
-    protected virtual void UpdatePreAttack() 
+    protected virtual void UpdateWander()
     {
-        rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, Vector2.zero, 10f * Time.deltaTime);
-        // PreAttack -> Attack
-        timer -= Time.deltaTime;
-        if (timer <= 0f) currentState = EnemyState.Attack;
+        // Si hay un objetivo (Wander -> Seek)
+        if (DetectTarget())
+        {
+            currentState = EnemyState.Seek;
+            return;
+        }
+        // ejecutar wander
+        if (wanderDirection == Vector2.zero)
+            wanderDirection = Random.insideUnitCircle.normalized;
+
+        wanderDirection += Random.insideUnitCircle * wanderChange * Time.fixedDeltaTime;
+        wanderDirection.Normalize();
+
+        Vector2 forward = velocity.sqrMagnitude > 0.01f
+            ? velocity.normalized
+            : wanderDirection;
+
+        Vector2 circleCenter = forward * wanderDistance;
+        Vector2 wanderTarget = circleCenter + wanderDirection * wanderRadius;
+
+        Vector2 desiredVelocity = wanderTarget.normalized * maxSpeed;
+
+        Move(desiredVelocity);
+    }
+    protected virtual void UpdatePatrol()
+    {
+        // Si hay un objetivo (Patrol -> Seek)
+        if (DetectTarget())
+        {
+            currentState = EnemyState.Seek;
+            return;
+        }
+        // Si no hay minimo 2 puntos (Patrol -> Wander)
+        if (patrolPoints == null || patrolPoints.Length < 2)
+        {
+            currentState = EnemyState.Wander;
+            return;
+        }
+
+        Vector2 patrolPoint = patrolPoints[currentPatrolPoint];
+
+        if (Vector2.Distance(transform.position, patrolPoint) <= patrolPointDistance)
+        {
+            currentPatrolPoint++;
+
+            if (currentPatrolPoint >= patrolPoints.Length)
+                currentPatrolPoint = 0;
+
+            patrolPoint = patrolPoints[currentPatrolPoint];
+        }
+
+        Vector2 direction = (patrolPoint - (Vector2)transform.position).normalized;
+        Vector2 desiredVelocity = direction * maxSpeed;
+
+        Move(desiredVelocity);
+    }
+    protected virtual void UpdateArrive() 
+    {
+        // Si no hay objetivo (Arrive -> Patrol)
+        if (target == null)
+        {
+            currentState = EnemyState.Patrol;
+            return;
+        }
+        timer -= Time.fixedDeltaTime;
+
+        Vector2 direction = (target.transform.position - transform.position).normalized;
+        Vector2 desiredVelocity = direction * maxSpeed;
+        Move(desiredVelocity);
+
+        // Si esta lista para atacar (Arrive -> Attack)
+        if (timer <= 0f)
+        {
+            currentState = EnemyState.Attack;
+        }
     }
     protected virtual void UpdateAttack() 
     {
+        // Si no hay objetivo [fallo ataque] (Attack -> Cooldown)
         if (target == null)
         {
-            currentState = EnemyState.Idle; // Attack -> Idle
+            currentState = EnemyState.Cooldown;
+            timer = attackCooldown;
             return;
         }
-        float distanceX = Mathf.Abs(transform.position.x - target.transform.position.x);
-        float distanceY = Mathf.Abs(transform.position.y - target.transform.position.y);
-        float manhattanDistance = distanceX + distanceY;
-        if (manhattanDistance <= attackRange + 0.2f) // margen
-        {
-            AttackTarget(target);
-        }
-        // Attack -> Cooldown
-        timer = cooldownTime;
+        float distance = Vector2.Distance(transform.position, target.transform.position);
+        if (distance <= attackRange) AttackTarget(target); // atacar objetivo 
+        timer = attackCooldown;
+        // Ataco al objetivo  (Attack -> Cooldown)
         currentState = EnemyState.Cooldown;
     }
-    protected virtual void UpdateCooldown()
+    protected virtual void UpdateCooldown() 
     {
-        //  Cooldown -> Seek
-        timer -= Time.deltaTime;
-        if (timer <= 0f) currentState = EnemyState.Seek;
+        timer -= Time.fixedDeltaTime;
+        if (timer > 0f) return;
+        // Despues del tiempo (Cooldown -> Seek)
+        currentState = EnemyState.Seek; 
     }
     protected virtual void UpdateStun() { /* AGREGAR O SOBRE ESCRIBIR */ }
+    // metodos de universales
     public virtual void AttackTarget(EntityBase target)
     {
         target.TakeDamage(attackDamage);
@@ -153,95 +221,279 @@ public abstract class EnemyBase : EntityBase
         Debug.Log($"{gameObject.name} murió.");
         Destroy(gameObject, 0.5f);
     }
-    // extras 
-    protected Vector2 GetFourDirectionMovement(Vector2 offset)
+    // Metodo de movimiento
+    protected void Move(Vector2 desiredVelocity)
     {
-        // Las 4 direcciones posibles
-        Vector2[] directions = { Vector2.up, Vector2.down, Vector2.left, Vector2.right };
+        desiredVelocity = Vector2.ClampMagnitude(desiredVelocity, maxSpeed); // limitar velocidad deseada 
 
-        Vector2 bestDirection = Vector2.zero;
-        float shortestDistance = float.MaxValue;
+        velocity = Vector2.MoveTowards(
+            velocity,
+            desiredVelocity,
+            acceleration * Time.fixedDeltaTime
+        );
+        rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
+    }
+    // Metodo de deteccion
+    protected bool DetectTarget()
+    {
+        Collider2D[] detectedTargets = Physics2D.OverlapCircleAll(
+            transform.position,
+            detectionRadius,
+            npcLayer | playerLayer
+        );
 
-        // Las coordenadas exactas del objetivo
-        Vector2 targetPoint = (Vector2)transform.position + offset;
-        bool foundPath = false;
+        EntityBase nearestPlayer = null;
+        EntityBase nearestNPC = null;
 
-        foreach (Vector2 dir in directions)
+        float playerDistance = Mathf.Infinity;
+        float npcDistance = Mathf.Infinity;
+
+        foreach (Collider2D collider in detectedTargets)
         {
-            // 1. Jamas dar la vuelta en "U" (evita que tiemble arriba y abajo)
-            if (facingDirection != Vector2.zero && dir == -facingDirection)
+            EntityBase detectedTarget = collider.GetComponentInParent<EntityBase>();
+
+            if (detectedTarget == null || detectedTarget == this)
                 continue;
 
-            // 2. No intentar atravesar paredes
-            if (IsWall(dir))
-                continue;
+            float distance = Vector2.Distance(
+                transform.position,
+                detectedTarget.transform.position
+            );
 
-            // 3. Proyectar un paso imaginario en esa direccion y medir que tan cerca nos deja de la meta
-            Vector2 imaginaryPosition = (Vector2)transform.position + (dir * 1f);
-            float realDistance = Vector2.Distance(imaginaryPosition, targetPoint);
-
-            if (facingDirection != Vector2.zero && dir != facingDirection)
+            if (((1 << detectedTarget.gameObject.layer) & playerLayer) != 0 &&
+                distance < playerDistance)
             {
-                realDistance += 0.5f;
+                nearestPlayer = detectedTarget;
+                playerDistance = distance;
             }
-            if (realDistance < shortestDistance)
+
+            if (((1 << detectedTarget.gameObject.layer) & npcLayer) != 0 &&
+                distance < npcDistance)
             {
-                shortestDistance = realDistance;
-                bestDirection = dir;
-                foundPath = true;
+                nearestNPC = detectedTarget;
+                npcDistance = distance;
             }
         }
 
-        // 4. Si todas las direcciones estan tapadas (un callejon sin salida)
-        // Rompemos la regla y le permitimos dar la vuelta en "U" para salir.
-        if (!foundPath)
+        EntityBase selectedTarget = null;
+
+        switch (targetPriority)
         {
-            if (!IsWall(-facingDirection))
-            {
-                bestDirection = -facingDirection;
-            }
+            case TargetPriority.Player:
+                selectedTarget = nearestPlayer ?? nearestNPC;
+                break;
+
+            case TargetPriority.NPC:
+                selectedTarget = nearestNPC ?? nearestPlayer;
+                break;
+
+            case TargetPriority.None:
+                selectedTarget = playerDistance < npcDistance
+                    ? nearestPlayer
+                    : nearestNPC;
+                break;
         }
 
-        // Guardar hacia donde estamos mirando para el proximo fotograma
-        if (bestDirection != Vector2.zero)
+        if (selectedTarget == null)
+            return false;
+
+        bool priorityTarget = targetPriority switch
         {
-            facingDirection = bestDirection;
-        }
+            TargetPriority.Player => ((1 << selectedTarget.gameObject.layer) & playerLayer) != 0,
+            TargetPriority.NPC => ((1 << selectedTarget.gameObject.layer) & npcLayer) != 0,
+            _ => false
+        };
 
-        return bestDirection;
+        if (target == null || changeTarget || priorityTarget)
+            target = selectedTarget;
+
+        return true;
     }
 
-    protected bool IsWall(Vector2 dir)
-    {
-        Vector2 origin = transform.position;
-
-        if (dir != facingDirection && facingDirection != Vector2.zero)
-        {
-            origin = (Vector2)transform.position - (facingDirection * 0.6f);
-        }
-
-        RaycastHit2D hit = Physics2D.Raycast(origin, dir, obstacleCheck, visionMask);
-
-        if (hit.collider != null && !hit.collider.CompareTag("Player") && !hit.collider.CompareTag("NPC"))
-        {
-            return true;
-        }
-        return false;
-    }
+    // Modo Debug
     private void OnDrawGizmosSelected()
     {
-        // 1. Dibujar los puntos de patrulla
-        if (patrolPoints != null)
+        // RANGO DE DETECCION
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, detectionRadius);
+
+        // Rango para perder objetivo
+        Gizmos.color = new Color(1f, 0.5f, 0f);
+        Gizmos.DrawWireSphere(transform.position, detectionRadius + 1f);
+
+        // RANGO DE ATAQUE
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
+
+        // Rango para iniciar preataque
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireSphere(transform.position, attackRange + 1f);
+
+        // OBJETIVO ACTUAL
+
+        if (target != null)
         {
-            Gizmos.color = Color.yellow;
-            foreach (Vector2 punto in patrolPoints)
+            Gizmos.color = Color.red;
+
+            Gizmos.DrawLine(
+                transform.position,
+                target.transform.position
+            );
+
+            Gizmos.DrawWireSphere(
+                target.transform.position,
+                0.25f
+            );
+        }
+
+        // DIRECCION / VELOCIDAD
+
+        if (velocity.sqrMagnitude > 0.01f)
+        {
+            Gizmos.color = Color.green;
+
+            Gizmos.DrawLine(
+                transform.position,
+                transform.position + (Vector3)velocity.normalized * 1.5f
+            );
+        }
+
+        // WANDER
+
+        if (currentState == EnemyState.Wander)
+        {
+            Vector2 forward = velocity.sqrMagnitude > 0.01f
+                ? velocity.normalized
+                : wanderDirection;
+
+            Vector2 circleCenter = forward * wanderDistance;
+            Vector2 wanderTarget = circleCenter + wanderDirection * wanderRadius;
+
+            // Centro del círculo Wander
+            Gizmos.color = Color.cyan;
+
+            Gizmos.DrawWireSphere(
+                transform.position + (Vector3)circleCenter,
+                wanderRadius
+            );
+
+            // Dirección hacia el objetivo Wander
+            Gizmos.color = Color.magenta;
+
+            Gizmos.DrawLine(
+                transform.position,
+                transform.position + (Vector3)wanderTarget
+            );
+
+            // Punto objetivo Wander
+            Gizmos.DrawWireSphere(
+                transform.position + (Vector3)wanderTarget,
+                0.2f
+            );
+        }
+
+        // PATROL
+
+        if (patrolPoints != null && patrolPoints.Length > 0)
+        {
+            for (int i = 0; i < patrolPoints.Length; i++)
             {
-                Gizmos.DrawWireSphere(punto, 0.3f);
+                Gizmos.color = Color.cyan;
+
+                Gizmos.DrawWireSphere(
+                    patrolPoints[i],
+                    0.25f
+                );
+
+                if (patrolPoints.Length > 1)
+                {
+                    int nextPoint = (i + 1) % patrolPoints.Length;
+
+                    Gizmos.color = Color.blue;
+
+                    Gizmos.DrawLine(
+                        patrolPoints[i],
+                        patrolPoints[nextPoint]
+                    );
+                }
+            }
+
+            if (currentState == EnemyState.Patrol &&
+                currentPatrolPoint < patrolPoints.Length)
+            {
+                Gizmos.color = Color.green;
+
+                Gizmos.DrawLine(
+                    transform.position,
+                    patrolPoints[currentPatrolPoint]
+                );
+
+                Gizmos.DrawWireSphere(
+                    patrolPoints[currentPatrolPoint],
+                    patrolPointDistance
+                );
             }
         }
 
-        // 2. Dibujar el rayo de visión
-        Gizmos.color = Color.red;
-        Gizmos.DrawRay(transform.position, facingDirection * visionDistance);
+        // ARRIVE / PRE-ATAQUE
+
+        if (currentState == EnemyState.Arrive && target != null)
+        {
+            Gizmos.color = Color.magenta;
+
+            Gizmos.DrawLine(
+                transform.position,
+                target.transform.position
+            );
+
+            Gizmos.DrawWireSphere(
+                transform.position,
+                attackRange + 1f
+            );
+        }
+
+        // FLEE
+
+        if (currentState == EnemyState.Flee && target != null)
+        {
+            Vector2 fleeDirection =
+                (transform.position - target.transform.position).normalized;
+
+            Gizmos.color = Color.blue;
+
+            Gizmos.DrawLine(
+                transform.position,
+                transform.position + (Vector3)fleeDirection * 1.5f
+            );
+        }
+
+        // ATTACK
+
+        if (currentState == EnemyState.Attack && target != null)
+        {
+            Gizmos.color = Color.red;
+
+            Gizmos.DrawLine(
+                transform.position,
+                target.transform.position
+            );
+
+            Gizmos.DrawWireSphere(
+                target.transform.position,
+                0.4f
+            );
+        }
+
+        // COOLDOWN
+
+        if (currentState == EnemyState.Cooldown)
+        {
+            Gizmos.color = Color.gray;
+
+            Gizmos.DrawWireSphere(
+                transform.position,
+                0.4f
+            );
+        }
     }
 }

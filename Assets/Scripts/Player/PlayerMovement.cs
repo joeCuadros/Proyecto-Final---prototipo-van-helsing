@@ -13,7 +13,6 @@ public class PlayerMovement : MonoBehaviour
     private float currentSpeed;
     private Rigidbody2D rb;
     private Vector2 moveInput;
-    private Vector2 lastInput;
     private bool isSprinting = false;
     private PlayerStats stats;
     // eventos
@@ -30,20 +29,6 @@ public class PlayerMovement : MonoBehaviour
     void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
-        if (Mathf.Abs(moveInput.x) > 0 && Mathf.Abs(moveInput.y) > 0)
-        {
-            if (Mathf.Abs(lastInput.x) > 0)
-            {
-                moveInput.x = 0f;
-                moveInput.y = 1f;
-            }
-            else
-            {
-                moveInput.y = 0f;
-                moveInput.x = 1f;
-            }
-        }
-        lastInput = moveInput;
         OnDirectionChanged?.Invoke(moveInput);
     }
 

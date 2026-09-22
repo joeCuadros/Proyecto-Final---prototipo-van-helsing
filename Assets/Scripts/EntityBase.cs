@@ -4,7 +4,7 @@ using UnityEngine;
 public abstract class EntityBase : MonoBehaviour
 {
     [Header("Stats Base")]
-    public int maxHealth;
+    public int maxHealth = 3;
     protected int currentHealth;
 
     protected virtual void Start()
