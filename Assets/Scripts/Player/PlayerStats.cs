@@ -6,6 +6,7 @@ public class PlayerStats : EntityBase
     [Header("Stats")]
     public float maxStamina = 100f;
     public float invulnerabilityDuration = 1.5f;
+    public bool hasShield = false;
 
     private float currentStamina;
     private float nextDamageTime = 0f;
@@ -15,6 +16,7 @@ public class PlayerStats : EntityBase
         base.Start();
         currentStamina = maxStamina;
         if (SystemManager.Instance != null) SystemManager.Instance.RegisterPlayer(GetComponent<PlayerInput>());
+        if (UIManager.Instance != null) UIManager.Instance.UpdateHealthUI(currentHealth, maxHealth, hasShield);
     }
 
     public void DrainStamina(float amount)
@@ -39,18 +41,32 @@ public class PlayerStats : EntityBase
     public override void TakeDamage(int damage)
     {
         if (Time.time < nextDamageTime) return;
-        base.TakeDamage(damage);
+        if (hasShield)
+        {
+            hasShield = false;
+        }
+        else
+        {
+            base.TakeDamage(damage);
+        }
         if (currentHealth > 0)
         {
             nextDamageTime = Time.time + invulnerabilityDuration;
         }
-        if (UIManager.Instance != null) UIManager.Instance.ChangeHealth(currentHealth, maxHealth);
+        if (UIManager.Instance != null) UIManager.Instance.UpdateHealthUI(currentHealth, maxHealth, hasShield);
     }
 
     public void RegenerateHealth(int amount)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-        if (UIManager.Instance != null) UIManager.Instance.ChangeHealth(currentHealth, maxHealth);
+        if (UIManager.Instance != null) UIManager.Instance.UpdateHealthUI(currentHealth, maxHealth, hasShield);
+    }
+
+    public void EquipShield()
+    {
+        if (hasShield) return; 
+        hasShield = true;
+        if (UIManager.Instance != null) UIManager.Instance.UpdateHealthUI(currentHealth, maxHealth, hasShield);
     }
 
     public bool IsHealthFull()

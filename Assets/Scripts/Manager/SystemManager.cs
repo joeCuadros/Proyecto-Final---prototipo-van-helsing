@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SystemManager : MonoBehaviour
 {
     public static SystemManager Instance { get; private set; }
-    private bool isPaused = true;
+    private bool isPaused = false;
     private bool isGameEnded = true;
 
     private PlayerInput playerInput;
@@ -50,7 +50,15 @@ public class SystemManager : MonoBehaviour
     }
     public void NextScene()
     {
-        LoadScene(currentSceneKey + 1);
+        int nextKey = currentSceneKey + 1;
+        if (sceneRoutes.ContainsKey(nextKey))
+        {
+            LoadScene(nextKey);
+        }
+        else
+        {
+            LoadScene(currentSceneKey);
+        }
     }
     public void RestartScene()
     {
