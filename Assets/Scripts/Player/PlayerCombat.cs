@@ -32,7 +32,10 @@ public class PlayerCombat : MonoBehaviour
     {
         movement = GetComponent<PlayerMovement>();
     }
-
+    void Start()
+    {
+        UpdateWeaponsUI();
+    }
     void OnEnable()
     {
         if (movement != null)
@@ -60,6 +63,7 @@ public class PlayerCombat : MonoBehaviour
     {
         currentWeapon = weaponToEquip;
         Debug.Log($"Combat: Has equipado -> {currentWeapon}"); // Mandar a UI
+        UpdateWeaponsUI();
     }
 
     // LOGICA DE ATAQUE
@@ -123,18 +127,28 @@ public class PlayerCombat : MonoBehaviour
     {
         woodenStakes--;
         nextActionTime = Time.time + actionCooldown;
+        UpdateWeaponsUI();
     }
 
     private void UseSilverBullet()
     {
         silverBullets--;
         nextActionTime = Time.time + actionCooldown;
+        UpdateWeaponsUI();
     }
 
     private void UseHolyWater()
     {
         holyWaterFlasks--;
         nextActionTime = Time.time + actionCooldown;
+        UpdateWeaponsUI();
+    }
+    private void UpdateWeaponsUI()
+    {
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.RefreshWeaponsUI(currentWeapon, hasDagger, woodenStakes, silverBullets, holyWaterFlasks);
+        }
     }
     // DEBUG
     private void OnDrawGizmosSelected()

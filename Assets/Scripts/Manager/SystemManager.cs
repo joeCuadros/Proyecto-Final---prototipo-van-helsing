@@ -4,8 +4,8 @@ using UnityEngine.InputSystem;
 public class SystemManager : MonoBehaviour
 {
     public static SystemManager Instance { get; private set; }
-    public bool isPaused { get; private set; }
-    public bool isGameOver { get; private set; }
+    private bool isPaused = true;
+    private bool isGameEnded = true;
 
     private PlayerInput playerInput;
 
@@ -18,41 +18,43 @@ public class SystemManager : MonoBehaviour
     public void RegisterPlayer(PlayerInput nuevoPlayerInput)
     {
         playerInput = nuevoPlayerInput;
-        Debug.Log("Sistema: Jugador registrado correctamente.");
+        isGameEnded = false;
     }
 
     public void TogglePause()
     {
-        if (isGameOver || playerInput == null) return; // si esta muerto no hacer nada
+        if (isGameEnded || playerInput == null) return; // si esta termino no hacer nada
 
         isPaused = !isPaused;
         Time.timeScale = isPaused ? 0f : 1f;
-
-        if (isPaused)
-        {
-            playerInput.SwitchCurrentActionMap("System");
-        }
-        else
-        {
-            playerInput.SwitchCurrentActionMap("Player");
-        }
-        Debug.Log($"Sistema: Pausa = {isPaused}. Control actual = {playerInput.currentActionMap.name}"); // mandar a UI
+        playerInput.SwitchCurrentActionMap(isPaused ? "System" : "Player");
+        if (UIManager.Instance != null) UIManager.Instance.RenderPause(isPaused);
     }
 
+    public void GameOver()
+    {
+        if (playerInput == null) return;
+        isGameEnded = true;
+        Time.timeScale = 0f;
+        playerInput.SwitchCurrentActionMap("System");
+        if (UIManager.Instance != null) UIManager.Instance.RenderGameOver();
+    }
+
+    public void Victory()
+    {
+        if (playerInput == null) return;
+        isGameEnded = true;
+        Time.timeScale = 0f;
+        playerInput.SwitchCurrentActionMap("System");
+        if (UIManager.Instance != null)  UIManager.Instance.RenderVictory();
+    }
+
+    // eventos externos 
     void OnPause(InputValue value)
     {
         if (value.isPressed)
         {
             TogglePause();
         }
-    }
-
-    public void GameOver()
-    {
-        if (playerInput == null) return;
-        isGameOver = true;
-        Time.timeScale = 0f;
-        playerInput.SwitchCurrentActionMap("System");   
-        Debug.Log("Sistema: ¡Game Over! Controles de jugador desactivados.");
     }
 }

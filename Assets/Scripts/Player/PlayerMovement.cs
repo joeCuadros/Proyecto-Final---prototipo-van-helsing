@@ -41,15 +41,22 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         float staminaCostThisFrame = staminaCostPerSecond * Time.fixedDeltaTime;
+        // 1. Corriendo
         if (isSprinting && moveInput != Vector2.zero && stats.HasEnoughStamina(staminaCostThisFrame))
         {
             currentSpeed = sprintSpeed;
             stats.DrainStamina(staminaCostPerSecond);
         }
-        else
+        // 2. Caminando
+        else if (moveInput != Vector2.zero)
         {
             currentSpeed = walkSpeed;
+        }
+        // 3. Quieto
+        else
+        {
             stats.RegenerateStamina(staminaRegenPerSecond);
+            return;
         }
 
         rb.MovePosition(rb.position + moveInput * currentSpeed * Time.fixedDeltaTime);
