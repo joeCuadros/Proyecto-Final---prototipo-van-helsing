@@ -1,5 +1,7 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class SystemManager : MonoBehaviour
 {
@@ -8,11 +10,55 @@ public class SystemManager : MonoBehaviour
     private bool isGameEnded = true;
 
     private PlayerInput playerInput;
+    private Dictionary<int, string> sceneRoutes = new Dictionary<int, string>()
+    {
+        { 0, "SampleScene" },
+        { 1, "SampleScene" }
+    };
+    public int currentSceneKey { get; private set; } = 0;
 
     private void Awake()
     {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public void LoadScene(int sceneKey)
+    {
+        if (sceneRoutes.TryGetValue(sceneKey, out string exactSceneName))
+        {
+            Time.timeScale = 1f;
+            isPaused = false; 
+            currentSceneKey = sceneKey;
+            //hasta que se registre el jugador
+            isGameEnded = true;
+            if (playerInput != null)
+            {
+                playerInput.SwitchCurrentActionMap("System");
+                playerInput = null;
+            }
+
+            SceneManager.LoadScene(exactSceneName);
+        }
+    }
+    public void NextScene()
+    {
+        LoadScene(currentSceneKey + 1);
+    }
+    public void RestartScene()
+    {
+        LoadScene(currentSceneKey);
+    }
+    public void InitScene()
+    {
+        LoadScene(0);
     }
 
     public void RegisterPlayer(PlayerInput nuevoPlayerInput)

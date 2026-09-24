@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
@@ -57,5 +58,18 @@ public class UIManager : MonoBehaviour
         // UI Visual: Si holyWater == 0 -> Poner icono gris o activar imagen de 'X'
         // UI Visual: Si activeWeapon == WeaponType.HolyWater -> Resaltar el borde
         Debug.Log($"Slot 4 [Agua B.]: {(activeWeapon == WeaponType.HolyWater ? ">> SELECCIONADA <<" : "")} Ammo: {holyWater}");
+    }
+    public void UpdateEnemyCounters(Dictionary<string, LevelManager.EnemyCountData> enemyData, int totalAlive)
+    {
+        Debug.Log($"Total de enemigos vivos en la arena: {totalAlive}");
+
+        foreach (var entry in enemyData)
+        {
+            string enemyType = entry.Key;
+            int total = entry.Value.cantidad_total;
+            int vivos = entry.Value.cantidad_viva;
+
+            Debug.Log($"UI -> {enemyType} | Total aparecidos: {total} | Vivos actualmente: {vivos}");
+        }
     }
 }
