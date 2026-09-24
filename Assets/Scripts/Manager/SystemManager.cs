@@ -12,8 +12,8 @@ public class SystemManager : MonoBehaviour
     private PlayerInput playerInput;
     private Dictionary<int, string> sceneRoutes = new Dictionary<int, string>()
     {
-        { 0, "SampleScene" },
-        { 1, "SampleScene" }
+        { 0, "MainMenu" },
+        { 1, "SampleScene" } //Level_01
     };
     public int currentSceneKey { get; private set; } = 0;
 

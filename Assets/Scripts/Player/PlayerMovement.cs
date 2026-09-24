@@ -56,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             stats.RegenerateStamina(staminaRegenPerSecond);
+            rb.linearVelocity = Vector2.zero;
             return;
         }
 
