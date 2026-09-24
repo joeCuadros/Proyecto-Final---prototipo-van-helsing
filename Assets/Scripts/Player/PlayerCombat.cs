@@ -5,8 +5,12 @@ public enum WeaponType { Dagger, WoodenStake, SilverBullet, HolyWater }
 
 public class PlayerCombat : MonoBehaviour
 {
+
     [Header("Selección Actual")]
     public WeaponType currentWeapon = WeaponType.Dagger;
+
+    [Header("Audio")]
+    public AudioClip music;
 
     [Header("Tiempos y Cooldowns")]
     public float actionCooldown = 1f;
@@ -121,6 +125,10 @@ public class PlayerCombat : MonoBehaviour
             }
         }
         nextActionTime = Time.time + actionCooldown;
+        if(AudioManager.Instance != null && music != null)
+        {
+            AudioManager.Instance.PlaySFX(music);
+        }
     }
 
     private void UseWoodenStake()
