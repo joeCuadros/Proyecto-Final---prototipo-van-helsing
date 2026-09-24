@@ -27,6 +27,7 @@ public class UIManager : MonoBehaviour
     public GameObject modalPanel;
     public GameObject modalHUD;
     public TextMeshProUGUI modalTitle;
+    public TextMeshProUGUI totalEnemiesText;
 
     [Header("Botones de Acción")]
     public GameObject resumeButton;         // Boton "Continuar"
@@ -188,6 +189,7 @@ public class UIManager : MonoBehaviour
     // Enemigos 
     public void UpdateEnemyCounters(Dictionary<string, LevelManager.EnemyCountData> enemyData, int totalAlive)
     {
+        if (totalEnemiesText != null) totalEnemiesText.text = "Enemigos: " + totalAlive.ToString("D3");
         Debug.Log($"Total de enemigos vivos en la arena: {totalAlive}");
 
         foreach (var entry in enemyData)

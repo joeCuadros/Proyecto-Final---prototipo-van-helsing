@@ -13,7 +13,8 @@ public class SystemManager : MonoBehaviour
     private Dictionary<int, string> sceneRoutes = new Dictionary<int, string>()
     {
         { 0, "MainMenu" },
-        { 1, "SampleScene" } //Level_01
+        { 1, "Nivel 1" }, //Level_01
+        { 2, "Nivel 2" }, //Level_02
     };
     public int currentSceneKey { get; private set; } = 0;
 
