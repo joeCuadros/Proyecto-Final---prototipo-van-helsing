@@ -59,11 +59,13 @@ public abstract class EnemyBase : EntityBase
     // GENERALES
     protected Rigidbody2D rb;
     protected float timer = 0f;
-        
+    protected string enemyType = "BaseEnemy";
+
     protected override void Start()
     {
         base.Start();
         rb = GetComponent<Rigidbody2D>();
+        if (LevelManager.Instance != null) LevelManager.Instance.RegisterEnemy(enemyType);
     }
     protected virtual void FixedUpdate()
     {
@@ -218,7 +220,7 @@ public abstract class EnemyBase : EntityBase
     protected override void Die()
     {
         currentState = EnemyState.Die;
-        Debug.Log($"{gameObject.name} murió.");
+        if (LevelManager.Instance != null) LevelManager.Instance.EnemyDied(enemyType);
         Destroy(gameObject, 0.5f);
     }
     // Metodo de movimiento
