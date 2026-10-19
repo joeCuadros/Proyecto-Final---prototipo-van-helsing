@@ -14,6 +14,7 @@ public abstract class EnemyBase : EntityBase
         Attack,     // Ejecutar el ataque contra el objetivo
         Cooldown,   // Espera antes de poder realizar otro ataque
         Stun,       // Que incapacitado temporalmente
+        Investigate,// Investigar el punto solicitado
     }
     public enum TargetPriority
     {
@@ -27,7 +28,7 @@ public abstract class EnemyBase : EntityBase
     
     [Header("Combate")]
     public int attackDamage = 1;
-    public float attackRange = 1.5f;
+    public float attackRange = 1f;
     public float preAttackDuration = 1f;
     public float attackCooldown = 1f;
 
@@ -37,10 +38,10 @@ public abstract class EnemyBase : EntityBase
     public float wanderChange = 10f;
     protected Vector2 wanderDirection; // no publico
 
-    [Header("Patrol")]
-    public Vector2[] patrolPoints;
-    public float patrolPointDistance = 0.2f;
-    protected int currentPatrolPoint = 0; // no publico
+    [Header("Waypoints")]
+    public Vector2[] waypoints;
+    public float waypointDistance = 0.2f;
+    protected int currentWaypointIndex = 0; // no publico
 
     [Header("Movimiento")]
     public float maxSpeed = 3f;
@@ -49,7 +50,7 @@ public abstract class EnemyBase : EntityBase
     protected Vector2 velocity; // no publico
 
     [Header("Deteccion")]
-    public float detectionRadius = 5f;
+    public float detectionRadius = 4f;
     public LayerMask npcLayer;
     public LayerMask playerLayer;
     public TargetPriority targetPriority;
@@ -58,13 +59,16 @@ public abstract class EnemyBase : EntityBase
 
     // GENERALES
     protected Rigidbody2D rb;
+    private Collider2D col;
     protected float timer = 0f;
     protected string enemyType = "BaseEnemy";
+    private int avoidSide = 0;
 
     protected override void Start()
     {
         base.Start();
         rb = GetComponent<Rigidbody2D>();
+        col = GetComponent<Collider2D>();
         if (LevelManager.Instance != null) LevelManager.Instance.RegisterEnemy(enemyType);
     }
     protected virtual void FixedUpdate()
@@ -82,6 +86,7 @@ public abstract class EnemyBase : EntityBase
             case EnemyState.Attack: UpdateAttack(); break;
             case EnemyState.Cooldown: UpdateCooldown(); break;
             case EnemyState.Stun: UpdateStun(); break;
+            case EnemyState.Investigate: UpdateInvestigate(); break;
         }
     }
 
@@ -98,7 +103,7 @@ public abstract class EnemyBase : EntityBase
             return;
         }
         // Si estamos cerca preparamos un pre ataque
-        if (Vector2.Distance(transform.position, target.transform.position) <= attackRange + 1f)
+        if (Vector2.Distance(transform.position, target.transform.position) <= attackRange + 0.5f)
         {
             timer = preAttackDuration;
             currentState = EnemyState.Arrive;
@@ -146,22 +151,22 @@ public abstract class EnemyBase : EntityBase
             return;
         }
         // Si no hay minimo 2 puntos (Patrol -> Wander)
-        if (patrolPoints == null || patrolPoints.Length < 2)
+        if (waypoints == null || waypoints.Length < 2)
         {
             currentState = EnemyState.Wander;
             return;
         }
 
-        Vector2 patrolPoint = patrolPoints[currentPatrolPoint];
+        Vector2 patrolPoint = waypoints[currentWaypointIndex];
 
-        if (Vector2.Distance(transform.position, patrolPoint) <= patrolPointDistance)
+        if (Vector2.Distance(transform.position, patrolPoint) <= waypointDistance)
         {
-            currentPatrolPoint++;
+            currentWaypointIndex++;
 
-            if (currentPatrolPoint >= patrolPoints.Length)
-                currentPatrolPoint = 0;
+            if (currentWaypointIndex >= waypoints.Length)
+                currentWaypointIndex = 0;
 
-            patrolPoint = patrolPoints[currentPatrolPoint];
+            patrolPoint = waypoints[currentWaypointIndex];
         }
 
         Vector2 direction = (patrolPoint - (Vector2)transform.position).normalized;
@@ -212,6 +217,7 @@ public abstract class EnemyBase : EntityBase
         currentState = EnemyState.Seek; 
     }
     protected virtual void UpdateStun() { /* AGREGAR O SOBRE ESCRIBIR */ }
+    protected virtual void UpdateInvestigate() { /* AGREGAR O SOBRE ESCRIBIR */ }
     // metodos de universales
     public virtual void AttackTarget(EntityBase target)
     {
@@ -226,14 +232,102 @@ public abstract class EnemyBase : EntityBase
     // Metodo de movimiento
     protected void Move(Vector2 desiredVelocity)
     {
-        desiredVelocity = Vector2.ClampMagnitude(desiredVelocity, maxSpeed); // limitar velocidad deseada 
+        desiredVelocity = Vector2.ClampMagnitude(desiredVelocity, maxSpeed);
 
-        velocity = Vector2.MoveTowards(
-            velocity,
-            desiredVelocity,
-            acceleration * Time.fixedDeltaTime
-        );
-        rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
+        // ATASCO: comparo lo ordenado (velocity) con la velocidad real de la fisica
+        bool nearTarget = target != null &&
+            Vector2.Distance(rb.position, target.transform.position) <= attackRange + 0.5f;
+        bool stuck = !nearTarget &&
+            velocity.magnitude > maxSpeed * 0.5f &&
+            rb.linearVelocity.magnitude < velocity.magnitude * 0.3f;
+
+        if (desiredVelocity.sqrMagnitude > 0.0001f)
+        {
+            int mask = LayerMask.GetMask("StealthObstacle");
+            float sensorLength = 0.15f;
+            float step = 45f;
+            Vector2 origin = col.bounds.center;       // centro del collider, no del sprite
+            Vector2 size = col.bounds.size * 0.9f;    // un poco mas chica para no empezar tocando la pared
+            Vector2 dir = desiredVelocity.normalized;
+
+            bool Blocked(float angle) =>
+                Physics2D.BoxCast(
+                    origin,
+                    size,
+                    0f,
+                    (Vector2)(Quaternion.Euler(0f, 0f, angle) * dir),
+                    sensorLength,
+                    mask
+                ).collider != null;
+
+            // primer angulo libre hacia un lado (999 = ninguno)
+            float FirstFree(int side, float start)
+            {
+                for (float a = start; a <= 180f; a += step)
+                    if (!Blocked(a * side)) return a;
+                return 999f;
+            }
+
+            bool blocked = Blocked(0f) || Blocked(step) || Blocked(-step);
+
+            // soltar la pared: camino libre Y ya no hay pared a su lado
+            if (avoidSide != 0 && !blocked && !Blocked(-avoidSide * 90f))
+                avoidSide = 0;
+
+            // elegir lado una sola vez: el que necesite girar menos
+            if (avoidSide == 0 && blocked)
+            {
+                float left = FirstFree(1, step);
+                float right = FirstFree(-1, step);
+                avoidSide = left < right ? 1 : right < left ? -1 : (Random.value < 0.5f ? 1 : -1);
+            }
+
+            // siguiendo la pared: girar solo lo minimo necesario
+            if (avoidSide != 0)
+            {
+                float angle = FirstFree(avoidSide, 0f);
+                if (angle < 999f)
+                    dir = (Vector2)(Quaternion.Euler(0f, 0f, angle * avoidSide) * dir);
+
+                desiredVelocity = dir * desiredVelocity.magnitude;
+            }
+        }
+
+        velocity = rb.linearVelocity;
+
+        if (stuck && desiredVelocity.sqrMagnitude > 0.0001f)
+        {
+            Vector2 stuckDir = desiredVelocity.normalized;
+            RaycastHit2D wall = Physics2D.BoxCast(
+                col.bounds.center,
+                col.bounds.size * 0.9f,
+                0f,
+                stuckDir,
+                0.3f,
+                LayerMask.GetMask("StealthObstacle")
+            );
+
+            if (wall.collider != null)
+            {
+                Vector2 slide = stuckDir - wall.normal * Vector2.Dot(stuckDir, wall.normal);
+                Vector2 safeDir = (slide.normalized + wall.normal).normalized;
+                velocity = safeDir * maxSpeed;
+            }
+            else
+            {
+                velocity = desiredVelocity;
+            }
+        }
+        else
+        {
+            velocity = Vector2.MoveTowards(
+                velocity,
+                desiredVelocity,
+                acceleration * Time.fixedDeltaTime
+            );
+        }
+
+        rb.linearVelocity = velocity;
     }
     // Metodo de deteccion
     protected bool DetectTarget()
@@ -256,6 +350,18 @@ public abstract class EnemyBase : EntityBase
 
             if (detectedTarget == null || detectedTarget == this)
                 continue;
+
+            RaycastHit2D hit = Physics2D.Linecast(
+                transform.position,
+                detectedTarget.transform.position,
+                LayerMask.GetMask("StealthObstacle")
+            );
+
+            if (hit.collider != null)
+            {
+                continue;
+            }
+
 
             float distance = Vector2.Distance(
                 transform.position,
@@ -329,7 +435,7 @@ public abstract class EnemyBase : EntityBase
 
         // Rango para iniciar preataque
         Gizmos.color = Color.magenta;
-        Gizmos.DrawWireSphere(transform.position, attackRange + 1f);
+        Gizmos.DrawWireSphere(transform.position, attackRange + 0.5f);
 
         // OBJETIVO ACTUAL
 
@@ -396,43 +502,43 @@ public abstract class EnemyBase : EntityBase
 
         // PATROL
 
-        if (patrolPoints != null && patrolPoints.Length > 0)
+        if (waypoints != null && waypoints.Length > 0)
         {
-            for (int i = 0; i < patrolPoints.Length; i++)
+            for (int i = 0; i < waypoints.Length; i++)
             {
                 Gizmos.color = Color.cyan;
 
                 Gizmos.DrawWireSphere(
-                    patrolPoints[i],
+                    waypoints[i],
                     0.25f
                 );
 
-                if (patrolPoints.Length > 1)
+                if (waypoints.Length > 1)
                 {
-                    int nextPoint = (i + 1) % patrolPoints.Length;
+                    int nextPoint = (i + 1) % waypoints.Length;
 
                     Gizmos.color = Color.blue;
 
                     Gizmos.DrawLine(
-                        patrolPoints[i],
-                        patrolPoints[nextPoint]
+                        waypoints[i],
+                        waypoints[nextPoint]
                     );
                 }
             }
 
             if (currentState == EnemyState.Patrol &&
-                currentPatrolPoint < patrolPoints.Length)
+                currentWaypointIndex < waypoints.Length)
             {
                 Gizmos.color = Color.green;
 
                 Gizmos.DrawLine(
                     transform.position,
-                    patrolPoints[currentPatrolPoint]
+                    waypoints[currentWaypointIndex]
                 );
 
                 Gizmos.DrawWireSphere(
-                    patrolPoints[currentPatrolPoint],
-                    patrolPointDistance
+                    waypoints[currentWaypointIndex],
+                    waypointDistance
                 );
             }
         }
