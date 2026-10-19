@@ -18,6 +18,10 @@ public abstract class EntityBase : MonoBehaviour
         Debug.Log($"{gameObject.name} recibió {damage}. Vida: {currentHealth}");
         if (currentHealth == 0) Die();
     }
+    public virtual void TakeDamage(int damage, WeaponType weapon)
+    {
+        TakeDamage(damage);
+    }
 
     protected virtual void Die()
     {

@@ -10,7 +10,11 @@ public class PlayerCombat : MonoBehaviour
     public WeaponType currentWeapon = WeaponType.Dagger;
 
     [Header("Audio")]
-    public AudioClip music;
+    public AudioClip audioDagger;
+    public AudioClip audioStakes;
+    public AudioClip audioCrossbow;
+    public AudioClip audioWater;
+
 
     [Header("Tiempos y Cooldowns")]
     public float actionCooldown = 1f;
@@ -27,6 +31,18 @@ public class PlayerCombat : MonoBehaviour
     public float daggerAngle = 90f;
     public int daggerDamage = 1;
     public LayerMask enemyLayer;
+
+    [Header("Bala de plata")]
+    public Projectile bulletPrefab;
+    public int bulletDamage = 1;
+
+    [Header("Estaca de madera")]
+    public Projectile stakePrefab;
+    public int stakeDamage = 1;
+
+    [Header("Agua bendita")]
+    public Projectile holyWaterPrefab;
+    public int holyWaterDamage = 1;
 
     private PlayerMovement movement;
     private Vector2 attackDirection = Vector2.down;
@@ -121,13 +137,13 @@ public class PlayerCombat : MonoBehaviour
 
             if (angle <= daggerAngle / 2f)
             {
-                enemy.TakeDamage(daggerDamage);
+                enemy.TakeDamage(daggerDamage, WeaponType.Dagger);
             }
         }
         nextActionTime = Time.time + actionCooldown;
-        if(AudioManager.Instance != null && music != null)
+        if(AudioManager.Instance != null && audioDagger != null)
         {
-            AudioManager.Instance.PlaySFX(music);
+            AudioManager.Instance.PlaySFX(audioDagger);
         }
     }
 
@@ -136,6 +152,17 @@ public class PlayerCombat : MonoBehaviour
         woodenStakes--;
         nextActionTime = Time.time + actionCooldown;
         UpdateWeaponsUI();
+
+        if (stakePrefab != null)
+        {
+            Projectile stake = Instantiate(stakePrefab, transform.position, Quaternion.identity);
+            stake.Launch(attackDirection, stakeDamage);
+        }
+
+        if (AudioManager.Instance != null && audioCrossbow != null)
+        {
+            AudioManager.Instance.PlaySFX(audioCrossbow);
+        }
     }
 
     private void UseSilverBullet()
@@ -143,6 +170,17 @@ public class PlayerCombat : MonoBehaviour
         silverBullets--;
         nextActionTime = Time.time + actionCooldown;
         UpdateWeaponsUI();
+
+        if (bulletPrefab != null)
+        {
+            Projectile bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            bullet.Launch(attackDirection, bulletDamage);
+        }
+
+        if (AudioManager.Instance != null && audioStakes != null)
+        {
+            AudioManager.Instance.PlaySFX(audioStakes);
+        }
     }
 
     private void UseHolyWater()
@@ -150,6 +188,17 @@ public class PlayerCombat : MonoBehaviour
         holyWaterFlasks--;
         nextActionTime = Time.time + actionCooldown;
         UpdateWeaponsUI();
+
+        if (holyWaterPrefab != null)
+        {
+            Projectile flask = Instantiate(holyWaterPrefab, transform.position, Quaternion.identity);
+            flask.Launch(attackDirection, holyWaterDamage);
+        }
+
+        if (AudioManager.Instance != null && audioWater != null)
+        {
+            AudioManager.Instance.PlaySFX(audioWater);
+        }
     }
     private void UpdateWeaponsUI()
     {
