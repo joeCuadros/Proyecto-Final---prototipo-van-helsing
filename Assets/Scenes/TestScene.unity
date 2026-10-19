@@ -1956,17 +1956,24 @@ MonoBehaviour:
   audioDagger: {fileID: 8300000, guid: c0909b6d6cd3f364fbe09c4c7fb746c7, type: 3}
   audioStakes: {fileID: 8300000, guid: 912b07d4969217b4693c76759eb86e7a, type: 3}
   audioCrossbow: {fileID: 8300000, guid: 8dc1e67af822d2948b987d6904051acd, type: 3}
+  audioWater: {fileID: 8300000, guid: 0f3377911c655c541a26d5dfc6a6bfbf, type: 3}
   actionCooldown: 1
   hasDagger: 1
-  woodenStakes: 0
-  silverBullets: 0
-  holyWaterFlasks: 0
+  woodenStakes: 5
+  silverBullets: 5
+  holyWaterFlasks: 5
   daggerRange: 1
   daggerAngle: 90
   daggerDamage: 1
   enemyLayer:
     serializedVersion: 2
     m_Bits: 256
+  bulletPrefab: {fileID: 8753829515700380607, guid: 855d2e4892f27994c899c68434ba8ad8, type: 3}
+  bulletDamage: 1
+  stakePrefab: {fileID: 8753829515700380607, guid: 855d2e4892f27994c899c68434ba8ad8, type: 3}
+  stakeDamage: 1
+  holyWaterPrefab: {fileID: 8753829515700380607, guid: 855d2e4892f27994c899c68434ba8ad8, type: 3}
+  holyWaterDamage: 1
 --- !u!114 &733897141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32556,7 +32563,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &2141230764
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32740,7 +32747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyWerewolf
   maxHealth: 3
-  currentState: 5
+  currentState: 1
   attackDamage: 1
   attackRange: 1
   preAttackDuration: 1

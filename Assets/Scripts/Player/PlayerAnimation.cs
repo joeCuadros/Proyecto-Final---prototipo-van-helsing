@@ -94,11 +94,11 @@ public class PlayerAnimation : MonoBehaviour
                 break;
 
             case WeaponType.SilverBullet:
-                animator.Play("Daga");
+                animator.Play("Shoot");
                 break;
 
             case WeaponType.WoodenStake:
-                animator.Play("Daga");
+                animator.Play("Shoot");
                 break;
 
             default:
