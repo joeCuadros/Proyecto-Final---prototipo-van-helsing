@@ -57,6 +57,9 @@ public abstract class EnemyBase : EntityBase
     public bool changeTarget = true;
     protected EntityBase target; // no publico
 
+    [Header("Investigar")]
+    public Vector2 investigatePoint;
+
     // GENERALES
     protected Rigidbody2D rb;
     private Collider2D col;
@@ -217,7 +220,23 @@ public abstract class EnemyBase : EntityBase
         currentState = EnemyState.Seek; 
     }
     protected virtual void UpdateStun() { /* AGREGAR O SOBRE ESCRIBIR */ }
-    protected virtual void UpdateInvestigate() { /* AGREGAR O SOBRE ESCRIBIR */ }
+    protected virtual void UpdateInvestigate() {
+        // Si hay un objetivo (Investigate -> Seek)
+        if (DetectTarget())
+        {
+            currentState = EnemyState.Seek;
+            return;
+        }
+        // Si llego al punto (Investigate -> Patrol)
+        if (Vector2.Distance(transform.position, investigatePoint) <= waypointDistance)
+        {
+            currentState = EnemyState.Patrol;
+            return;
+        }
+        Vector2 direction = (investigatePoint - (Vector2)transform.position).normalized;
+        Vector2 desiredVelocity = direction * maxSpeed;
+        Move(desiredVelocity);
+    }
     // metodos de universales
     public virtual void AttackTarget(EntityBase target)
     {
@@ -601,6 +620,21 @@ public abstract class EnemyBase : EntityBase
             Gizmos.DrawWireSphere(
                 transform.position,
                 0.4f
+            );
+        }
+        // investigate
+        if (currentState == EnemyState.Investigate)
+        {
+            Gizmos.color = Color.yellow;
+
+            Gizmos.DrawLine(
+                transform.position,
+                investigatePoint
+            );
+
+            Gizmos.DrawWireSphere(
+                investigatePoint,
+                waypointDistance
             );
         }
     }
