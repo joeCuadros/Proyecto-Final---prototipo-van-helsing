@@ -50,13 +50,8 @@ public class PlayerAnimation : MonoBehaviour
             return; // Solo cambiar estados de movimiento
 
         
-        if (dir.sqrMagnitude <= 0.01f) {
-            if (!state.IsName("Up")) animator.Play("Up");
-            return;
-        }
-
         // Ariba o abajo
-        if (Mathf.Abs(dir.x) > Mathf.Abs(dir.y))
+        if (dir.x != 0)
         {
             if (!state.IsName("Beside")) animator.Play("Beside");
 
@@ -64,6 +59,7 @@ public class PlayerAnimation : MonoBehaviour
                 spriteRenderer.flipX = dir.x < 0;
             return;
         }
+
 
         // Segun direccion
         if (dir.y > 0)
