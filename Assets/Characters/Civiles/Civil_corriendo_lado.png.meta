@@ -1,0 +1,769 @@
+fileFormatVersion: 2
+guid: 3bd889903e0a2b0409fed21f7cf93ecf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3606446259058692185
+    second: Civil_corriendo_lado_0
+  - first:
+      213: -392367007240190432
+    second: Civil_corriendo_lado_1
+  - first:
+      213: -3363798145752586193
+    second: Civil_corriendo_lado_2
+  - first:
+      213: -4155964279063407933
+    second: Civil_corriendo_lado_3
+  - first:
+      213: 155302471895212243
+    second: Civil_corriendo_lado_4
+  - first:
+      213: -2382338757103424100
+    second: Civil_corriendo_lado_5
+  - first:
+      213: 1310940090685382009
+    second: Civil_corriendo_lado_6
+  - first:
+      213: 7398357647376195358
+    second: Civil_corriendo_lado_7
+  - first:
+      213: 1455412799637610443
+    second: Civil_corriendo_lado_8
+  - first:
+      213: -2049967440000799058
+    second: Civil_corriendo_lado_9
+  - first:
+      213: -4307485240885579078
+    second: Civil_corriendo_lado_10
+  - first:
+      213: -1028883382492086988
+    second: Civil_corriendo_lado_11
+  - first:
+      213: 2806238586656241851
+    second: Civil_corriendo_lado_12
+  - first:
+      213: -4186695637280899607
+    second: Civil_corriendo_lado_13
+  - first:
+      213: 1013727534353747496
+    second: Civil_corriendo_lado_14
+  - first:
+      213: -9029896739689117513
+    second: Civil_corriendo_lado_15
+  - first:
+      213: 3299610832061387020
+    second: Civil_corriendo_lado_16
+  - first:
+      213: -332917322110072807
+    second: Civil_corriendo_lado_17
+  - first:
+      213: 4823119053440945234
+    second: Civil_corriendo_lado_18
+  - first:
+      213: 1812293954387140659
+    second: Civil_corriendo_lado_19
+  - first:
+      213: -751509791157781773
+    second: Civil_corriendo_lado_20
+  - first:
+      213: -4399446356567046647
+    second: Civil_corriendo_lado_21
+  - first:
+      213: -2234303850272916657
+    second: Civil_corriendo_lado_22
+  - first:
+      213: 5133209270931924689
+    second: Civil_corriendo_lado_23
+  - first:
+      213: 7022055693842981119
+    second: Civil_corriendo_lado_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Civil_corriendo_lado_0
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 1072
+        width: 88
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7af25433c3453fdc0800000000000000
+      internalID: -3606446259058692185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_lado_1
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 1071
+        width: 89
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0268dd729480e8af0800000000000000
+      internalID: -392367007240190432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_lado_2
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1081
+        width: 97
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f28ac4a98636151d0800000000000000
+      internalID: -3363798145752586193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_lado_3
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 1078
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c29637e18c0356c0800000000000000
+      internalID: -4155964279063407933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_lado_4
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 1067
+        width: 88
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d0ed0e76ceb72200800000000000000
+      internalID: 155302471895212243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_lado_5
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 808
+        width: 91
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9d6438c58b30fed0800000000000000
+      internalID: -2382338757103424100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_lado_6
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 830
+        width: 102
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97dde1b1115613210800000000000000
+      internalID: 1310940090685382009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_lado_7
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 818
+        width: 90
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1f1725051f3ca660800000000000000
+      internalID: 7398357647376195358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_lado_8
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 816
+        width: 88
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcfd4fbea3aa23410800000000000000
+      internalID: 1455412799637610443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_lado_9
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 827
+        width: 107
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaea2a9797d0d83e0800000000000000
+      internalID: -2049967440000799058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_lado_10
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 563
+        width: 92
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab2f6c5defcb834c0800000000000000
+      internalID: -4307485240885579078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_lado_11
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 554
+        width: 88
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43db14fc30ca8b1f0800000000000000
+      internalID: -1028883382492086988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_lado_12
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 563
+        width: 99
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb8b3a06023c1f620800000000000000
+      internalID: 2806238586656241851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_lado_13
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 572
+        width: 102
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9edb13dff7ed5e5c0800000000000000
+      internalID: -4186695637280899607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_lado_14
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 561
+        width: 89
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82e003052db711e00800000000000000
+      internalID: 1013727534353747496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_lado_15
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 302
+        width: 89
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b84f58f1cc5fa280800000000000000
+      internalID: -9029896739689117513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_lado_16
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 314
+        width: 106
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c01dc06d1929acd20800000000000000
+      internalID: 3299610832061387020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_lado_17
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 304
+        width: 90
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9180e0c957d316bf0800000000000000
+      internalID: -332917322110072807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_lado_18
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 297
+        width: 88
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25c04c1a9392fe240800000000000000
+      internalID: 4823119053440945234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_lado_19
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 313
+        width: 102
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33065d3efbf862910800000000000000
+      internalID: 1812293954387140659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_lado_20
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 58
+        width: 101
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3faffcc93d91295f0800000000000000
+      internalID: -751509791157781773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_lado_21
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 48
+        width: 89
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9064f6419d602f2c0800000000000000
+      internalID: -4399446356567046647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_lado_22
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 47
+        width: 88
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4bf13c6c782ef0e0800000000000000
+      internalID: -2234303850272916657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_lado_23
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 57
+        width: 101
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d6a3af82a2dc3740800000000000000
+      internalID: 5133209270931924689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_lado_24
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 44
+        width: 89
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff02588f27a537160800000000000000
+      internalID: 7022055693842981119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Civil_corriendo_lado_0: -3606446259058692185
+      Civil_corriendo_lado_1: -392367007240190432
+      Civil_corriendo_lado_10: -4307485240885579078
+      Civil_corriendo_lado_11: -1028883382492086988
+      Civil_corriendo_lado_12: 2806238586656241851
+      Civil_corriendo_lado_13: -4186695637280899607
+      Civil_corriendo_lado_14: 1013727534353747496
+      Civil_corriendo_lado_15: -9029896739689117513
+      Civil_corriendo_lado_16: 3299610832061387020
+      Civil_corriendo_lado_17: -332917322110072807
+      Civil_corriendo_lado_18: 4823119053440945234
+      Civil_corriendo_lado_19: 1812293954387140659
+      Civil_corriendo_lado_2: -3363798145752586193
+      Civil_corriendo_lado_20: -751509791157781773
+      Civil_corriendo_lado_21: -4399446356567046647
+      Civil_corriendo_lado_22: -2234303850272916657
+      Civil_corriendo_lado_23: 5133209270931924689
+      Civil_corriendo_lado_24: 7022055693842981119
+      Civil_corriendo_lado_3: -4155964279063407933
+      Civil_corriendo_lado_4: 155302471895212243
+      Civil_corriendo_lado_5: -2382338757103424100
+      Civil_corriendo_lado_6: 1310940090685382009
+      Civil_corriendo_lado_7: 7398357647376195358
+      Civil_corriendo_lado_8: 1455412799637610443
+      Civil_corriendo_lado_9: -2049967440000799058
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

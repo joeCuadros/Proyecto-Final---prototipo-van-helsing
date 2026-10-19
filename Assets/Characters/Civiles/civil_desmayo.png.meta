@@ -1,0 +1,769 @@
+fileFormatVersion: 2
+guid: cff4447c71d927647af13ce1820be2a6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8547157223270168066
+    second: civil_desmayo_0
+  - first:
+      213: -3122696950792358857
+    second: civil_desmayo_1
+  - first:
+      213: -5256750489628393358
+    second: civil_desmayo_2
+  - first:
+      213: 7111286108406549866
+    second: civil_desmayo_3
+  - first:
+      213: -322765496106647195
+    second: civil_desmayo_4
+  - first:
+      213: 8217225960488295774
+    second: civil_desmayo_5
+  - first:
+      213: -6508284556726794887
+    second: civil_desmayo_6
+  - first:
+      213: 1878507647623263701
+    second: civil_desmayo_7
+  - first:
+      213: -4225442609277566368
+    second: civil_desmayo_8
+  - first:
+      213: -7765954536811657262
+    second: civil_desmayo_9
+  - first:
+      213: 8086412866340902685
+    second: civil_desmayo_10
+  - first:
+      213: -1534892115544561400
+    second: civil_desmayo_11
+  - first:
+      213: -8116744330627409663
+    second: civil_desmayo_12
+  - first:
+      213: 7530000561643663385
+    second: civil_desmayo_13
+  - first:
+      213: -2810225622770769749
+    second: civil_desmayo_14
+  - first:
+      213: -1782541285010207373
+    second: civil_desmayo_15
+  - first:
+      213: -888666595459043151
+    second: civil_desmayo_16
+  - first:
+      213: 746971634376425346
+    second: civil_desmayo_17
+  - first:
+      213: -202542514819189855
+    second: civil_desmayo_18
+  - first:
+      213: -7792480376530638970
+    second: civil_desmayo_19
+  - first:
+      213: -6708411494902278097
+    second: civil_desmayo_20
+  - first:
+      213: -8448075832525072493
+    second: civil_desmayo_21
+  - first:
+      213: 3825017379002691162
+    second: civil_desmayo_22
+  - first:
+      213: 2546027310571296212
+    second: civil_desmayo_23
+  - first:
+      213: -9025261729997064287
+    second: civil_desmayo_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: civil_desmayo_0
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1093
+        width: 63
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef9419b4ac5626980800000000000000
+      internalID: -8547157223270168066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_desmayo_1
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1093
+        width: 63
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73473d20ba3f9a4d0800000000000000
+      internalID: -3122696950792358857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_desmayo_2
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 1093
+        width: 64
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 270c6d8f7454c07b0800000000000000
+      internalID: -5256750489628393358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_desmayo_3
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 1093
+        width: 64
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6d0eb3d90d50b260800000000000000
+      internalID: 7111286108406549866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_desmayo_4
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 1093
+        width: 65
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5618fcacd7e458bf0800000000000000
+      internalID: -322765496106647195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_desmayo_5
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 837
+        width: 67
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5dd50e6973790270800000000000000
+      internalID: 8217225960488295774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_desmayo_6
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 837
+        width: 67
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97583239dadeda5a0800000000000000
+      internalID: -6508284556726794887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_desmayo_7
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 837
+        width: 69
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d57074b0ccc11a10800000000000000
+      internalID: 1878507647623263701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_desmayo_8
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 837
+        width: 70
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 062063f85563c55c0800000000000000
+      internalID: -4225442609277566368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_desmayo_9
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 836
+        width: 72
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d7028b9e79c93490800000000000000
+      internalID: -7765954536811657262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_desmayo_10
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 580
+        width: 75
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d17d56588a5b83070800000000000000
+      internalID: 8086412866340902685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_desmayo_11
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 580
+        width: 76
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8092b6cc0c7f2bae0800000000000000
+      internalID: -1534892115544561400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_desmayo_12
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 580
+        width: 83
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 109994029088b5f80800000000000000
+      internalID: -8116744330627409663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_desmayo_13
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 581
+        width: 93
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 910334b7d9fef7860800000000000000
+      internalID: 7530000561643663385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_desmayo_14
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 582
+        width: 111
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba02c007fa21009d0800000000000000
+      internalID: -2810225622770769749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_desmayo_15
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 328
+        width: 130
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37d8f7545242347e0800000000000000
+      internalID: -1782541285010207373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_desmayo_16
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 333
+        width: 130
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b078e59072daa3f0800000000000000
+      internalID: -888666595459043151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_desmayo_17
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 332
+        width: 131
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28fbc4c6eb6cd5a00800000000000000
+      internalID: 746971634376425346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_desmayo_18
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 331
+        width: 131
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a3b948e7ac603df0800000000000000
+      internalID: -202542514819189855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_desmayo_19
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 331
+        width: 131
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68760b5426c8bd390800000000000000
+      internalID: -7792480376530638970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_desmayo_20
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 75
+        width: 131
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f28d33fb94fe6e2a0800000000000000
+      internalID: -6708411494902278097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_desmayo_21
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 76
+        width: 131
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 397d7c64ac762ca80800000000000000
+      internalID: -8448075832525072493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_desmayo_22
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 75
+        width: 131
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5ea6275a01351530800000000000000
+      internalID: 3825017379002691162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_desmayo_23
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 76
+        width: 131
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d59b0b795e455320800000000000000
+      internalID: 2546027310571296212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_desmayo_24
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 76
+        width: 131
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a7f8924644dfb280800000000000000
+      internalID: -9025261729997064287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      civil_desmayo_0: -8547157223270168066
+      civil_desmayo_1: -3122696950792358857
+      civil_desmayo_10: 8086412866340902685
+      civil_desmayo_11: -1534892115544561400
+      civil_desmayo_12: -8116744330627409663
+      civil_desmayo_13: 7530000561643663385
+      civil_desmayo_14: -2810225622770769749
+      civil_desmayo_15: -1782541285010207373
+      civil_desmayo_16: -888666595459043151
+      civil_desmayo_17: 746971634376425346
+      civil_desmayo_18: -202542514819189855
+      civil_desmayo_19: -7792480376530638970
+      civil_desmayo_2: -5256750489628393358
+      civil_desmayo_20: -6708411494902278097
+      civil_desmayo_21: -8448075832525072493
+      civil_desmayo_22: 3825017379002691162
+      civil_desmayo_23: 2546027310571296212
+      civil_desmayo_24: -9025261729997064287
+      civil_desmayo_3: 7111286108406549866
+      civil_desmayo_4: -322765496106647195
+      civil_desmayo_5: 8217225960488295774
+      civil_desmayo_6: -6508284556726794887
+      civil_desmayo_7: 1878507647623263701
+      civil_desmayo_8: -4225442609277566368
+      civil_desmayo_9: -7765954536811657262
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

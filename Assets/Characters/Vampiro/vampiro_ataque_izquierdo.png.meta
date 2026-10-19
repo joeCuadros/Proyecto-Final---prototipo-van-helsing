@@ -1,0 +1,837 @@
+fileFormatVersion: 2
+guid: b59d3d439cbad7f47ba861a619c0e94a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1415035809481707408
+    second: vampiro_ataque_izquierdo_0
+  - first:
+      213: 8568846820613709430
+    second: vampiro_ataque_izquierdo_1
+  - first:
+      213: 8533418460149531340
+    second: vampiro_ataque_izquierdo_2
+  - first:
+      213: -5671938510301795451
+    second: vampiro_ataque_izquierdo_3
+  - first:
+      213: -8197090902247086548
+    second: vampiro_ataque_izquierdo_4
+  - first:
+      213: 7544539778093887011
+    second: vampiro_ataque_izquierdo_5
+  - first:
+      213: 1459890246805535918
+    second: vampiro_ataque_izquierdo_6
+  - first:
+      213: -5493006173291507289
+    second: vampiro_ataque_izquierdo_7
+  - first:
+      213: 256547893950481862
+    second: vampiro_ataque_izquierdo_8
+  - first:
+      213: -4692844825931139831
+    second: vampiro_ataque_izquierdo_9
+  - first:
+      213: 7078246418104780740
+    second: vampiro_ataque_izquierdo_10
+  - first:
+      213: -188334977754642213
+    second: vampiro_ataque_izquierdo_11
+  - first:
+      213: 3712754377266228356
+    second: vampiro_ataque_izquierdo_12
+  - first:
+      213: -6481985162235183506
+    second: vampiro_ataque_izquierdo_13
+  - first:
+      213: -3486087970632682233
+    second: vampiro_ataque_izquierdo_14
+  - first:
+      213: -2811088833951358956
+    second: vampiro_ataque_izquierdo_15
+  - first:
+      213: -5621291588413771710
+    second: vampiro_ataque_izquierdo_16
+  - first:
+      213: 1446773821992070934
+    second: vampiro_ataque_izquierdo_17
+  - first:
+      213: -5798640999617146978
+    second: vampiro_ataque_izquierdo_18
+  - first:
+      213: 2733134411267216306
+    second: vampiro_ataque_izquierdo_19
+  - first:
+      213: 5839786056216124497
+    second: vampiro_ataque_izquierdo_20
+  - first:
+      213: 378890354978559420
+    second: vampiro_ataque_izquierdo_21
+  - first:
+      213: -2019737066154035133
+    second: vampiro_ataque_izquierdo_22
+  - first:
+      213: -2598668857921945217
+    second: vampiro_ataque_izquierdo_23
+  - first:
+      213: -4888930252074507917
+    second: vampiro_ataque_izquierdo_24
+  - first:
+      213: -8999500359933307832
+    second: vampiro_ataque_izquierdo_25
+  - first:
+      213: -4868735441985808408
+    second: vampiro_ataque_izquierdo_26
+  - first:
+      213: 4501988079026321117
+    second: vampiro_ataque_izquierdo_27
+  - first:
+      213: 2717376262107967199
+    second: vampiro_ataque_izquierdo_28
+  - first:
+      213: 5361990793136262461
+    second: vampiro_ataque_izquierdo_29
+  - first:
+      213: 5400652907402808911
+    second: vampiro_ataque_izquierdo_30
+  - first:
+      213: -2101587790111633238
+    second: vampiro_ataque_izquierdo_31
+  - first:
+      213: -7908899104406093852
+    second: vampiro_ataque_izquierdo_32
+  - first:
+      213: -7778054841624135669
+    second: vampiro_ataque_izquierdo_33
+  - first:
+      213: 2993895226797158225
+    second: vampiro_ataque_izquierdo_34
+  - first:
+      213: -5940620896944482780
+    second: vampiro_ataque_izquierdo_35
+  - first:
+      213: -6980075966480025304
+    second: vampiro_ataque_izquierdo_36
+  - first:
+      213: -130127911179826442
+    second: vampiro_ataque_izquierdo_37
+  - first:
+      213: -4695777286750074378
+    second: vampiro_ataque_izquierdo_38
+  - first:
+      213: -664992419273650562
+    second: vampiro_ataque_izquierdo_39
+  - first:
+      213: 1336573495726478776
+    second: vampiro_ataque_izquierdo_40
+  - first:
+      213: 1868556389431294996
+    second: vampiro_ataque_izquierdo_41
+  - first:
+      213: 5640414264020349082
+    second: vampiro_ataque_izquierdo_42
+  - first:
+      213: 8867149267610183848
+    second: vampiro_ataque_izquierdo_43
+  - first:
+      213: -1947838789923568695
+    second: vampiro_ataque_izquierdo_44
+  - first:
+      213: 7994756125763462076
+    second: vampiro_ataque_izquierdo_45
+  - first:
+      213: -1214857071256009846
+    second: vampiro_ataque_izquierdo_46
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: vampiro_ataque_izquierdo_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09f4d90529733a310800000000000000
+      internalID: 1415035809481707408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampiro_ataque_izquierdo_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67e5a6d98c8aae670800000000000000
+      internalID: 8568846820613709430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampiro_ataque_izquierdo_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc249f4a0eacc6670800000000000000
+      internalID: 8533418460149531340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampiro_ataque_izquierdo_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58b6a91e9f93941b0800000000000000
+      internalID: -5671938510301795451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampiro_ataque_izquierdo_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c26e9f321451e3e80800000000000000
+      internalID: -8197090902247086548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampiro_ataque_izquierdo_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32e271b94f693b860800000000000000
+      internalID: 7544539778093887011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampiro_ataque_izquierdo_6
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eacb6e3d172924410800000000000000
+      internalID: 1459890246805535918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampiro_ataque_izquierdo_7
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a19ee31dfbe4c3b0800000000000000
+      internalID: -5493006173291507289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampiro_ataque_izquierdo_8
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c50bc643f07f8300800000000000000
+      internalID: 256547893950481862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampiro_ataque_izquierdo_9
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 905385c9e7aafdeb0800000000000000
+      internalID: -4692844825931139831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampiro_ataque_izquierdo_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c701d77d9bfa3260800000000000000
+      internalID: 7078246418104780740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampiro_ataque_izquierdo_11
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd84728e556e26df0800000000000000
+      internalID: -188334977754642213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampiro_ataque_izquierdo_12
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48cea336f6a568330800000000000000
+      internalID: 3712754377266228356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampiro_ataque_izquierdo_13
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6e7e9586dc5b06a0800000000000000
+      internalID: -6481985162235183506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampiro_ataque_izquierdo_14
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7053da6f57dee9fc0800000000000000
+      internalID: -3486087970632682233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampiro_ataque_izquierdo_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 410234c69910df8d0800000000000000
+      internalID: -2811088833951358956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampiro_ataque_izquierdo_16
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 240b4bd45192df1b0800000000000000
+      internalID: -5621291588413771710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampiro_ataque_izquierdo_17
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61feb223029f31410800000000000000
+      internalID: 1446773821992070934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampiro_ataque_izquierdo_18
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9fcdcdbbb6178fa0800000000000000
+      internalID: -5798640999617146978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampiro_ataque_izquierdo_19
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b39afa244b0ee520800000000000000
+      internalID: 2733134411267216306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampiro_ataque_izquierdo_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15c9a054a761b0150800000000000000
+      internalID: 5839786056216124497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampiro_ataque_izquierdo_21
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb5915935c6124500800000000000000
+      internalID: 378890354978559420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampiro_ataque_izquierdo_22
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 348f230e6d378f3e0800000000000000
+      internalID: -2019737066154035133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampiro_ataque_izquierdo_23
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7141ba217cafebd0800000000000000
+      internalID: -2598668857921945217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampiro_ataque_izquierdo_24
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3712071a6d7072cb0800000000000000
+      internalID: -4888930252074507917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: eb7ee9465baad734db905ab03be23e2a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":5.0},"gridSpriteSize":{"x":256.0,"y":256.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      vampiro_ataque_izquierdo_0: 1415035809481707408
+      vampiro_ataque_izquierdo_1: 8568846820613709430
+      vampiro_ataque_izquierdo_10: 7078246418104780740
+      vampiro_ataque_izquierdo_11: -188334977754642213
+      vampiro_ataque_izquierdo_12: 3712754377266228356
+      vampiro_ataque_izquierdo_13: -6481985162235183506
+      vampiro_ataque_izquierdo_14: -3486087970632682233
+      vampiro_ataque_izquierdo_15: -2811088833951358956
+      vampiro_ataque_izquierdo_16: -5621291588413771710
+      vampiro_ataque_izquierdo_17: 1446773821992070934
+      vampiro_ataque_izquierdo_18: -5798640999617146978
+      vampiro_ataque_izquierdo_19: 2733134411267216306
+      vampiro_ataque_izquierdo_2: 8533418460149531340
+      vampiro_ataque_izquierdo_20: 5839786056216124497
+      vampiro_ataque_izquierdo_21: 378890354978559420
+      vampiro_ataque_izquierdo_22: -2019737066154035133
+      vampiro_ataque_izquierdo_23: -2598668857921945217
+      vampiro_ataque_izquierdo_24: -4888930252074507917
+      vampiro_ataque_izquierdo_3: -5671938510301795451
+      vampiro_ataque_izquierdo_4: -8197090902247086548
+      vampiro_ataque_izquierdo_5: 7544539778093887011
+      vampiro_ataque_izquierdo_6: 1459890246805535918
+      vampiro_ataque_izquierdo_7: -5493006173291507289
+      vampiro_ataque_izquierdo_8: 256547893950481862
+      vampiro_ataque_izquierdo_9: -4692844825931139831
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

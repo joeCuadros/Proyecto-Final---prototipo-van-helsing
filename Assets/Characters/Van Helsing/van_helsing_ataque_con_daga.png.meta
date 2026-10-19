@@ -1,0 +1,535 @@
+fileFormatVersion: 2
+guid: c4aec0149ecaa294a8b284620572aa2f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1154857804684282416
+    second: van_helsing_ataque_con_daga_0
+  - first:
+      213: -5226182461600579613
+    second: van_helsing_ataque_con_daga_1
+  - first:
+      213: -6197737631647311121
+    second: van_helsing_ataque_con_daga_2
+  - first:
+      213: -7772167529752451223
+    second: van_helsing_ataque_con_daga_3
+  - first:
+      213: -2930545305776403231
+    second: van_helsing_ataque_con_daga_4
+  - first:
+      213: -8575019862149324127
+    second: van_helsing_ataque_con_daga_5
+  - first:
+      213: -9218729592860185794
+    second: van_helsing_ataque_con_daga_6
+  - first:
+      213: -6798794398313201461
+    second: van_helsing_ataque_con_daga_7
+  - first:
+      213: 4749894480546545525
+    second: van_helsing_ataque_con_daga_8
+  - first:
+      213: -5132645330978671194
+    second: van_helsing_ataque_con_daga_9
+  - first:
+      213: 2034599001043314662
+    second: van_helsing_ataque_con_daga_10
+  - first:
+      213: 561502499572410773
+    second: van_helsing_ataque_con_daga_11
+  - first:
+      213: -7927424970201499514
+    second: van_helsing_ataque_con_daga_12
+  - first:
+      213: 1272415723990812335
+    second: van_helsing_ataque_con_daga_13
+  - first:
+      213: -7785152572745310082
+    second: van_helsing_ataque_con_daga_14
+  - first:
+      213: 1298079589784975128
+    second: van_helsing_ataque_con_daga_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: van_helsing_ataque_con_daga_0
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 808
+        width: 160
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d5b4b102fe19ffe0800000000000000
+      internalID: -1154857804684282416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_ataque_con_daga_1
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 808
+        width: 159
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3efbbec9dbed877b0800000000000000
+      internalID: -5226182461600579613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_ataque_con_daga_2
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 807
+        width: 159
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fea579606763df9a0800000000000000
+      internalID: -6197737631647311121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_ataque_con_daga_3
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 808
+        width: 159
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 967a7467fc6b32490800000000000000
+      internalID: -7772167529752451223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_ataque_con_daga_4
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 551
+        width: 182
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ec4203329c9457d0800000000000000
+      internalID: -2930545305776403231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_ataque_con_daga_5
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 551
+        width: 182
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a2aba62ed86ff880800000000000000
+      internalID: -8575019862149324127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_ataque_con_daga_6
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 551
+        width: 172
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3bef29374e701080800000000000000
+      internalID: -9218729592860185794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_ataque_con_daga_7
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 552
+        width: 172
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc040ab2484d5a1a0800000000000000
+      internalID: -6798794398313201461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_ataque_con_daga_8
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 295
+        width: 172
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57fb0913dd30be140800000000000000
+      internalID: 4749894480546545525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_ataque_con_daga_9
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 295
+        width: 172
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a5f2f0f34e25c8b0800000000000000
+      internalID: -5132645330978671194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_ataque_con_daga_10
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 295
+        width: 172
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e72d8df2095c3c10800000000000000
+      internalID: 2034599001043314662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_ataque_con_daga_11
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 295
+        width: 172
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 599e1836c8bdac700800000000000000
+      internalID: 561502499572410773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_ataque_con_daga_12
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 39
+        width: 172
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 688f39badf02cf190800000000000000
+      internalID: -7927424970201499514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_ataque_con_daga_13
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 39
+        width: 172
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa608130c5788a110800000000000000
+      internalID: 1272415723990812335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_ataque_con_daga_14
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 39
+        width: 149
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e702c4b8bf495f390800000000000000
+      internalID: -7785152572745310082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_ataque_con_daga_15
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 40
+        width: 160
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81771576284b30210800000000000000
+      internalID: 1298079589784975128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      van_helsing_ataque_con_daga_0: -1154857804684282416
+      van_helsing_ataque_con_daga_1: -5226182461600579613
+      van_helsing_ataque_con_daga_10: 2034599001043314662
+      van_helsing_ataque_con_daga_11: 561502499572410773
+      van_helsing_ataque_con_daga_12: -7927424970201499514
+      van_helsing_ataque_con_daga_13: 1272415723990812335
+      van_helsing_ataque_con_daga_14: -7785152572745310082
+      van_helsing_ataque_con_daga_15: 1298079589784975128
+      van_helsing_ataque_con_daga_2: -6197737631647311121
+      van_helsing_ataque_con_daga_3: -7772167529752451223
+      van_helsing_ataque_con_daga_4: -2930545305776403231
+      van_helsing_ataque_con_daga_5: -8575019862149324127
+      van_helsing_ataque_con_daga_6: -9218729592860185794
+      van_helsing_ataque_con_daga_7: -6798794398313201461
+      van_helsing_ataque_con_daga_8: 4749894480546545525
+      van_helsing_ataque_con_daga_9: -5132645330978671194
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

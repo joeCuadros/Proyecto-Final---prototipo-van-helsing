@@ -1,0 +1,769 @@
+fileFormatVersion: 2
+guid: 402de95e6ede84e4d8c795ffc5f45d35
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7637905449940535118
+    second: vh_siendo_herido_derecha_0
+  - first:
+      213: 7369097930495717935
+    second: vh_siendo_herido_derecha_1
+  - first:
+      213: -7545660156389522756
+    second: vh_siendo_herido_derecha_2
+  - first:
+      213: 390413038310302260
+    second: vh_siendo_herido_derecha_3
+  - first:
+      213: -2755208165525499195
+    second: vh_siendo_herido_derecha_4
+  - first:
+      213: 3699041299585850661
+    second: vh_siendo_herido_derecha_5
+  - first:
+      213: -9096752953439909230
+    second: vh_siendo_herido_derecha_6
+  - first:
+      213: -6244163195512776802
+    second: vh_siendo_herido_derecha_7
+  - first:
+      213: 4348355142030923660
+    second: vh_siendo_herido_derecha_8
+  - first:
+      213: 4059189510017039526
+    second: vh_siendo_herido_derecha_9
+  - first:
+      213: -2003955291441080811
+    second: vh_siendo_herido_derecha_10
+  - first:
+      213: -8864062629340159085
+    second: vh_siendo_herido_derecha_11
+  - first:
+      213: -4925517603872998745
+    second: vh_siendo_herido_derecha_12
+  - first:
+      213: 6451776854438456636
+    second: vh_siendo_herido_derecha_13
+  - first:
+      213: 2911766345388069399
+    second: vh_siendo_herido_derecha_14
+  - first:
+      213: -8889770909218236783
+    second: vh_siendo_herido_derecha_15
+  - first:
+      213: 4674737674136497751
+    second: vh_siendo_herido_derecha_16
+  - first:
+      213: -6363006242973505645
+    second: vh_siendo_herido_derecha_17
+  - first:
+      213: -6143086899262071984
+    second: vh_siendo_herido_derecha_18
+  - first:
+      213: -2345983995074910930
+    second: vh_siendo_herido_derecha_19
+  - first:
+      213: -5472740732226587749
+    second: vh_siendo_herido_derecha_20
+  - first:
+      213: -4066228035829067079
+    second: vh_siendo_herido_derecha_21
+  - first:
+      213: -7214770041689417760
+    second: vh_siendo_herido_derecha_22
+  - first:
+      213: -1289716898946270687
+    second: vh_siendo_herido_derecha_23
+  - first:
+      213: -104770533176065289
+    second: vh_siendo_herido_derecha_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: vh_siendo_herido_derecha_0
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1083
+        width: 103
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e47c9b31a8a4ff960800000000000000
+      internalID: 7637905449940535118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vh_siendo_herido_derecha_1
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 1083
+        width: 103
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f22734e468b444660800000000000000
+      internalID: 7369097930495717935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vh_siendo_herido_derecha_2
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 1083
+        width: 103
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb2859ef01e684790800000000000000
+      internalID: -7545660156389522756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vh_siendo_herido_derecha_3
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 1083
+        width: 103
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 432aa2007960b6500800000000000000
+      internalID: 390413038310302260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vh_siendo_herido_derecha_4
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 1083
+        width: 103
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c2d89b65c883c9d0800000000000000
+      internalID: -2755208165525499195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vh_siendo_herido_derecha_5
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 827
+        width: 102
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52d505fa672a55330800000000000000
+      internalID: 3699041299585850661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vh_siendo_herido_derecha_6
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 827
+        width: 102
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29a8ab0b267d1c180800000000000000
+      internalID: -9096752953439909230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vh_siendo_herido_derecha_7
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 827
+        width: 102
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9794eb18a64859a0800000000000000
+      internalID: -6244163195512776802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vh_siendo_herido_derecha_8
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 827
+        width: 102
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c871ffd86f5785c30800000000000000
+      internalID: 4348355142030923660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vh_siendo_herido_derecha_9
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 827
+        width: 102
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6acbe845a53255830800000000000000
+      internalID: 4059189510017039526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vh_siendo_herido_derecha_10
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 571
+        width: 102
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 516d3e3a7458034e0800000000000000
+      internalID: -2003955291441080811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vh_siendo_herido_derecha_11
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 571
+        width: 102
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3936d5f90068cf480800000000000000
+      internalID: -8864062629340159085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vh_siendo_herido_derecha_12
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 571
+        width: 102
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aa7736f5db05abb0800000000000000
+      internalID: -4925517603872998745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vh_siendo_herido_derecha_13
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 571
+        width: 102
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3d24eabdd0598950800000000000000
+      internalID: 6451776854438456636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vh_siendo_herido_derecha_14
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 571
+        width: 102
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7121bcd501ca86820800000000000000
+      internalID: 2911766345388069399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vh_siendo_herido_derecha_15
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 315
+        width: 102
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1961275457031a480800000000000000
+      internalID: -8889770909218236783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vh_siendo_herido_derecha_16
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 315
+        width: 103
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75eaa05952100e040800000000000000
+      internalID: 4674737674136497751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vh_siendo_herido_derecha_17
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 315
+        width: 103
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 397a8ffd88f02b7a0800000000000000
+      internalID: -6363006242973505645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vh_siendo_herido_derecha_18
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 315
+        width: 103
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05bd029330f5fbaa0800000000000000
+      internalID: -6143086899262071984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vh_siendo_herido_derecha_19
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 315
+        width: 103
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e25eecc6cf3617fd0800000000000000
+      internalID: -2345983995074910930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vh_siendo_herido_derecha_20
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 59
+        width: 103
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b93b2d3cc4bec04b0800000000000000
+      internalID: -5472740732226587749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vh_siendo_herido_derecha_21
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 59
+        width: 103
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b29cac252bd197c0800000000000000
+      internalID: -4066228035829067079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vh_siendo_herido_derecha_22
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 59
+        width: 103
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e7d8f06fdcffdb90800000000000000
+      internalID: -7214770041689417760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vh_siendo_herido_derecha_23
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 59
+        width: 103
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12a3d7940510a1ee0800000000000000
+      internalID: -1289716898946270687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vh_siendo_herido_derecha_24
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 59
+        width: 103
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f2cc1351c7cb8ef0800000000000000
+      internalID: -104770533176065289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      vh_siendo_herido_derecha_0: 7637905449940535118
+      vh_siendo_herido_derecha_1: 7369097930495717935
+      vh_siendo_herido_derecha_10: -2003955291441080811
+      vh_siendo_herido_derecha_11: -8864062629340159085
+      vh_siendo_herido_derecha_12: -4925517603872998745
+      vh_siendo_herido_derecha_13: 6451776854438456636
+      vh_siendo_herido_derecha_14: 2911766345388069399
+      vh_siendo_herido_derecha_15: -8889770909218236783
+      vh_siendo_herido_derecha_16: 4674737674136497751
+      vh_siendo_herido_derecha_17: -6363006242973505645
+      vh_siendo_herido_derecha_18: -6143086899262071984
+      vh_siendo_herido_derecha_19: -2345983995074910930
+      vh_siendo_herido_derecha_2: -7545660156389522756
+      vh_siendo_herido_derecha_20: -5472740732226587749
+      vh_siendo_herido_derecha_21: -4066228035829067079
+      vh_siendo_herido_derecha_22: -7214770041689417760
+      vh_siendo_herido_derecha_23: -1289716898946270687
+      vh_siendo_herido_derecha_24: -104770533176065289
+      vh_siendo_herido_derecha_3: 390413038310302260
+      vh_siendo_herido_derecha_4: -2755208165525499195
+      vh_siendo_herido_derecha_5: 3699041299585850661
+      vh_siendo_herido_derecha_6: -9096752953439909230
+      vh_siendo_herido_derecha_7: -6244163195512776802
+      vh_siendo_herido_derecha_8: 4348355142030923660
+      vh_siendo_herido_derecha_9: 4059189510017039526
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

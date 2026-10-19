@@ -1,0 +1,509 @@
+fileFormatVersion: 2
+guid: 343334a5ff677274eb2a89222dbe0177
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6006257011618710870
+    second: Vampire-iso_walk_up-trimmed_0
+  - first:
+      213: -112042359047762190
+    second: Vampire-iso_walk_up-trimmed_1
+  - first:
+      213: 6724926841252854922
+    second: Vampire-iso_walk_up-trimmed_2
+  - first:
+      213: -2395100671739164178
+    second: Vampire-iso_walk_up-trimmed_3
+  - first:
+      213: 5383020402125400475
+    second: Vampire-iso_walk_up-trimmed_4
+  - first:
+      213: 2154896627823503090
+    second: Vampire-iso_walk_up-trimmed_5
+  - first:
+      213: 7427494029204055789
+    second: Vampire-iso_walk_up-trimmed_6
+  - first:
+      213: 4397426048244844837
+    second: Vampire-iso_walk_up-trimmed_7
+  - first:
+      213: 4479731931518364964
+    second: Vampire-iso_walk_up-trimmed_8
+  - first:
+      213: 6001810912221527271
+    second: Vampire-iso_walk_up-trimmed_9
+  - first:
+      213: 6417856148780338710
+    second: Vampire-iso_walk_up-trimmed_10
+  - first:
+      213: 7349423336085444927
+    second: Vampire-iso_walk_up-trimmed_11
+  - first:
+      213: -5843284690556950680
+    second: Vampire-iso_walk_up-trimmed_12
+  - first:
+      213: -4297387725814839442
+    second: Vampire-iso_walk_up-trimmed_13
+  - first:
+      213: -8506191857516001303
+    second: Vampire-iso_walk_up-trimmed_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Vampire-iso_walk_up-trimmed_0
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 811
+        width: 80
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6558b37fde28a5350800000000000000
+      internalID: 6006257011618710870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vampire-iso_walk_up-trimmed_1
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 813
+        width: 80
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fe492d6112f17ef0800000000000000
+      internalID: -112042359047762190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vampire-iso_walk_up-trimmed_2
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 818
+        width: 81
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8cbd59f45db35d50800000000000000
+      internalID: 6724926841252854922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vampire-iso_walk_up-trimmed_3
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 811
+        width: 80
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee900bbf0a4e2ced0800000000000000
+      internalID: -2395100671739164178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vampire-iso_walk_up-trimmed_4
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 563
+        width: 80
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b996d57098454ba40800000000000000
+      internalID: 5383020402125400475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vampire-iso_walk_up-trimmed_5
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 555
+        width: 80
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f66b1dd01bb7ed10800000000000000
+      internalID: 2154896627823503090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vampire-iso_walk_up-trimmed_6
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 559
+        width: 80
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de6ea0e8772c31760800000000000000
+      internalID: 7427494029204055789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vampire-iso_walk_up-trimmed_7
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 557
+        width: 80
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5290fab31bbc60d30800000000000000
+      internalID: 4397426048244844837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vampire-iso_walk_up-trimmed_8
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 299
+        width: 80
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42d602305743b2e30800000000000000
+      internalID: 4479731931518364964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vampire-iso_walk_up-trimmed_9
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 307
+        width: 80
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ecf608c937ba4350800000000000000
+      internalID: 6001810912221527271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vampire-iso_walk_up-trimmed_10
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 299
+        width: 80
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61ecb9ff92ec01950800000000000000
+      internalID: 6417856148780338710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vampire-iso_walk_up-trimmed_11
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 302
+        width: 80
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f39d653d5956ef560800000000000000
+      internalID: 7349423336085444927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vampire-iso_walk_up-trimmed_12
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 45
+        width: 80
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 867efd1788b78eea0800000000000000
+      internalID: -5843284690556950680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vampire-iso_walk_up-trimmed_13
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 45
+        width: 81
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e67cea4c1ac9c54c0800000000000000
+      internalID: -4297387725814839442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vampire-iso_walk_up-trimmed_14
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 51
+        width: 80
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e74075c29fe3f980800000000000000
+      internalID: -8506191857516001303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Vampire-iso_walk_up-trimmed_0: 6006257011618710870
+      Vampire-iso_walk_up-trimmed_1: -112042359047762190
+      Vampire-iso_walk_up-trimmed_10: 6417856148780338710
+      Vampire-iso_walk_up-trimmed_11: 7349423336085444927
+      Vampire-iso_walk_up-trimmed_12: -5843284690556950680
+      Vampire-iso_walk_up-trimmed_13: -4297387725814839442
+      Vampire-iso_walk_up-trimmed_14: -8506191857516001303
+      Vampire-iso_walk_up-trimmed_2: 6724926841252854922
+      Vampire-iso_walk_up-trimmed_3: -2395100671739164178
+      Vampire-iso_walk_up-trimmed_4: 5383020402125400475
+      Vampire-iso_walk_up-trimmed_5: 2154896627823503090
+      Vampire-iso_walk_up-trimmed_6: 7427494029204055789
+      Vampire-iso_walk_up-trimmed_7: 4397426048244844837
+      Vampire-iso_walk_up-trimmed_8: 4479731931518364964
+      Vampire-iso_walk_up-trimmed_9: 6001810912221527271
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
