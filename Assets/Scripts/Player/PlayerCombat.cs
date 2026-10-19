@@ -137,7 +137,7 @@ public class PlayerCombat : MonoBehaviour
 
             if (angle <= daggerAngle / 2f)
             {
-                enemy.TakeDamage(daggerDamage);
+                enemy.TakeDamage(daggerDamage, WeaponType.Dagger);
             }
         }
         nextActionTime = Time.time + actionCooldown;

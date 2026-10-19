@@ -5,6 +5,24 @@ public class EnemyWerewolf : EnemyBase
     private Animator animator;
     private SpriteRenderer spriteRenderer;
 
+    public override void TakeDamage(int amount, WeaponType weapon)
+    {
+        switch (weapon)
+        {
+            case WeaponType.Dagger:
+            case WeaponType.SilverBullet:
+            case WeaponType.WoodenStake:
+                base.TakeDamage(amount);
+                break;
+            case WeaponType.HolyWater: // invulnerable
+                break;
+
+            default:
+                base.TakeDamage(amount);
+                break;
+        }
+    }
+
     protected override void Start()
     {
         enemyType = "Werewolf";

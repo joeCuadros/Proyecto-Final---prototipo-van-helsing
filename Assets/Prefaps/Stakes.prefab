@@ -113,6 +113,7 @@ MonoBehaviour:
   speed: 10
   maxDistance: 8
   damage: 1
+  weapon: 1
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 1024

@@ -7,6 +7,7 @@ public class Projectile : MonoBehaviour
     public float speed = 10f;
     public float maxDistance = 8f;
     public int damage = 1;
+    public WeaponType weapon;
     public LayerMask obstacleLayer;
 
     private Rigidbody2D rb;
@@ -36,7 +37,7 @@ public class Projectile : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             EntityBase enemy = other.GetComponentInParent<EntityBase>();
-            if (enemy != null) enemy.TakeDamage(damage);
+            if (enemy != null) enemy.TakeDamage(damage, weapon);
             Destroy(gameObject);
             return;
         }
