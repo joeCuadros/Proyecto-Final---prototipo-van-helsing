@@ -1867,7 +1867,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &733897135
 Transform:
   m_ObjectHideFlags: 0
@@ -1895,6 +1895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f9a0b771766220429768b1250e36c87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimation
+  sprintClip: {fileID: 8300000, guid: a5597b6a51d46c447afbb2c37e8d2214, type: 3}
 --- !u!114 &733897137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1952,7 +1953,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCombat
   currentWeapon: 0
-  music: {fileID: 0}
+  audioDagger: {fileID: 8300000, guid: c0909b6d6cd3f364fbe09c4c7fb746c7, type: 3}
+  audioStakes: {fileID: 8300000, guid: 912b07d4969217b4693c76759eb86e7a, type: 3}
+  audioCrossbow: {fileID: 8300000, guid: 8dc1e67af822d2948b987d6904051acd, type: 3}
   actionCooldown: 1
   hasDagger: 1
   woodenStakes: 0
@@ -2808,7 +2811,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1055388426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31969,7 +31972,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1977560627
 RectTransform:
   m_ObjectHideFlags: 0

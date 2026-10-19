@@ -6,6 +6,7 @@ public class PlayerAnimation : MonoBehaviour
     private PlayerCombat combat;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+    public AudioClip sprintClip;
 
     void Awake()
     {
@@ -74,6 +75,15 @@ public class PlayerAnimation : MonoBehaviour
     private void UpdateSprintAnimation(bool isSprinting)
     {
         //Debug.Log($"Sprint es {isSprinting}");
+        if (AudioManager.Instance == null && sprintClip != null) return;
+        if (isSprinting && sprintClip != null)
+        {
+            AudioManager.Instance.PlayLoopSFX(sprintClip);
+        }
+        else
+        {
+            AudioManager.Instance.StopLoopSFX();
+        }
     }
     private void TriggerAttackAnimation(WeaponType weaponUsed)
     {

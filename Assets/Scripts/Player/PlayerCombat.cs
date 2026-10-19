@@ -10,7 +10,10 @@ public class PlayerCombat : MonoBehaviour
     public WeaponType currentWeapon = WeaponType.Dagger;
 
     [Header("Audio")]
-    public AudioClip music;
+    public AudioClip audioDagger;
+    public AudioClip audioStakes;
+    public AudioClip audioCrossbow;
+
 
     [Header("Tiempos y Cooldowns")]
     public float actionCooldown = 1f;
@@ -125,9 +128,9 @@ public class PlayerCombat : MonoBehaviour
             }
         }
         nextActionTime = Time.time + actionCooldown;
-        if(AudioManager.Instance != null && music != null)
+        if(AudioManager.Instance != null && audioDagger != null)
         {
-            AudioManager.Instance.PlaySFX(music);
+            AudioManager.Instance.PlaySFX(audioDagger);
         }
     }
 

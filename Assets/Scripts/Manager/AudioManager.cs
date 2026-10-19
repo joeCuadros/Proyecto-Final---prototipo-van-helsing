@@ -6,6 +6,7 @@ public class AudioManager : MonoBehaviour
 
     private AudioSource bgmSource;
     private AudioSource sfxSource;
+    private AudioSource loopSource;
 
     private void Awake()
     {
@@ -32,6 +33,11 @@ public class AudioManager : MonoBehaviour
         sfxSource = gameObject.AddComponent<AudioSource>();
         sfxSource.loop = false;
         sfxSource.playOnAwake = false;
+
+        // 3. Creamos el de los Efectos en loop (correr, etc.)
+        loopSource = gameObject.AddComponent<AudioSource>();
+        loopSource.loop = true;
+        loopSource.playOnAwake = false;
     }
     // Funciones para el fondo de musica
     public void PlayBGM(AudioClip bgmClip)
@@ -52,5 +58,19 @@ public class AudioManager : MonoBehaviour
     {
         if (sfxClip == null) return;
         sfxSource.PlayOneShot(sfxClip);
+    }
+    // Funciones para efectos de sonido en loop
+    public void PlayLoopSFX(AudioClip loopClip)
+    {
+        if (loopClip == null) return;
+        if (loopSource.clip == loopClip && loopSource.isPlaying) return;
+
+        loopSource.clip = loopClip;
+        loopSource.Play();
+    }
+
+    public void StopLoopSFX()
+    {
+        loopSource.Stop();
     }
 }
