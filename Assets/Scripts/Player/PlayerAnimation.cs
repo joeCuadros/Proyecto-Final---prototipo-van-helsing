@@ -1,14 +1,19 @@
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
     private PlayerMovement movement;
     private PlayerCombat combat;
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
 
     void Awake()
     {
         movement = GetComponent<PlayerMovement>();
         combat = GetComponent<PlayerCombat>();
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void OnEnable()
@@ -39,7 +44,36 @@ public class PlayerAnimation : MonoBehaviour
 
     private void UpdateMoveAnimation(Vector2 dir)
     {
-        //Debug.Log($"Direccion x={dir.x}, y={dir.y}");
+        AnimatorStateInfo state = animator.GetCurrentAnimatorStateInfo(0); // animacion actual
+                                                                           
+        if (!(state.IsName("Beside") || state.IsName("Up") || state.IsName("Down"))) 
+            return; // Solo cambiar estados de movimiento
+
+        
+        if (dir.sqrMagnitude <= 0.01f) {
+            if (!state.IsName("Up")) animator.Play("Up");
+            return;
+        }
+
+        // Ariba o abajo
+        if (Mathf.Abs(dir.x) > Mathf.Abs(dir.y))
+        {
+            if (!state.IsName("Beside")) animator.Play("Beside");
+
+            if (spriteRenderer != null)
+                spriteRenderer.flipX = dir.x < 0;
+            return;
+        }
+
+        // Segun direccion
+        if (dir.y > 0)
+        {
+            if (!state.IsName("Down")) animator.Play("Down");
+        }
+        else
+        {
+            if (!state.IsName("Up")) animator.Play("Up");
+        }
     }
 
     private void UpdateSprintAnimation(bool isSprinting)
@@ -48,6 +82,23 @@ public class PlayerAnimation : MonoBehaviour
     }
     private void TriggerAttackAnimation(WeaponType weaponUsed)
     {
-        Debug.Log($"Atacando con {weaponUsed.ToString()}");
+        switch (weaponUsed)
+        {
+            case WeaponType.Dagger:
+                animator.Play("Daga");
+                break;
+
+            case WeaponType.SilverBullet:
+                animator.Play("Daga");
+                break;
+
+            case WeaponType.WoodenStake:
+                animator.Play("Daga");
+                break;
+
+            default:
+                Debug.Log($"Atacando con {weaponUsed}");
+                break;
+        }
     }
 }
