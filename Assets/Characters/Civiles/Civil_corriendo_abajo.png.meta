@@ -1,0 +1,769 @@
+fileFormatVersion: 2
+guid: acb0c31d1067f9945a5f07e660e110ee
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4927533315722326318
+    second: Civil_corriendo_abajo_0
+  - first:
+      213: -3738996421929953713
+    second: Civil_corriendo_abajo_1
+  - first:
+      213: -2023649693190487192
+    second: Civil_corriendo_abajo_2
+  - first:
+      213: 8055453668861206770
+    second: Civil_corriendo_abajo_3
+  - first:
+      213: 2342794505045090431
+    second: Civil_corriendo_abajo_4
+  - first:
+      213: 7683046498191943343
+    second: Civil_corriendo_abajo_5
+  - first:
+      213: 3211391883569498496
+    second: Civil_corriendo_abajo_6
+  - first:
+      213: -2946651113185464762
+    second: Civil_corriendo_abajo_7
+  - first:
+      213: 4300544862550007122
+    second: Civil_corriendo_abajo_8
+  - first:
+      213: 2812568817820407263
+    second: Civil_corriendo_abajo_9
+  - first:
+      213: 8643472673504341292
+    second: Civil_corriendo_abajo_10
+  - first:
+      213: 3828103646227106137
+    second: Civil_corriendo_abajo_11
+  - first:
+      213: -8162699839205632056
+    second: Civil_corriendo_abajo_12
+  - first:
+      213: -8560675095779751324
+    second: Civil_corriendo_abajo_13
+  - first:
+      213: 1049675385743858548
+    second: Civil_corriendo_abajo_14
+  - first:
+      213: -4009956609156765399
+    second: Civil_corriendo_abajo_15
+  - first:
+      213: -8418152307730467301
+    second: Civil_corriendo_abajo_16
+  - first:
+      213: -8089089752476149239
+    second: Civil_corriendo_abajo_17
+  - first:
+      213: 7956939651295361865
+    second: Civil_corriendo_abajo_18
+  - first:
+      213: -9184544926594293860
+    second: Civil_corriendo_abajo_19
+  - first:
+      213: -2612524379480823175
+    second: Civil_corriendo_abajo_20
+  - first:
+      213: -1208264011083989925
+    second: Civil_corriendo_abajo_21
+  - first:
+      213: -7806106265665835822
+    second: Civil_corriendo_abajo_22
+  - first:
+      213: 4176447662957480441
+    second: Civil_corriendo_abajo_23
+  - first:
+      213: -3313500588665434540
+    second: Civil_corriendo_abajo_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Civil_corriendo_abajo_0
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 1065
+        width: 90
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dec7797e82ed9bb0800000000000000
+      internalID: -4927533315722326318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_abajo_1
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 1067
+        width: 90
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f469866709a6c1cc0800000000000000
+      internalID: -3738996421929953713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_abajo_2
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1078
+        width: 88
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8638d87635d8ae3e0800000000000000
+      internalID: -2023649693190487192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_abajo_3
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 1063
+        width: 87
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f0e615ae68bacf60800000000000000
+      internalID: 8055453668861206770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_abajo_4
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 1065
+        width: 88
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7023fe8037438020800000000000000
+      internalID: 2342794505045090431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_abajo_5
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 820
+        width: 91
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa62a85651aaf9a60800000000000000
+      internalID: 7683046498191943343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_abajo_6
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 810
+        width: 88
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0898bb647e7219c20800000000000000
+      internalID: 3211391883569498496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_abajo_7
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 809
+        width: 90
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64e2291bc646b17d0800000000000000
+      internalID: -2946651113185464762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_abajo_8
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 821
+        width: 91
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25d9ce864ca9eab30800000000000000
+      internalID: 4300544862550007122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_abajo_9
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 812
+        width: 87
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd5968c2070480720800000000000000
+      internalID: 2812568817820407263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_abajo_10
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 551
+        width: 87
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2da50af998c3f770800000000000000
+      internalID: 8643472673504341292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_abajo_11
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 557
+        width: 90
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9598ebcebf7202530800000000000000
+      internalID: 3828103646227106137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_abajo_12
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 558
+        width: 88
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c7920c7eb348be80800000000000000
+      internalID: -8162699839205632056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_abajo_13
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 552
+        width: 89
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46ac3865b5f523980800000000000000
+      internalID: -8560675095779751324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_abajo_14
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 556
+        width: 90
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47bdbb0b332319e00800000000000000
+      internalID: 1049675385743858548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_abajo_15
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 312
+        width: 90
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9292b7aa5b5c958c0800000000000000
+      internalID: -4009956609156765399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_abajo_16
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 294
+        width: 86
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b163790d317bc2b80800000000000000
+      internalID: -8418152307730467301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_abajo_17
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 297
+        width: 89
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90a186b5ab7cdbf80800000000000000
+      internalID: -8089089752476149239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_abajo_18
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 309
+        width: 90
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94b3ea6847abc6e60800000000000000
+      internalID: 7956939651295361865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_abajo_19
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 295
+        width: 88
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9f1bb21d01f98080800000000000000
+      internalID: -9184544926594293860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_abajo_20
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 42
+        width: 89
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97a6ff92be27ebbd0800000000000000
+      internalID: -2612524379480823175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_abajo_21
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 55
+        width: 91
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5c337898426b3fe0800000000000000
+      internalID: -1208264011083989925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_abajo_22
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 47
+        width: 87
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dc690cb5b32ba390800000000000000
+      internalID: -7806106265665835822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_abajo_23
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 40
+        width: 87
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f9479d8509b5f930800000000000000
+      internalID: 4176447662957480441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_corriendo_abajo_24
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 51
+        width: 91
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45e8c8135c41402d0800000000000000
+      internalID: -3313500588665434540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Civil_corriendo_abajo_0: -4927533315722326318
+      Civil_corriendo_abajo_1: -3738996421929953713
+      Civil_corriendo_abajo_10: 8643472673504341292
+      Civil_corriendo_abajo_11: 3828103646227106137
+      Civil_corriendo_abajo_12: -8162699839205632056
+      Civil_corriendo_abajo_13: -8560675095779751324
+      Civil_corriendo_abajo_14: 1049675385743858548
+      Civil_corriendo_abajo_15: -4009956609156765399
+      Civil_corriendo_abajo_16: -8418152307730467301
+      Civil_corriendo_abajo_17: -8089089752476149239
+      Civil_corriendo_abajo_18: 7956939651295361865
+      Civil_corriendo_abajo_19: -9184544926594293860
+      Civil_corriendo_abajo_2: -2023649693190487192
+      Civil_corriendo_abajo_20: -2612524379480823175
+      Civil_corriendo_abajo_21: -1208264011083989925
+      Civil_corriendo_abajo_22: -7806106265665835822
+      Civil_corriendo_abajo_23: 4176447662957480441
+      Civil_corriendo_abajo_24: -3313500588665434540
+      Civil_corriendo_abajo_3: 8055453668861206770
+      Civil_corriendo_abajo_4: 2342794505045090431
+      Civil_corriendo_abajo_5: 7683046498191943343
+      Civil_corriendo_abajo_6: 3211391883569498496
+      Civil_corriendo_abajo_7: -2946651113185464762
+      Civil_corriendo_abajo_8: 4300544862550007122
+      Civil_corriendo_abajo_9: 2812568817820407263
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

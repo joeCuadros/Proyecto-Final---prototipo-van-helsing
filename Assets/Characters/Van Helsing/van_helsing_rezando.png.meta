@@ -1,0 +1,769 @@
+fileFormatVersion: 2
+guid: 6978c407c10e9f84380480e72d863a48
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4774882740898374651
+    second: van_helsing_rezando_0
+  - first:
+      213: -1751463083893988586
+    second: van_helsing_rezando_1
+  - first:
+      213: -7096245676114015238
+    second: van_helsing_rezando_2
+  - first:
+      213: -2921442116452556032
+    second: van_helsing_rezando_3
+  - first:
+      213: -2725612045680689759
+    second: van_helsing_rezando_4
+  - first:
+      213: 3505455929832084487
+    second: van_helsing_rezando_5
+  - first:
+      213: -7241236978026323763
+    second: van_helsing_rezando_6
+  - first:
+      213: -8692737502569846648
+    second: van_helsing_rezando_7
+  - first:
+      213: -6708883635837746594
+    second: van_helsing_rezando_8
+  - first:
+      213: 8235785619041731531
+    second: van_helsing_rezando_9
+  - first:
+      213: 3626746709968112357
+    second: van_helsing_rezando_10
+  - first:
+      213: 263861693779380572
+    second: van_helsing_rezando_11
+  - first:
+      213: 5105218507187408472
+    second: van_helsing_rezando_12
+  - first:
+      213: 8491967372753340913
+    second: van_helsing_rezando_13
+  - first:
+      213: -377274451516004209
+    second: van_helsing_rezando_14
+  - first:
+      213: -1211319790087622619
+    second: van_helsing_rezando_15
+  - first:
+      213: -3936953860719282003
+    second: van_helsing_rezando_16
+  - first:
+      213: -8004212426094990129
+    second: van_helsing_rezando_17
+  - first:
+      213: 1890386063675996483
+    second: van_helsing_rezando_18
+  - first:
+      213: 8525529860333667959
+    second: van_helsing_rezando_19
+  - first:
+      213: 407721797898390432
+    second: van_helsing_rezando_20
+  - first:
+      213: 3408666687916269917
+    second: van_helsing_rezando_21
+  - first:
+      213: 3958807566136926366
+    second: van_helsing_rezando_22
+  - first:
+      213: -8038142025734729631
+    second: van_helsing_rezando_23
+  - first:
+      213: -5127508973898150805
+    second: van_helsing_rezando_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: van_helsing_rezando_0
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1083
+        width: 106
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf3246fed8ac34240800000000000000
+      internalID: 4774882740898374651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_rezando_1
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 1083
+        width: 106
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 613e947da9d81b7e0800000000000000
+      internalID: -1751463083893988586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_rezando_2
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 1083
+        width: 106
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afb8254b722158d90800000000000000
+      internalID: -7096245676114015238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_rezando_3
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 1083
+        width: 106
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 003eaf0afd3f477d0800000000000000
+      internalID: -2921442116452556032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_rezando_4
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 1083
+        width: 105
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ad3dad094eac2ad0800000000000000
+      internalID: -2725612045680689759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_rezando_5
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 827
+        width: 106
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7049d617891e5a030800000000000000
+      internalID: 3505455929832084487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_rezando_6
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 827
+        width: 106
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc0615e8555f18b90800000000000000
+      internalID: -7241236978026323763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_rezando_7
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 827
+        width: 106
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 888ab992c413d5780800000000000000
+      internalID: -8692737502569846648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_rezando_8
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 826
+        width: 106
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e52c57ed0e145e2a0800000000000000
+      internalID: -6708883635837746594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_rezando_9
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 827
+        width: 106
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc3c04da2636b4270800000000000000
+      internalID: 8235785619041731531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_rezando_10
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 571
+        width: 106
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ea47f9daeac45230800000000000000
+      internalID: 3626746709968112357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_rezando_11
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 571
+        width: 106
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c598d8fffcc69a300800000000000000
+      internalID: 263861693779380572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_rezando_12
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 571
+        width: 106
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85ec7a50f2169d640800000000000000
+      internalID: 5105218507187408472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_rezando_13
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 571
+        width: 106
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f98b29455789d570800000000000000
+      internalID: 8491967372753340913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_rezando_14
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 571
+        width: 106
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f88ee8e92e6a3caf0800000000000000
+      internalID: -377274451516004209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_rezando_15
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 315
+        width: 106
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5203d6a9117803fe0800000000000000
+      internalID: -1211319790087622619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_rezando_16
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 316
+        width: 105
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da879b292512d59c0800000000000000
+      internalID: -3936953860719282003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_rezando_17
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 316
+        width: 105
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcc27d3e4335be090800000000000000
+      internalID: -8004212426094990129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_rezando_18
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 315
+        width: 106
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 349b1c5fb100c3a10800000000000000
+      internalID: 1890386063675996483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_rezando_19
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 315
+        width: 106
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7768c2fdc34c05670800000000000000
+      internalID: 8525529860333667959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_rezando_20
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 59
+        width: 106
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0abcae2a0d488a500800000000000000
+      internalID: 407721797898390432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_rezando_21
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 59
+        width: 106
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d51e4f2fa440e4f20800000000000000
+      internalID: 3408666687916269917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_rezando_22
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 60
+        width: 106
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9068b9b18280f630800000000000000
+      internalID: 3958807566136926366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_rezando_23
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 60
+        width: 106
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16051fd5a68c27090800000000000000
+      internalID: -8038142025734729631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_helsing_rezando_24
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 59
+        width: 106
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6c4c2441cd67d8b0800000000000000
+      internalID: -5127508973898150805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      van_helsing_rezando_0: 4774882740898374651
+      van_helsing_rezando_1: -1751463083893988586
+      van_helsing_rezando_10: 3626746709968112357
+      van_helsing_rezando_11: 263861693779380572
+      van_helsing_rezando_12: 5105218507187408472
+      van_helsing_rezando_13: 8491967372753340913
+      van_helsing_rezando_14: -377274451516004209
+      van_helsing_rezando_15: -1211319790087622619
+      van_helsing_rezando_16: -3936953860719282003
+      van_helsing_rezando_17: -8004212426094990129
+      van_helsing_rezando_18: 1890386063675996483
+      van_helsing_rezando_19: 8525529860333667959
+      van_helsing_rezando_2: -7096245676114015238
+      van_helsing_rezando_20: 407721797898390432
+      van_helsing_rezando_21: 3408666687916269917
+      van_helsing_rezando_22: 3958807566136926366
+      van_helsing_rezando_23: -8038142025734729631
+      van_helsing_rezando_24: -5127508973898150805
+      van_helsing_rezando_3: -2921442116452556032
+      van_helsing_rezando_4: -2725612045680689759
+      van_helsing_rezando_5: 3505455929832084487
+      van_helsing_rezando_6: -7241236978026323763
+      van_helsing_rezando_7: -8692737502569846648
+      van_helsing_rezando_8: -6708883635837746594
+      van_helsing_rezando_9: 8235785619041731531
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

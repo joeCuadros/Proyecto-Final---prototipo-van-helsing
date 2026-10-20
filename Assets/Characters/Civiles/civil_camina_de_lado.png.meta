@@ -1,0 +1,509 @@
+fileFormatVersion: 2
+guid: 8648e4f953ad1eb4ea6e232e8c99493a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6425260033089376616
+    second: civil_camina_de_lado_0
+  - first:
+      213: 7179126814200886823
+    second: civil_camina_de_lado_1
+  - first:
+      213: -1779375586289471409
+    second: civil_camina_de_lado_2
+  - first:
+      213: -2299108061877006691
+    second: civil_camina_de_lado_3
+  - first:
+      213: -4040303962518012768
+    second: civil_camina_de_lado_4
+  - first:
+      213: 8951792238095758958
+    second: civil_camina_de_lado_5
+  - first:
+      213: 5745428052260423212
+    second: civil_camina_de_lado_6
+  - first:
+      213: 289378445091559117
+    second: civil_camina_de_lado_7
+  - first:
+      213: 6853038856070880129
+    second: civil_camina_de_lado_8
+  - first:
+      213: 7136549942322817500
+    second: civil_camina_de_lado_9
+  - first:
+      213: -3986987249681929197
+    second: civil_camina_de_lado_10
+  - first:
+      213: 7728807438068213423
+    second: civil_camina_de_lado_11
+  - first:
+      213: 738991317053821109
+    second: civil_camina_de_lado_12
+  - first:
+      213: -5525347703417428566
+    second: civil_camina_de_lado_13
+  - first:
+      213: 4099416104501642106
+    second: civil_camina_de_lado_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: civil_camina_de_lado_0
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 816
+        width: 78
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8619ec525fb1b2950800000000000000
+      internalID: 6425260033089376616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_camina_de_lado_1
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 815
+        width: 78
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 726fce50dc161a360800000000000000
+      internalID: 7179126814200886823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_camina_de_lado_2
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 815
+        width: 80
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f40b631f4536e47e0800000000000000
+      internalID: -1779375586289471409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_camina_de_lado_3
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 816
+        width: 78
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9e859f166de710e0800000000000000
+      internalID: -2299108061877006691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_camina_de_lado_4
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 559
+        width: 78
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0acb289d3f4fde7c0800000000000000
+      internalID: -4040303962518012768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_camina_de_lado_5
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 559
+        width: 78
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e66fbc6ac972b3c70800000000000000
+      internalID: 8951792238095758958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_camina_de_lado_6
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 560
+        width: 78
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c260c897f5cdbbf40800000000000000
+      internalID: 5745428052260423212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_camina_de_lado_7
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 559
+        width: 81
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc65651a924140400800000000000000
+      internalID: 289378445091559117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_camina_de_lado_8
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 303
+        width: 78
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18bdd08d782ea1f50800000000000000
+      internalID: 6853038856070880129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_camina_de_lado_9
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 303
+        width: 78
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd96cf98c5e1a0360800000000000000
+      internalID: 7136549942322817500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_camina_de_lado_10
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 303
+        width: 78
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31c62ba68306ba8c0800000000000000
+      internalID: -3986987249681929197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_camina_de_lado_11
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 303
+        width: 78
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa6e37b7a6d324b60800000000000000
+      internalID: 7728807438068213423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_camina_de_lado_12
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 47
+        width: 81
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b0571100bc614a00800000000000000
+      internalID: 738991317053821109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_camina_de_lado_13
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 47
+        width: 78
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa5a84dc9850253b0800000000000000
+      internalID: -5525347703417428566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_camina_de_lado_14
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 47
+        width: 80
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7306573a3d04e830800000000000000
+      internalID: 4099416104501642106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      civil_camina_de_lado_0: 6425260033089376616
+      civil_camina_de_lado_1: 7179126814200886823
+      civil_camina_de_lado_10: -3986987249681929197
+      civil_camina_de_lado_11: 7728807438068213423
+      civil_camina_de_lado_12: 738991317053821109
+      civil_camina_de_lado_13: -5525347703417428566
+      civil_camina_de_lado_14: 4099416104501642106
+      civil_camina_de_lado_2: -1779375586289471409
+      civil_camina_de_lado_3: -2299108061877006691
+      civil_camina_de_lado_4: -4040303962518012768
+      civil_camina_de_lado_5: 8951792238095758958
+      civil_camina_de_lado_6: 5745428052260423212
+      civil_camina_de_lado_7: 289378445091559117
+      civil_camina_de_lado_8: 6853038856070880129
+      civil_camina_de_lado_9: 7136549942322817500
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

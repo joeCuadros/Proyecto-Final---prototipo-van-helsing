@@ -1,0 +1,769 @@
+fileFormatVersion: 2
+guid: 5ee9e06178322c34aa663ed10d9517b4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 309407212160925835
+    second: civil_asustado_0
+  - first:
+      213: 3959095556292297489
+    second: civil_asustado_1
+  - first:
+      213: -8502231311359306550
+    second: civil_asustado_2
+  - first:
+      213: -1948042606237143758
+    second: civil_asustado_3
+  - first:
+      213: -8650100058676816062
+    second: civil_asustado_4
+  - first:
+      213: 4149937121869063054
+    second: civil_asustado_5
+  - first:
+      213: 5104539952768310178
+    second: civil_asustado_6
+  - first:
+      213: -8773089938100101863
+    second: civil_asustado_7
+  - first:
+      213: -1272180736379938785
+    second: civil_asustado_8
+  - first:
+      213: -8369261699852508983
+    second: civil_asustado_9
+  - first:
+      213: -1455001580588417702
+    second: civil_asustado_10
+  - first:
+      213: -2480452085753379836
+    second: civil_asustado_11
+  - first:
+      213: 2287857896191679915
+    second: civil_asustado_12
+  - first:
+      213: 5479245096982184375
+    second: civil_asustado_13
+  - first:
+      213: 3324434209937176486
+    second: civil_asustado_14
+  - first:
+      213: 5326478523944148563
+    second: civil_asustado_15
+  - first:
+      213: -2338049266808423395
+    second: civil_asustado_16
+  - first:
+      213: -1016622527765840150
+    second: civil_asustado_17
+  - first:
+      213: 8542777664923808840
+    second: civil_asustado_18
+  - first:
+      213: 3291742573781217804
+    second: civil_asustado_19
+  - first:
+      213: -1079352705904549670
+    second: civil_asustado_20
+  - first:
+      213: 2452757528387779719
+    second: civil_asustado_21
+  - first:
+      213: 527349261102501134
+    second: civil_asustado_22
+  - first:
+      213: 5203383058126956303
+    second: civil_asustado_23
+  - first:
+      213: -8300614854410843833
+    second: civil_asustado_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: civil_asustado_0
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 1074
+        width: 77
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b80cbcb583c3b4400800000000000000
+      internalID: 309407212160925835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_asustado_1
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 1074
+        width: 77
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11341a8ae6881f630800000000000000
+      internalID: 3959095556292297489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_asustado_2
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 1074
+        width: 77
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac499384ba1020a80800000000000000
+      internalID: -8502231311359306550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_asustado_3
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 1074
+        width: 76
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23da8ef129927f4e0800000000000000
+      internalID: -1948042606237143758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_asustado_4
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 1074
+        width: 77
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2479bfaa3dba4f780800000000000000
+      internalID: -8650100058676816062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_asustado_5
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 818
+        width: 77
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e83663533d9879930800000000000000
+      internalID: 4149937121869063054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_asustado_6
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 818
+        width: 77
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ab5b82ca08f6d640800000000000000
+      internalID: 5104539952768310178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_asustado_7
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 818
+        width: 77
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91d5df0ee29bf3680800000000000000
+      internalID: -8773089938100101863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_asustado_8
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 818
+        width: 77
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f189afd4c5e485ee0800000000000000
+      internalID: -1272180736379938785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_asustado_9
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 818
+        width: 77
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c0620483d86adb80800000000000000
+      internalID: -8369261699852508983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_asustado_10
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 562
+        width: 77
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5d356975cbcecbe0800000000000000
+      internalID: -1455001580588417702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_asustado_11
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 562
+        width: 77
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4040b4258f9a39dd0800000000000000
+      internalID: -2480452085753379836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_asustado_12
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 562
+        width: 77
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: badd31f82aa10cf10800000000000000
+      internalID: 2287857896191679915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_asustado_13
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 562
+        width: 77
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b18ceaa2603a0c40800000000000000
+      internalID: 5479245096982184375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_asustado_14
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 562
+        width: 77
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a73672ec43c22e20800000000000000
+      internalID: 3324434209937176486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_asustado_15
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 306
+        width: 77
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35e10732ff37be940800000000000000
+      internalID: 5326478523944148563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_asustado_16
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 306
+        width: 77
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1c758054949d8fd0800000000000000
+      internalID: -2338049266808423395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_asustado_17
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 306
+        width: 77
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aee7bd1823b34e1f0800000000000000
+      internalID: -1016622527765840150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_asustado_18
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 306
+        width: 77
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 844bce0560b0e8670800000000000000
+      internalID: 8542777664923808840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_asustado_19
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 306
+        width: 77
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0272423e6e9ead20800000000000000
+      internalID: 3291742573781217804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_asustado_20
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 50
+        width: 77
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad0e331ce6e5501f0800000000000000
+      internalID: -1079352705904549670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_asustado_21
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 50
+        width: 77
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78cf7bf0af1f90220800000000000000
+      internalID: 2452757528387779719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_asustado_22
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 50
+        width: 77
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0d4494eb55815700800000000000000
+      internalID: 527349261102501134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_asustado_23
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 50
+        width: 77
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0761f99251263840800000000000000
+      internalID: 5203383058126956303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civil_asustado_24
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 50
+        width: 77
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 749c289b4ca4ecc80800000000000000
+      internalID: -8300614854410843833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      civil_asustado_0: 309407212160925835
+      civil_asustado_1: 3959095556292297489
+      civil_asustado_10: -1455001580588417702
+      civil_asustado_11: -2480452085753379836
+      civil_asustado_12: 2287857896191679915
+      civil_asustado_13: 5479245096982184375
+      civil_asustado_14: 3324434209937176486
+      civil_asustado_15: 5326478523944148563
+      civil_asustado_16: -2338049266808423395
+      civil_asustado_17: -1016622527765840150
+      civil_asustado_18: 8542777664923808840
+      civil_asustado_19: 3291742573781217804
+      civil_asustado_2: -8502231311359306550
+      civil_asustado_20: -1079352705904549670
+      civil_asustado_21: 2452757528387779719
+      civil_asustado_22: 527349261102501134
+      civil_asustado_23: 5203383058126956303
+      civil_asustado_24: -8300614854410843833
+      civil_asustado_3: -1948042606237143758
+      civil_asustado_4: -8650100058676816062
+      civil_asustado_5: 4149937121869063054
+      civil_asustado_6: 5104539952768310178
+      civil_asustado_7: -8773089938100101863
+      civil_asustado_8: -1272180736379938785
+      civil_asustado_9: -8369261699852508983
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
