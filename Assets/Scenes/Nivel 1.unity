@@ -1112,8 +1112,8 @@ MonoBehaviour:
   wanderRadius: 1
   wanderDistance: 1
   wanderChange: 5
-  patrolPoints: []
-  patrolPointDistance: 0.2
+  waypoints: []
+  waypointDistance: 0.2
   maxSpeed: 3
   acceleration: 4
   deceleration: 6
@@ -1126,6 +1126,7 @@ MonoBehaviour:
     m_Bits: 64
   targetPriority: 0
   changeTarget: 1
+  investigatePoint: {x: 0, y: 0}
 --- !u!61 &70838948
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2504,8 +2505,8 @@ MonoBehaviour:
   wanderRadius: 1
   wanderDistance: 1
   wanderChange: 5
-  patrolPoints: []
-  patrolPointDistance: 0.2
+  waypoints: []
+  waypointDistance: 0.2
   maxSpeed: 3
   acceleration: 4
   deceleration: 6
@@ -2518,6 +2519,7 @@ MonoBehaviour:
     m_Bits: 64
   targetPriority: 0
   changeTarget: 1
+  investigatePoint: {x: 0, y: 0}
 --- !u!61 &167533559
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3913,7 +3915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDemon
   maxHealth: 3
-  currentState: 5
+  currentState: 4
   attackDamage: 1
   attackRange: 0.78
   preAttackDuration: 1
@@ -3921,12 +3923,9 @@ MonoBehaviour:
   wanderRadius: 1
   wanderDistance: 1
   wanderChange: 5
-  patrolPoints:
-  - {x: -4.68, y: -7.43}
-  - {x: 6.97, y: -7.2}
-  - {x: 4.85, y: -12}
-  - {x: 0.3, y: -12}
-  patrolPointDistance: 0.2
+  waypoints:
+  - {x: 0, y: 0}
+  waypointDistance: 0.2
   maxSpeed: 3
   acceleration: 4
   deceleration: 6
@@ -3939,6 +3938,7 @@ MonoBehaviour:
     m_Bits: 64
   targetPriority: 0
   changeTarget: 1
+  investigatePoint: {x: 0, y: 0}
 --- !u!61 &247374454
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4931,12 +4931,8 @@ MonoBehaviour:
   wanderRadius: 1
   wanderDistance: 1
   wanderChange: 5
-  patrolPoints:
-  - {x: 15, y: -18}
-  - {x: 0, y: -18}
-  - {x: 0, y: -12}
-  - {x: 15, y: -12}
-  patrolPointDistance: 0.2
+  waypoints: []
+  waypointDistance: 0.2
   maxSpeed: 3
   acceleration: 4
   deceleration: 6
@@ -4949,6 +4945,7 @@ MonoBehaviour:
     m_Bits: 64
   targetPriority: 0
   changeTarget: 1
+  investigatePoint: {x: 0, y: 0}
 --- !u!61 &296850117
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40881,6 +40878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f9a0b771766220429768b1250e36c87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimation
+  sprintClip: {fileID: 0}
 --- !u!114 &964153632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40938,7 +40936,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCombat
   currentWeapon: 0
-  music: {fileID: 8300000, guid: c0909b6d6cd3f364fbe09c4c7fb746c7, type: 3}
+  audioDagger: {fileID: 0}
+  audioStakes: {fileID: 0}
+  audioCrossbow: {fileID: 0}
+  audioWater: {fileID: 0}
   actionCooldown: 1
   hasDagger: 1
   woodenStakes: 0
@@ -40950,6 +40951,12 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 256
+  bulletPrefab: {fileID: 0}
+  bulletDamage: 1
+  stakePrefab: {fileID: 0}
+  stakeDamage: 1
+  holyWaterPrefab: {fileID: 0}
+  holyWaterDamage: 1
 --- !u!114 &964153636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55817,8 +55824,8 @@ MonoBehaviour:
   wanderRadius: 1
   wanderDistance: 1
   wanderChange: 5
-  patrolPoints: []
-  patrolPointDistance: 0.2
+  waypoints: []
+  waypointDistance: 0.2
   maxSpeed: 3
   acceleration: 4
   deceleration: 6
@@ -55831,6 +55838,7 @@ MonoBehaviour:
     m_Bits: 64
   targetPriority: 0
   changeTarget: 1
+  investigatePoint: {x: 0, y: 0}
 --- !u!61 &1931120929
 BoxCollider2D:
   m_ObjectHideFlags: 0
