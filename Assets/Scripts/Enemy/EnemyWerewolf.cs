@@ -40,7 +40,9 @@ public class EnemyWerewolf : EnemyBase
     public override void AttackTarget(EntityBase target)
     {
         base.AttackTarget(target);
-        Debug.Log("Aca poner animacion de ataque");
+        Vector2 direction = target.transform.position - transform.position;
+       animator.Play("AttackDer"); //Attack Izquierda 
+   
     }
 
     private void UpdateMoveAnimation(Vector2 dir)
