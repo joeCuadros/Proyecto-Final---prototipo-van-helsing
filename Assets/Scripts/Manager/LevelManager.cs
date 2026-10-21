@@ -11,6 +11,7 @@ public class LevelManager : MonoBehaviour
     }
     private readonly object _registryLock = new object();
     private Dictionary<string, EnemyCountData> enemyRegistry = new Dictionary<string, EnemyCountData>();
+    private List<EnemyBase> enemies = new List<EnemyBase>();
     private int totalEnemiesAlive = 0;
 
     private void Awake()
@@ -19,10 +20,11 @@ public class LevelManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
-    public void RegisterEnemy(string enemyId)
+    public void RegisterEnemy(string enemyId, EnemyBase enemy)
     {
         lock (_registryLock) // candado mutex
         {
+            enemies.Add(enemy);
             if (!enemyRegistry.ContainsKey(enemyId))
             {
                 enemyRegistry[enemyId] = new EnemyCountData(); // si no hay nada lo creamos
@@ -34,10 +36,11 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    public void EnemyDied(string enemyId)
+    public void EnemyDied(string enemyId, EnemyBase enemy)
     {
         lock (_registryLock) // candado mutex
         {
+            if (!enemies.Remove(enemy)) return;
             if (enemyRegistry.ContainsKey(enemyId) && enemyRegistry[enemyId].cantidad_viva > 0)
             {
                 enemyRegistry[enemyId].cantidad_viva--;
@@ -54,5 +57,31 @@ public class LevelManager : MonoBehaviour
     private void TriggerVictory()
     {
         if (SystemManager.Instance != null) SystemManager.Instance.Victory();
+    }
+
+    public EnemyBase GetEnemy(int index)
+    {
+        lock (_registryLock)
+        {
+            if (index < 0 || index >= enemies.Count) return null;
+            return enemies[index];
+        }
+    }
+
+    public void InvestigateEnemy(Vector2 point, float distance)
+    {
+        lock (_registryLock)
+        {
+            foreach (EnemyBase enemy in enemies)
+            {
+                if (enemy == null) continue;
+
+                if (Vector2.Distance(enemy.transform.position, point) <= distance)
+                {
+                    enemy.investigatePoint = point;
+                    enemy.currentState = EnemyBase.EnemyState.Investigate;
+                }
+            }
+        }
     }
 }
