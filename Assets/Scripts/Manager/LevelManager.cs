@@ -11,7 +11,7 @@ public class LevelManager : MonoBehaviour
     }
     private readonly object _registryLock = new object();
     private Dictionary<string, EnemyCountData> enemyRegistry = new Dictionary<string, EnemyCountData>();
-    private List<EnemyBase> enemies = new List<EnemyBase>();
+    private List<AIBase> enemies = new List<AIBase>();
     private int totalEnemiesAlive = 0;
 
     private void Awake()
@@ -20,7 +20,7 @@ public class LevelManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
-    public void RegisterEnemy(string enemyId, EnemyBase enemy)
+    public void RegisterEnemy(string enemyId, AIBase enemy)
     {
         lock (_registryLock) // candado mutex
         {
@@ -36,7 +36,7 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    public void EnemyDied(string enemyId, EnemyBase enemy)
+    public void EnemyDied(string enemyId, AIBase enemy)
     {
         lock (_registryLock) // candado mutex
         {
@@ -59,7 +59,7 @@ public class LevelManager : MonoBehaviour
         if (SystemManager.Instance != null) SystemManager.Instance.Victory();
     }
 
-    public EnemyBase GetEnemy(int index)
+    public AIBase GetEnemy(int index)
     {
         lock (_registryLock)
         {
@@ -72,14 +72,14 @@ public class LevelManager : MonoBehaviour
     {
         lock (_registryLock)
         {
-            foreach (EnemyBase enemy in enemies)
+            foreach (AIBase enemy in enemies)
             {
                 if (enemy == null) continue;
 
                 if (Vector2.Distance(enemy.transform.position, point) <= distance)
                 {
                     enemy.investigatePoint = point;
-                    enemy.currentState = EnemyBase.EnemyState.Investigate;
+                    enemy.currentState = AIBase.EnemyState.Investigate;
                 }
             }
         }

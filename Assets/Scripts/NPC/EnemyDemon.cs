@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class EnemyVampire : EnemyBase
+public class EnemyDemon: AIBase
 {
     protected override void Start()
     {
-        enemyType = "Vampire";
+        enemyType = "Demon";
         base.Start();
     }
 }

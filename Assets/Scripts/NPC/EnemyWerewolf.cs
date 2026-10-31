@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyWerewolf : EnemyBase
+public class EnemyWerewolf : AIBase
 {
     private Animator animator;
     private SpriteRenderer spriteRenderer;

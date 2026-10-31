@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class EnemyBase : EntityBase
+public abstract class AIBase : EntityBase
 {
     public enum EnemyState
     {
@@ -118,7 +118,22 @@ public abstract class EnemyBase : EntityBase
         Vector2 desiredVelocity = direction * maxSpeed;
         Move(desiredVelocity);
     }
-    protected virtual void UpdateFlee() { /* AGREGAR O SOBRE ESCRIBIR */ }
+    protected virtual void UpdateFlee() 
+    {
+        // Si no hay un objetivo o ya está fuera del rango seguro (Flee -> Patrol)
+        if (target == null ||
+            Vector2.Distance(transform.position, target.transform.position) > detectionRadius + 2f)
+        {
+            target = null;
+            currentState = EnemyState.Patrol; // O Wander, si prefieres que deambule
+            return;
+        }
+
+        // Ejecutar Flee
+        Vector2 direction = (transform.position - target.transform.position).normalized; // opuesto a seek
+        Vector2 desiredVelocity = direction * maxSpeed;
+        Move(desiredVelocity);
+    }
     protected virtual void UpdateWander()
     {
         // Si hay un objetivo (Wander -> Seek)
