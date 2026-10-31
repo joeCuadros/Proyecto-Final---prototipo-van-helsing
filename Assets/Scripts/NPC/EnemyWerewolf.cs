@@ -41,7 +41,7 @@ public class EnemyWerewolf : AIBase
     {
         base.AttackTarget(target);
         Vector2 direction = target.transform.position - transform.position;
-       animator.Play("AttackDer"); //Attack Izquierda 
+        animator.Play("AttackDer"); //Attack Izquierda 
    
     }
 

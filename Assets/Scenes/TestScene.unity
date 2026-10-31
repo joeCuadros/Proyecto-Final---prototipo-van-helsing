@@ -1867,7 +1867,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &733897135
 Transform:
   m_ObjectHideFlags: 0
@@ -3211,6 +3211,10 @@ PrefabInstance:
     - target: {fileID: 7711282815421739377, guid: 5e4c498f0f0683647a3f4852cb0457b1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134472209062397445, guid: 5e4c498f0f0683647a3f4852cb0457b1, type: 3}
+      propertyPath: enemyLayer.m_Bits
+      value: 256
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -32516,7 +32520,7 @@ Animator:
   m_GameObject: {fileID: 438206526979123391}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 14d75b53e87793c40837306cc87fb091, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -32541,14 +32545,14 @@ GameObject:
   - component: {fileID: 7523246556730704617}
   - component: {fileID: 374523859852002480}
   - component: {fileID: 9191971884952678928}
-  - component: {fileID: 3704944370081627130}
-  m_Layer: 8
-  m_Name: Test personaje
+  - component: {fileID: 9191971884952678929}
+  m_Layer: 9
+  m_Name: NPC
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &1935350304020546825
 Rigidbody2D:
   serializedVersion: 5
@@ -32585,48 +32589,12 @@ Transform:
   m_GameObject: {fileID: 438206526979123391}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 3.75, y: 3, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3704944370081627130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438206526979123391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14e956472315130499052c0f70454692, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyWerewolf
-  maxHealth: 3
-  currentState: 5
-  attackDamage: 1
-  attackRange: 1
-  preAttackDuration: 1
-  attackCooldown: 1
-  wanderRadius: 2
-  wanderDistance: 2
-  wanderChange: 10
-  waypoints: []
-  waypointDistance: 0.2
-  maxSpeed: 3
-  acceleration: 4
-  deceleration: 6
-  detectionRadius: 4
-  npcLayer:
-    serializedVersion: 2
-    m_Bits: 512
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  targetPriority: 1
-  changeTarget: 1
-  investigatePoint: {x: 1, y: 20}
 --- !u!70 &7523246556730704617
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -32713,7 +32681,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -9080989932114246958, guid: cf014a8fa76cc3f498313532e3b1b92a, type: 3}
+  m_Sprite: {fileID: 5911899532914731595, guid: 07b11755f36808848b91ff872a489a66, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -32724,6 +32692,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &9191971884952678929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438206526979123391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43e56926ab459aa49ac0a3b1e341f3ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Civilian
+  maxHealth: 5
+  currentState: 1
+  attackDamage: 1
+  attackRange: 1
+  preAttackDuration: 1
+  attackCooldown: 1
+  wanderRadius: 2
+  wanderDistance: 2
+  wanderChange: 10
+  waypoints: []
+  waypointDistance: 0.2
+  maxSpeed: 4
+  acceleration: 4
+  deceleration: 6
+  detectionRadius: 4
+  npcLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  targetPriority: 0
+  changeTarget: 1
+  investigatePoint: {x: 0, y: 0}
+  fearLevel: 0
+  fearIncreaseRate: 15
+  fearDecreaseRate: 10
+  timeFearDecayRate: 2
+  isInjured: 0
+  conversionProbability: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

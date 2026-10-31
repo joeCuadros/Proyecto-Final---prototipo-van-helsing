@@ -53,6 +53,7 @@ public abstract class AIBase : EntityBase
     public float detectionRadius = 4f;
     public LayerMask npcLayer;
     public LayerMask playerLayer;
+    public LayerMask enemyLayer;
     public TargetPriority targetPriority;
     public bool changeTarget = true;
     protected EntityBase target; // no publico
@@ -125,7 +126,7 @@ public abstract class AIBase : EntityBase
             Vector2.Distance(transform.position, target.transform.position) > detectionRadius + 2f)
         {
             target = null;
-            currentState = EnemyState.Patrol; // O Wander, si prefieres que deambule
+            currentState = EnemyState.Patrol;
             return;
         }
 
@@ -364,7 +365,7 @@ public abstract class AIBase : EntityBase
         rb.linearVelocity = velocity;
     }
     // Metodo de deteccion
-    protected bool DetectTarget()
+    protected virtual bool DetectTarget()
     {
         Collider2D[] detectedTargets = Physics2D.OverlapCircleAll(
             transform.position,
