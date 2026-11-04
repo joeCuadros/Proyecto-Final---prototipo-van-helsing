@@ -1867,7 +1867,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &733897135
 Transform:
   m_ObjectHideFlags: 0
@@ -3168,10 +3168,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Hombre lobo '
       objectReference: {fileID: 0}
-    - target: {fileID: 5456783669391971648, guid: 5e4c498f0f0683647a3f4852cb0457b1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7711282815421739377, guid: 5e4c498f0f0683647a3f4852cb0457b1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3211,10 +3207,6 @@ PrefabInstance:
     - target: {fileID: 7711282815421739377, guid: 5e4c498f0f0683647a3f4852cb0457b1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9134472209062397445, guid: 5e4c498f0f0683647a3f4852cb0457b1, type: 3}
-      propertyPath: enemyLayer.m_Bits
-      value: 256
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -73,7 +73,10 @@ public abstract class AIBase : EntityBase
         base.Start();
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
-        if (LevelManager.Instance != null) LevelManager.Instance.RegisterEnemy(enemyType, this);
+        if (!(this is Civilian) && LevelManager.Instance != null)
+        {
+            LevelManager.Instance.RegisterEnemy(enemyType, this);
+        }
     }
     protected virtual void FixedUpdate()
     {
@@ -261,7 +264,10 @@ public abstract class AIBase : EntityBase
     protected override void Die()
     {
         currentState = EnemyState.Die;
-        if (LevelManager.Instance != null) LevelManager.Instance.EnemyDied(enemyType, this);
+        if (!(this is Civilian) && LevelManager.Instance != null)
+        {
+            LevelManager.Instance.EnemyDied(enemyType, this);
+        }
         Destroy(gameObject, 0.5f);
     }
     // Metodo de movimiento
