@@ -29,6 +29,9 @@ public class CivilRescueMember : MonoBehaviour
         if (civilian.currentState == AIBase.EnemyState.Die)
             return false;
 
+        if (!civilian.HasReceivedHelp)
+            return false;
+
         IsRescued = true;
 
         if (CivilRescueManager.Instance != null)

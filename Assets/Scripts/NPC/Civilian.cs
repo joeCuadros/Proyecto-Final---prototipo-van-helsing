@@ -11,6 +11,36 @@ public class Civilian : AIBase
         Panico      // 75 - 100
     }
 
+
+    public enum CivilEscapeMode
+    {
+        Unassisted,        // Sin ayuda: huye o busca a Van Helsing
+        Independent,       // Ayudado: va solo usando Dijkstra
+        FollowingPlayer,   // Ayudado: debe seguir a Van Helsing
+        SaltProtected,     // Paralizado dentro del círculo
+        Unconscious,       // Desmayado
+        Rescued            // Llegó a la zona segura
+    }
+
+    [Header("Estado del escape")]
+    [SerializeField] private CivilEscapeMode escapeMode = CivilEscapeMode.Unassisted;
+    public CivilEscapeMode EscapeMode => escapeMode;
+    public bool HasReceivedHelp => hasReceivedHelp;
+    private bool hasReceivedHelp;
+
+    [Header("Van Helsing / seguimiento")]
+    [SerializeField] private float safetyRadius = 2.5f;
+    [SerializeField] private float followingStopDistance = 1.1f;
+    [SerializeField] private float followingLostDistance = 4f;
+    private Transform followingPlayer;
+
+    private CivilDijkstraNavigator navigator;
+    private bool warnedMissingRoute;
+
+    [Header("Movimiento Dijkstra")]
+    [SerializeField] private float navigationSpeed = 1.5f;
+    [SerializeField] private float slowDownDistance = 0.65f;
+
     [Header("Sistema de Miedo")]
     [Range(0f, 100f)] public float fearLevel = 0f;
     public float fearIncreaseRate = 1f;
@@ -50,73 +80,200 @@ public class Civilian : AIBase
         enemyType = "Civilian";
         baseMaxSpeed = maxSpeed;
         base.Start();
+        navigator = GetComponent<CivilDijkstraNavigator>();
+
+        if (saltCircleVisual != null)
+            saltCircleVisual.SetActive(false);
+
+        // Prefabs viejos pueden haber guardado un estado distinto.
+        escapeMode = CivilEscapeMode.Unassisted;
     }
 
     protected override void FixedUpdate()
     {
-        if (currentState == EnemyState.Die || currentState == EnemyState.Stun) return;
-        UpdateFearAndState();
-        base.FixedUpdate(); // Ejecutar el cerebro AIBase
-    }
+        if (currentState == EnemyState.Die || isUnconscious)
+            return;
 
+        UpdateFearAndState();
+
+        if (isUnconscious)
+            return;
+
+        switch (escapeMode)
+        {
+            case CivilEscapeMode.Unassisted:
+                // Antes de recibir ayuda huye de monstruos, se acerca
+                // a Van Helsing si lo ve, o deambula.
+                maxSpeed = baseMaxSpeed;
+                if (nearestEnemy != null)
+                {
+                    target = nearestEnemy;
+                    currentState = EnemyState.Flee;
+                }
+                else if (nearestPlayer != null)
+                {
+                    target = nearestPlayer;
+                    currentState = EnemyState.Seek;
+                }
+                else
+                {
+                    target = null;
+                    currentState = EnemyState.Wander;
+                }
+                base.FixedUpdate();
+                break;
+
+            case CivilEscapeMode.Independent:
+                currentState = EnemyState.Idle;
+                MoveToSafeZone();
+                break;
+
+            case CivilEscapeMode.FollowingPlayer:
+                currentState = EnemyState.Idle;
+                FollowVanHelsing();
+                break;
+
+            case CivilEscapeMode.SaltProtected:
+                currentState = EnemyState.Idle;
+                StopMoving();
+                break;
+
+            case CivilEscapeMode.Unconscious:
+            case CivilEscapeMode.Rescued:
+                StopMoving();
+                break;
+        }
+    }
 
     private void UpdateFearAndState()
     {
         DetectTarget();
 
+        // La proximidad de Van Helsing detiene el aumento, no lo reduce.
+        float rate = IsNearVanHelsing() ? 0f : CalculateEnemyFearRate();
+        fearLevel = Mathf.Clamp(fearLevel + rate * Time.fixedDeltaTime, 0f, 100f);
 
-        float fearPerSecond = CalculateEnemyFearRate();
-
-        fearLevel += fearPerSecond * Time.fixedDeltaTime;
-
-        fearLevel = Mathf.Clamp(fearLevel, 0f, 100f);
-
-
-        if (isUnconscious)
-            return;
-
-        // Se comprueba el desmayo al alcanzar miedo máximo.
         if (fearLevel >= 100f)
         {
             TryFaint();
-
             if (isUnconscious)
                 return;
         }
 
-        // Desde 60 % se inmoviliza y se protege.
-        if (fearLevel >= 60f)
+        if (escapeMode == CivilEscapeMode.SaltProtected)
+            return; // Nunca sale del circulo por ver al jugador.
+
+        if (escapeMode == CivilEscapeMode.Unassisted && fearLevel >= 60f)
         {
             ActivateSalt();
             return;
         }
 
-        // Por debajo de 60 %, puede desplazarse.
-        if (isSaltProtected)
-            DeactivateSalt();
-
-        FearState newState =
-            fearLevel <= 25f
-            ? FearState.Tranquilo
-            : FearState.Asustado;
-
-        if (newState != lastFearState ||
-            currentState == EnemyState.Idle)
+        if (escapeMode == CivilEscapeMode.Independent && fearLevel >= 60f)
         {
-            lastFearState = newState;
-
-            maxSpeed = newState == FearState.Tranquilo
-                ? baseMaxSpeed
-                : baseMaxSpeed * 0.75f;
-
-            target = nearestPlayer;
-
-            currentState = target != null
-                ? EnemyState.Seek
-                : EnemyState.Wander;
+            ActivateSalt();
+            return;
         }
+
+        // FollowingPlayer puede tener 60-100 %: sigue al jugador
+        // mientras no lo pierda. El alejamiento se comprueba aparte.
     }
 
+    private bool IsNearVanHelsing()
+    {
+        // nearestPlayer se calcula con deteccion y linea de vision.
+        return nearestPlayer != null &&
+            Vector2.Distance(transform.position, nearestPlayer.transform.position)
+                <= safetyRadius;
+    }
+
+    private void MoveToSafeZone()
+    {
+        target = null;
+        maxSpeed = baseMaxSpeed;
+        if (navigator == null || !navigator.TryGetWaypoint(out Vector2 waypoint))
+        {
+            StopMoving();
+            if (!warnedMissingRoute)
+            {
+
+                DijkstraGrid2D dijkstraGrid =
+                    FindFirstObjectByType<DijkstraGrid2D>();
+
+                Debug.LogWarning(
+                    $"{name}: sin ruta Dijkstra. " +
+                    (dijkstraGrid != null
+                        ? dijkstraGrid.ExplainRouteFailure(transform.position)
+                        : "No existe DijkstraGrid2D en la escena.")
+                );
+
+            }
+            return;
+        }
+
+
+        warnedMissingRoute = false;
+
+        Vector2 direction = waypoint - rb.position;
+        float distance = direction.magnitude;
+
+        // Reducir la velocidad al acercarse al waypoint.
+
+        float speedFactor = Mathf.Clamp(
+            distance / Mathf.Max(0.01f, slowDownDistance),
+            0.65f,
+            1f
+        );
+
+        float desiredSpeed = navigationSpeed * speedFactor;
+
+
+        // Limitar la velocidad del civil mientras navega.
+        maxSpeed = navigationSpeed;
+
+        // Si está extremadamente cerca, frenar.
+        if (distance < 0.05f)
+        {
+            Move(Vector2.zero);
+            return;
+        }
+
+        Move(direction.normalized * desiredSpeed);
+
+    }
+
+    private void FollowVanHelsing()
+    {
+        target = null;
+        maxSpeed = baseMaxSpeed;
+
+        if (followingPlayer == null)
+        {
+            ActivateSalt();
+            return;
+        }
+
+        Vector2 offset = (Vector2)followingPlayer.position - rb.position;
+        float distance = offset.magnitude;
+
+        if (distance > followingLostDistance)
+        {
+            ActivateSalt();
+            return;
+        }
+
+        if (distance <= followingStopDistance)
+            Move(Vector2.zero);
+        else
+            Move(offset.normalized * maxSpeed);
+    }
+
+    private void StopMoving()
+    {
+        if (rb != null)
+            rb.linearVelocity = Vector2.zero;
+        velocity = Vector2.zero;
+    }
 
     protected override bool DetectTarget()
     {
@@ -168,22 +325,7 @@ public class Civilian : AIBase
             }
         }
 
-        // Seleccionar el objetivo según el estado de miedo actual
-        EntityBase selectedTarget = lastFearState switch
-        {
-            FearState.Tranquilo or FearState.Asustado => nearestPlayer,
-            FearState.Panico => nearestEnemy,
-            _ => null
-        };
-
-        if (selectedTarget == null)
-        {
-            target = null;
-            return false;
-        }
-
-        target = selectedTarget;
-        return true;
+        return nearestEnemy != null || nearestPlayer != null;
     }
 
     protected override void UpdateIdle()
@@ -194,15 +336,8 @@ public class Civilian : AIBase
 
     protected override void UpdateWander()
     {
-        // Si mientras deambula detecta objetivo, pasa a Flee (en Panico) o a Seek (Tranquilo/Asustado)
-        if (DetectTarget())
-        {
-            currentState = (lastFearState == FearState.Panico)
-                ? EnemyState.Flee
-                : EnemyState.Seek;
-            return;
-        }
-
+        // Se usa solo antes de recibir ayuda. FixedUpdate selecciona
+        // Seek/Flee cada frame si aparece jugador o monstruo.
         base.UpdateWander();
     }
 
@@ -214,6 +349,12 @@ public class Civilian : AIBase
         {
             target = null;
             currentState = EnemyState.Wander;
+            return;
+        }
+
+        if (Vector2.Distance(transform.position, target.transform.position) <= followingStopDistance)
+        {
+            Move(Vector2.zero);
             return;
         }
 
@@ -245,13 +386,12 @@ public class Civilian : AIBase
         if (isUnconscious)
             return;
 
+        escapeMode = CivilEscapeMode.SaltProtected;
         isSaltProtected = true;
         currentState = EnemyState.Idle;
         maxSpeed = 0f;
         target = null;
-
-        if (rb != null)
-            rb.linearVelocity = Vector2.zero;
+        StopMoving();
 
         if (saltCircleVisual != null)
             saltCircleVisual.SetActive(true);
@@ -260,25 +400,33 @@ public class Civilian : AIBase
     private void DeactivateSalt()
     {
         isSaltProtected = false;
-
         if (saltCircleVisual != null)
             saltCircleVisual.SetActive(false);
     }
 
     public void HelpByVanHelsing()
     {
-        if (isUnconscious ||
-            currentState == EnemyState.Die)
+        if (isUnconscious || currentState == EnemyState.Die ||
+            escapeMode == CivilEscapeMode.Rescued)
             return;
 
-        fearLevel = 0f;
+        // El miedo NO disminuye nunca.
+        hasReceivedHelp = true;
+        if (nearestPlayer != null)
+            followingPlayer = nearestPlayer.transform;
+
         DeactivateSalt();
-
         maxSpeed = baseMaxSpeed;
-        lastFearState = FearState.None;
-        currentState = EnemyState.Wander;
+        target = null;
+        currentState = EnemyState.Idle;
+        warnedMissingRoute = false;
 
-        Debug.Log("Civil ayudado: miedo reiniciado a 0.");
+        escapeMode = fearLevel < 60f
+            ? CivilEscapeMode.Independent
+            : CivilEscapeMode.FollowingPlayer;
+
+        Debug.Log($"{name}: ayuda recibida; miedo {fearLevel:0.0}%; " +
+            $"modo {escapeMode}.");
     }
 
     private void TryFaint()
@@ -292,12 +440,12 @@ public class Civilian : AIBase
         if (Random.value <= 0.10f)
         {
             isUnconscious = true;
+            escapeMode = CivilEscapeMode.Unconscious;
             DeactivateSalt();
 
             currentState = EnemyState.Stun;
 
-            if (rb != null)
-                rb.linearVelocity = Vector2.zero;
+            StopMoving();
 
             Debug.Log("El civil se ha desmayado.");
         }

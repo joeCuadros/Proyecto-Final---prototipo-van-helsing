@@ -364,12 +364,32 @@ public abstract class AIBase : EntityBase
                 LayerMask.GetMask("StealthObstacle")
             );
 
+
             if (wall.collider != null)
             {
-                Vector2 slide = stuckDir - wall.normal * Vector2.Dot(stuckDir, wall.normal);
-                Vector2 safeDir = (slide.normalized + wall.normal).normalized;
-                velocity = safeDir * maxSpeed;
+                Vector2 slide = stuckDir -
+                    wall.normal * Vector2.Dot(
+                        stuckDir,
+                        wall.normal
+                    );
+
+                if (this is Civilian)
+                {
+                    // El civil se desliza suavemente
+                    // en lugar de salir disparado.
+                    velocity = slide * maxSpeed * 0.35f;
+                }
+                else
+                {
+                    // Conservar el comportamiento
+                    // original de los enemigos.
+                    Vector2 safeDir =
+                        (slide.normalized + wall.normal).normalized;
+
+                    velocity = safeDir * maxSpeed;
+                }
             }
+
             else
             {
                 velocity = desiredVelocity;

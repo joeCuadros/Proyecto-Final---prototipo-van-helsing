@@ -224,6 +224,7 @@ GameObject:
   - component: {fileID: 2677162378546760335}
   - component: {fileID: 8087766017576448817}
   - component: {fileID: 7782676368569079121}
+  - component: {fileID: 6015240873992549637}
   m_Layer: 9
   m_Name: NPC
   m_TagString: Enemy
@@ -433,6 +434,10 @@ MonoBehaviour:
   targetPriority: 0
   changeTarget: 1
   investigatePoint: {x: 0, y: 0}
+  escapeMode: 0
+  safetyRadius: 2.5
+  followingStopDistance: 1.1
+  followingLostDistance: 4
   fearLevel: 65
   fearIncreaseRate: 5
   fearDecreaseRate: 0
@@ -456,6 +461,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2de1d34d2a3ef754993ef3e70bed54ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CivilRescueMember
+--- !u!114 &6015240873992549637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2826225743010860389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76431e31e71b6064ebef5128704d6d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CivilDijkstraNavigator
+  grid: {fileID: 0}
+  showRoute: 1
 --- !u!1 &4340642946919723408
 GameObject:
   m_ObjectHideFlags: 0
