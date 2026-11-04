@@ -257,10 +257,26 @@ public abstract class AIBase : EntityBase
         Move(desiredVelocity);
     }
     // metodos de universales
+
     public virtual void AttackTarget(EntityBase target)
     {
+        if (target == null)
+            return;
+
+        // No atacar a civiles protegidos por sal.
+        if (target is Civilian civilian &&
+            civilian.IsSaltProtected)
+        {
+            Debug.Log(
+                "El enemigo no puede dañar al civil protegido."
+            );
+
+            return;
+        }
+
         target.TakeDamage(attackDamage);
     }
+
     protected override void Die()
     {
         currentState = EnemyState.Die;

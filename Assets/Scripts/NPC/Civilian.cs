@@ -24,6 +24,10 @@ public class Civilian : AIBase
 
     private bool isSaltProtected = false;
     private bool faintChecked = false;
+    public bool IsSaltProtected =>
+    isSaltProtected &&
+    !isUnconscious &&
+    currentState != EnemyState.Die;
 
     [Header("Condicion del Civil")]
     public bool isInjured = false; // Esta herido
@@ -34,6 +38,12 @@ public class Civilian : AIBase
 
     private EntityBase nearestPlayer;
     private EntityBase nearestEnemy;
+
+    [Header("Miedo segun tipo de enemigo")]
+    public float vampireFearPer10Seconds = 5f;
+    public float werewolfFearPer10Seconds = 7.5f;
+    public float demonFearPer10Seconds = 10f;
+
 
     protected override void Start()
     {
@@ -54,10 +64,13 @@ public class Civilian : AIBase
     {
         DetectTarget();
 
-        if (nearestEnemy != null)
-            fearLevel += fearIncreaseRate * Time.fixedDeltaTime;
+
+        float fearPerSecond = CalculateEnemyFearRate();
+
+        fearLevel += fearPerSecond * Time.fixedDeltaTime;
 
         fearLevel = Mathf.Clamp(fearLevel, 0f, 100f);
+
 
         if (isUnconscious)
             return;
@@ -289,5 +302,90 @@ public class Civilian : AIBase
             Debug.Log("El civil se ha desmayado.");
         }
     }
+
+    public override void TakeDamage(int damage)
+    {
+        // Si está protegido por sal, no recibe daño.
+        if (IsSaltProtected)
+        {
+            Debug.Log(
+                $"{gameObject.name} está protegido por sal."
+            );
+
+            return;
+        }
+
+        // Si está desmayado o sin protección,
+        // recibe el daño normalmente.
+        base.TakeDamage(damage);
+    }
+
+    public override void TakeDamage(
+        int damage,
+        WeaponType weapon)
+    {
+        // Reutilizar la misma comprobación
+        // para ataques con armas o proyectiles.
+        TakeDamage(damage);
+    }
+
+
+    private float CalculateEnemyFearRate()
+    {
+        Collider2D[] nearbyColliders =
+            Physics2D.OverlapCircleAll(
+                transform.position,
+                detectionRadius,
+                enemyLayer
+            );
+
+        float highestFearRate = 0f;
+
+        foreach (Collider2D hit in nearbyColliders)
+        {
+            AIBase enemy = hit.GetComponentInParent<AIBase>();
+
+            if (enemy == null || enemy == this)
+                continue;
+
+            if (enemy.currentState == EnemyState.Die)
+                continue;
+
+            // Comprobar si existe una pared entre ambos.
+            RaycastHit2D wall = Physics2D.Linecast(
+                transform.position,
+                enemy.transform.position,
+                LayerMask.GetMask("StealthObstacle")
+            );
+
+            if (wall.collider != null)
+                continue;
+
+            float fearRate = 0f;
+
+            if (enemy is EnemyDemon)
+            {
+                fearRate = demonFearPer10Seconds;
+            }
+            else if (enemy is EnemyWerewolf)
+            {
+                fearRate = werewolfFearPer10Seconds;
+            }
+            else if (enemy is EnemyVampire)
+            {
+                fearRate = vampireFearPer10Seconds;
+            }
+
+            highestFearRate = Mathf.Max(
+                highestFearRate,
+                fearRate
+            );
+        }
+
+        // Convertir porcentaje por 10 segundos
+        // a porcentaje por segundo.
+        return highestFearRate / 10f;
+    }
+
 
 }

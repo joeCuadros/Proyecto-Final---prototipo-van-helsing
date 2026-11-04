@@ -1867,7 +1867,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &733897135
 Transform:
   m_ObjectHideFlags: 0
@@ -1940,6 +1940,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd412abb18b303541a8810d1ff28f676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInteract
+  interactionRadius: 1.5
+  civilianLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!114 &733897140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32748,8 +32755,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8087766017576448817, guid: 40ee400c39ead1e49ba49c41fa75829d, type: 3}
+      propertyPath: maxSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087766017576448817, guid: 40ee400c39ead1e49ba49c41fa75829d, type: 3}
       propertyPath: fearLevel
-      value: 20
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087766017576448817, guid: 40ee400c39ead1e49ba49c41fa75829d, type: 3}
+      propertyPath: maxHealth
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8087766017576448817, guid: 40ee400c39ead1e49ba49c41fa75829d, type: 3}
       propertyPath: isUnconscious
@@ -32761,7 +32776,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8087766017576448817, guid: 40ee400c39ead1e49ba49c41fa75829d, type: 3}
       propertyPath: fearIncreaseRate
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8087766017576448817, guid: 40ee400c39ead1e49ba49c41fa75829d, type: 3}
       propertyPath: saltCircleVisual
