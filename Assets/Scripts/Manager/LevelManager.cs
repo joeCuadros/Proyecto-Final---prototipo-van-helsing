@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
+    [Header("Condicion de victoria")]
+    public bool victoryWhenEnemiesDefeated = true;
+
     public static LevelManager Instance { get; private set; }
     public class EnemyCountData
     {
@@ -46,7 +49,7 @@ public class LevelManager : MonoBehaviour
                 enemyRegistry[enemyId].cantidad_viva--;
                 totalEnemiesAlive--;
                 if (UIManager.Instance != null) UIManager.Instance.UpdateEnemyCounters(enemyRegistry, totalEnemiesAlive);
-                if (totalEnemiesAlive <= 0)
+                if (totalEnemiesAlive <= 0 && victoryWhenEnemiesDefeated)
                 {
                     TriggerVictory();
                 }

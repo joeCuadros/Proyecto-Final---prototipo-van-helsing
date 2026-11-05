@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 moveInput;
     private bool isSprinting = false;
     private PlayerStats stats;
+    private PlayerCarryCivilian carry;
     // eventos
     public event Action<Vector2> OnDirectionChanged;
     public event Action<bool> OnSprintChanged;
@@ -24,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         stats = GetComponent<PlayerStats>();
         currentSpeed = walkSpeed;
+        carry = GetComponent<PlayerCarryCivilian>();
     }
 
     void OnMove(InputValue value)
@@ -44,7 +46,14 @@ public class PlayerMovement : MonoBehaviour
         // 1. Corriendo
         if (isSprinting && moveInput != Vector2.zero && stats.HasEnoughStamina(staminaCostThisFrame))
         {
-            currentSpeed = sprintSpeed;
+
+            float multiplier =
+                carry != null && carry.IsCarrying
+                    ? carry.SprintMultiplier
+                    : 1f;
+
+            currentSpeed = sprintSpeed * multiplier;
+
             stats.DrainStamina(staminaCostPerSecond);
         }
         // 2. Caminando

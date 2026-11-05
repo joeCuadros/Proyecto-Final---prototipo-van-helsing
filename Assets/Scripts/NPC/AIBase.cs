@@ -73,7 +73,10 @@ public abstract class AIBase : EntityBase
         base.Start();
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
-        if (LevelManager.Instance != null) LevelManager.Instance.RegisterEnemy(enemyType, this);
+        if (!(this is Civilian) && LevelManager.Instance != null)
+        {
+            LevelManager.Instance.RegisterEnemy(enemyType, this);
+        }
     }
     protected virtual void FixedUpdate()
     {
@@ -254,14 +257,33 @@ public abstract class AIBase : EntityBase
         Move(desiredVelocity);
     }
     // metodos de universales
+
     public virtual void AttackTarget(EntityBase target)
     {
+        if (target == null)
+            return;
+
+        // No atacar a civiles protegidos por sal.
+        if (target is Civilian civilian &&
+            civilian.IsSaltProtected)
+        {
+            Debug.Log(
+                "El enemigo no puede dañar al civil protegido."
+            );
+
+            return;
+        }
+
         target.TakeDamage(attackDamage);
     }
+
     protected override void Die()
     {
         currentState = EnemyState.Die;
-        if (LevelManager.Instance != null) LevelManager.Instance.EnemyDied(enemyType, this);
+        if (!(this is Civilian) && LevelManager.Instance != null)
+        {
+            LevelManager.Instance.EnemyDied(enemyType, this);
+        }
         Destroy(gameObject, 0.5f);
     }
     // Metodo de movimiento
@@ -342,12 +364,32 @@ public abstract class AIBase : EntityBase
                 LayerMask.GetMask("StealthObstacle")
             );
 
+
             if (wall.collider != null)
             {
-                Vector2 slide = stuckDir - wall.normal * Vector2.Dot(stuckDir, wall.normal);
-                Vector2 safeDir = (slide.normalized + wall.normal).normalized;
-                velocity = safeDir * maxSpeed;
+                Vector2 slide = stuckDir -
+                    wall.normal * Vector2.Dot(
+                        stuckDir,
+                        wall.normal
+                    );
+
+                if (this is Civilian)
+                {
+                    // El civil se desliza suavemente
+                    // en lugar de salir disparado.
+                    velocity = slide * maxSpeed * 0.35f;
+                }
+                else
+                {
+                    // Conservar el comportamiento
+                    // original de los enemigos.
+                    Vector2 safeDir =
+                        (slide.normalized + wall.normal).normalized;
+
+                    velocity = safeDir * maxSpeed;
+                }
             }
+
             else
             {
                 velocity = desiredVelocity;
