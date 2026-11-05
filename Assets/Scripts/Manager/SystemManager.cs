@@ -9,6 +9,8 @@ public class SystemManager : MonoBehaviour
     private bool isPaused = false;
     private bool isGameEnded = true;
 
+    [Header("Audio")]
+    public AudioClip gameOverClip;
     private PlayerInput playerInput;
     private Dictionary<int, string> sceneRoutes = new Dictionary<int, string>()
     {
@@ -89,10 +91,18 @@ public class SystemManager : MonoBehaviour
     public void GameOver()
     {
         if (playerInput == null) return;
+        if (isGameEnded) return;
         isGameEnded = true;
         Time.timeScale = 0f;
         playerInput.SwitchCurrentActionMap("System");
         if (UIManager.Instance != null) UIManager.Instance.RenderGameOver();
+
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.StopLoopSFX();
+            AudioManager.Instance.StopBGM();
+            AudioManager.Instance.PlaySFX(gameOverClip);
+        }
     }
 
     public void Victory()

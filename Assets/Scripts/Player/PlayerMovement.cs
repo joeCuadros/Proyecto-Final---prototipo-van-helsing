@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public float sprintSpeed = 8f;
     public float staminaCostPerSecond = 20f;
     public float staminaRegenPerSecond = 10f;
+    public bool IsActuallySprinting { get; private set; }
 
     private float currentSpeed;
     private Rigidbody2D rb;
@@ -16,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     private bool isSprinting = false;
     private PlayerStats stats;
     private PlayerCarryCivilian carry;
+
+
     // eventos
     public event Action<Vector2> OnDirectionChanged;
     public event Action<bool> OnSprintChanged;
@@ -43,8 +46,12 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         float staminaCostThisFrame = staminaCostPerSecond * Time.fixedDeltaTime;
+        IsActuallySprinting =
+            isSprinting &&
+            moveInput != Vector2.zero &&
+            stats.HasEnoughStamina(staminaCostThisFrame);
         // 1. Corriendo
-        if (isSprinting && moveInput != Vector2.zero && stats.HasEnoughStamina(staminaCostThisFrame))
+        if (IsActuallySprinting)
         {
 
             float multiplier =

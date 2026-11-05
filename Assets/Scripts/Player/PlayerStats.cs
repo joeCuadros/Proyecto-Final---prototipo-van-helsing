@@ -11,6 +11,9 @@ public class PlayerStats : EntityBase
     private float currentStamina;
     private float nextDamageTime = 0f;
 
+    [Header("Audio")]
+    public AudioClip shieldClip;
+
     protected override void Start()
     {
         base.Start();
@@ -66,6 +69,8 @@ public class PlayerStats : EntityBase
     {
         if (hasShield) return; 
         hasShield = true;
+        if (AudioManager.Instance != null)
+              AudioManager.Instance.PlaySFX(shieldClip);
         if (UIManager.Instance != null) UIManager.Instance.UpdateHealthUI(currentHealth, maxHealth, hasShield);
     }
 
