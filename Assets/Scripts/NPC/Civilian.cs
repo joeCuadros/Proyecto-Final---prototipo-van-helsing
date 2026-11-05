@@ -437,18 +437,27 @@ public class Civilian : AIBase
         faintChecked = true;
 
         // Probabilidad del 10 %, evaluada una sola vez.
+
         if (Random.value <= 0.10f)
         {
             isUnconscious = true;
-            escapeMode = CivilEscapeMode.Unconscious;
             DeactivateSalt();
 
             currentState = EnemyState.Stun;
 
-            StopMoving();
+            if (rb != null)
+            {
+                rb.linearVelocity = Vector2.zero;
+                rb.angularVelocity = 0f;
+
+                // Evita que la física lo desplace.
+                rb.constraints =
+                    RigidbodyConstraints2D.FreezeAll;
+            }
 
             Debug.Log("El civil se ha desmayado.");
         }
+
     }
 
     public override void TakeDamage(int damage)

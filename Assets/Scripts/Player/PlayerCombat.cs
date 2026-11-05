@@ -45,12 +45,14 @@ public class PlayerCombat : MonoBehaviour
     public int holyWaterDamage = 1;
 
     private PlayerMovement movement;
+    private PlayerCarryCivilian carry;
     private Vector2 attackDirection = Vector2.down;
     public event Action<WeaponType> OnAttackFired;
 
     void Awake()
     {
         movement = GetComponent<PlayerMovement>();
+        carry = GetComponent<PlayerCarryCivilian>();
     }
     void Start()
     {
@@ -89,6 +91,9 @@ public class PlayerCombat : MonoBehaviour
     // LOGICA DE ATAQUE
     void OnAttack()
     {
+        if (carry != null && carry.IsCarrying)
+            return;
+
         if (Time.time < nextActionTime) return;
         switch (currentWeapon)
         {

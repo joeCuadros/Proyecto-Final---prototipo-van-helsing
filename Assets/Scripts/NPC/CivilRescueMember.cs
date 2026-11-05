@@ -16,20 +16,27 @@ public class CivilRescueMember : MonoBehaviour
         }
     }
 
-    public bool Rescue()
+
+    public bool Rescue(bool carriedByPlayer = false)
     {
         if (IsRescued || isLost)
             return false;
 
         Civilian civilian = GetComponent<Civilian>();
 
-        if (civilian == null || civilian.isUnconscious)
+        if (civilian == null)
             return false;
 
         if (civilian.currentState == AIBase.EnemyState.Die)
             return false;
 
-        if (!civilian.HasReceivedHelp)
+        // Un civil desmayado necesita ser transportado.
+        if (civilian.isUnconscious && !carriedByPlayer)
+            return false;
+
+        // Un civil consciente necesita ayuda previa.
+        // Para los cargados, la entrega cuenta como rescate.
+        if (!civilian.HasReceivedHelp && !carriedByPlayer)
             return false;
 
         IsRescued = true;
@@ -37,11 +44,11 @@ public class CivilRescueMember : MonoBehaviour
         if (CivilRescueManager.Instance != null)
             CivilRescueManager.Instance.RescueCivil(this);
 
-        // Desactivar el civil: ya está fuera del peligro.
         gameObject.SetActive(false);
 
         return true;
     }
+
 
     private void OnDestroy()
     {
