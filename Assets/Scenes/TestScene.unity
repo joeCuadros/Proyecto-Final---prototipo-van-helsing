@@ -885,6 +885,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2826225743010860389, guid: 40ee400c39ead1e49ba49c41fa75829d, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 4916308652042238530, guid: 40ee400c39ead1e49ba49c41fa75829d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -905,6 +909,18 @@ PrefabInstance:
       propertyPath: grid
       value: 
       objectReference: {fileID: 1826943667}
+    - target: {fileID: 8087766017576448817, guid: 40ee400c39ead1e49ba49c41fa75829d, type: 3}
+      propertyPath: helpClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9f584aa71142c9143b483142beddce74, type: 3}
+    - target: {fileID: 8087766017576448817, guid: 40ee400c39ead1e49ba49c41fa75829d, type: 3}
+      propertyPath: hurtClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cb154a84bc49e754297f98ef47ec7468, type: 3}
+    - target: {fileID: 8087766017576448817, guid: 40ee400c39ead1e49ba49c41fa75829d, type: 3}
+      propertyPath: fearLevel
+      value: 34.7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2282,6 +2298,7 @@ MonoBehaviour:
   maxStamina: 100
   invulnerabilityDuration: 1.5
   hasShield: 1
+  shieldClip: {fileID: 8300000, guid: 0f3377911c655c541a26d5dfc6a6bfbf, type: 3}
 --- !u!114 &733897138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2333,7 +2350,7 @@ MonoBehaviour:
   audioDagger: {fileID: 8300000, guid: c0909b6d6cd3f364fbe09c4c7fb746c7, type: 3}
   audioStakes: {fileID: 8300000, guid: 912b07d4969217b4693c76759eb86e7a, type: 3}
   audioCrossbow: {fileID: 8300000, guid: 8dc1e67af822d2948b987d6904051acd, type: 3}
-  audioWater: {fileID: 8300000, guid: 0f3377911c655c541a26d5dfc6a6bfbf, type: 3}
+  audioWater: {fileID: 8300000, guid: 0feca22813fcdcc4ba42ea56bfe2991f, type: 3}
   actionCooldown: 1
   hasDagger: 1
   woodenStakes: 5
@@ -3030,6 +3047,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2826225743010860389, guid: 40ee400c39ead1e49ba49c41fa75829d, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 4916308652042238530, guid: 40ee400c39ead1e49ba49c41fa75829d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3050,6 +3071,14 @@ PrefabInstance:
       propertyPath: grid
       value: 
       objectReference: {fileID: 1826943667}
+    - target: {fileID: 8087766017576448817, guid: 40ee400c39ead1e49ba49c41fa75829d, type: 3}
+      propertyPath: helpClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9f584aa71142c9143b483142beddce74, type: 3}
+    - target: {fileID: 8087766017576448817, guid: 40ee400c39ead1e49ba49c41fa75829d, type: 3}
+      propertyPath: hurtClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cb154a84bc49e754297f98ef47ec7468, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3932,6 +3961,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9134472209062397445, guid: 5e4c498f0f0683647a3f4852cb0457b1, type: 3}
+      propertyPath: deathClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 39cf0e9df2369a14caad8656d048bc6f, type: 3}
+    - target: {fileID: 9134472209062397445, guid: 5e4c498f0f0683647a3f4852cb0457b1, type: 3}
+      propertyPath: attackClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1431987f21c511b46b2414c5a2ef4d6e, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4089,6 +4126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6def8d95997cd3b41b18ae22a57f776e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SystemManager
+  gameOverClip: {fileID: 8300000, guid: f2e239c9ed4c2844d94467f148fe14b5, type: 3}
 --- !u!4 &1730630193
 Transform:
   m_ObjectHideFlags: 0
@@ -32647,6 +32685,54 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &1950850081
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1950850083}
+  - component: {fileID: 1950850082}
+  m_Layer: 0
+  m_Name: TestSceneAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1950850082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950850081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38d605f8a88489f48b6e528c437f9531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TestSceneAudio
+  backgroundMusic: {fileID: 8300000, guid: 4c211aebfd0eb2b4ba0636d587f219d4, type: 3}
+  ambientHowl: {fileID: 8300000, guid: abbbf76ba82131a4b9abcd94664c9235, type: 3}
+  firstHowlDelay: 15
+  howlInterval: 30
+--- !u!4 &1950850083
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950850081}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.73246, y: 10.06342, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1977560626
 GameObject:
   m_ObjectHideFlags: 0
@@ -33488,6 +33574,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC
       objectReference: {fileID: 0}
+    - target: {fileID: 2826225743010860389, guid: 40ee400c39ead1e49ba49c41fa75829d, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 4916308652042238530, guid: 40ee400c39ead1e49ba49c41fa75829d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -33516,6 +33606,14 @@ PrefabInstance:
       propertyPath: obstacleLayer.m_Bits
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8087766017576448817, guid: 40ee400c39ead1e49ba49c41fa75829d, type: 3}
+      propertyPath: helpClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9f584aa71142c9143b483142beddce74, type: 3}
+    - target: {fileID: 8087766017576448817, guid: 40ee400c39ead1e49ba49c41fa75829d, type: 3}
+      propertyPath: hurtClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cb154a84bc49e754297f98ef47ec7468, type: 3}
     - target: {fileID: 8087766017576448817, guid: 40ee400c39ead1e49ba49c41fa75829d, type: 3}
       propertyPath: maxSpeed
       value: 3
@@ -33567,3 +33665,4 @@ SceneRoots:
   - {fileID: 2061708868}
   - {fileID: 1538384083}
   - {fileID: 1826943668}
+  - {fileID: 1950850083}

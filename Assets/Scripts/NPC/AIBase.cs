@@ -25,6 +25,10 @@ public abstract class AIBase : EntityBase
 
     [Header("Configuracion IA")]
     public EnemyState currentState = EnemyState.Idle;
+
+    [Header("Audio")]
+    public AudioClip attackClip;
+    public AudioClip deathClip;
     
     [Header("Combate")]
     public int attackDamage = 1;
@@ -275,11 +279,20 @@ public abstract class AIBase : EntityBase
         }
 
         target.TakeDamage(attackDamage);
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlaySFX(attackClip);
     }
 
     protected override void Die()
     {
         currentState = EnemyState.Die;
+        if (rb != null)
+            rb.linearVelocity = Vector2.zero;
+
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlaySFX(deathClip);
+
+            
         if (!(this is Civilian) && LevelManager.Instance != null)
         {
             LevelManager.Instance.EnemyDied(enemyType, this);
