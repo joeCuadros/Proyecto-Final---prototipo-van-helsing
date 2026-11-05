@@ -21,7 +21,6 @@ public class PlayerAnimation : MonoBehaviour
         if (movement != null)
         {
             movement.OnDirectionChanged += UpdateMoveAnimation;
-            movement.OnSprintChanged += UpdateSprintAnimation;
         }
         if (combat != null)
         {
@@ -34,13 +33,24 @@ public class PlayerAnimation : MonoBehaviour
         if (movement != null)
         {
             movement.OnDirectionChanged -= UpdateMoveAnimation;
-            movement.OnSprintChanged -= UpdateSprintAnimation;
         }
         if (combat != null)
         {
             combat.OnAttackFired -= TriggerAttackAnimation;
         }
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.StopLoopSFX();
     }
+
+    private void LateUpdate()
+        {
+            bool shouldPlay =
+                movement != null &&
+                movement.IsActuallySprinting &&
+                Time.timeScale > 0f;
+
+            UpdateSprintAnimation(shouldPlay);
+        }
 
     private void UpdateMoveAnimation(Vector2 dir)
     {
@@ -73,18 +83,16 @@ public class PlayerAnimation : MonoBehaviour
     }
 
     private void UpdateSprintAnimation(bool isSprinting)
-    {
-        //Debug.Log($"Sprint es {isSprinting}");
-        if (AudioManager.Instance == null && sprintClip != null) return;
-        if (isSprinting && sprintClip != null)
         {
-            AudioManager.Instance.PlayLoopSFX(sprintClip);
+            if (AudioManager.Instance == null)
+                return;
+
+            if (isSprinting && sprintClip != null)
+                AudioManager.Instance.PlayLoopSFX(sprintClip);
+            else
+                AudioManager.Instance.StopLoopSFX();
         }
-        else
-        {
-            AudioManager.Instance.StopLoopSFX();
-        }
-    }
+
     private void TriggerAttackAnimation(WeaponType weaponUsed)
     {
         switch (weaponUsed)

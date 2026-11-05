@@ -22,6 +22,10 @@ public class Civilian : AIBase
         Rescued            // Llegó a la zona segura
     }
 
+    [Header("Voces")]
+    public AudioClip hurtClip;
+    public AudioClip helpClip;
+    
     [Header("Estado del escape")]
     [SerializeField] private CivilEscapeMode escapeMode = CivilEscapeMode.Unassisted;
     public CivilEscapeMode EscapeMode => escapeMode;
@@ -411,6 +415,7 @@ public class Civilian : AIBase
             return;
 
         // El miedo NO disminuye nunca.
+        bool firstHelp = !hasReceivedHelp;
         hasReceivedHelp = true;
         if (nearestPlayer != null)
             followingPlayer = nearestPlayer.transform;
@@ -427,6 +432,9 @@ public class Civilian : AIBase
 
         Debug.Log($"{name}: ayuda recibida; miedo {fearLevel:0.0}%; " +
             $"modo {escapeMode}.");
+
+        if (firstHelp && AudioManager.Instance != null)
+            AudioManager.Instance.PlaySFX(helpClip);
     }
 
     private void TryFaint()
@@ -474,7 +482,15 @@ public class Civilian : AIBase
 
         // Si está desmayado o sin protección,
         // recibe el daño normalmente.
+        int previousHealth = CurrentHealth;
+
         base.TakeDamage(damage);
+
+        if (CurrentHealth < previousHealth &&
+            AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySFX(hurtClip);
+        }
     }
 
     public override void TakeDamage(
