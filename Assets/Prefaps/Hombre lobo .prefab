@@ -498,6 +498,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyWerewolf
   maxHealth: 4
   currentState: 5
+  attackClip: {fileID: 8300000, guid: 1431987f21c511b46b2414c5a2ef4d6e, type: 3}
+  deathClip: {fileID: 8300000, guid: 39cf0e9df2369a14caad8656d048bc6f, type: 3}
   attackDamage: 1
   attackRange: 1
   preAttackDuration: 1

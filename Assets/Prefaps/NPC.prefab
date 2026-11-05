@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 6015240873992549637}
   m_Layer: 9
   m_Name: NPC
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -409,6 +409,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Civilian
   maxHealth: 2
   currentState: 1
+  attackClip: {fileID: 0}
+  deathClip: {fileID: 0}
   attackDamage: 1
   attackRange: 1
   preAttackDuration: 1
@@ -418,9 +420,9 @@ MonoBehaviour:
   wanderChange: 10
   waypoints: []
   waypointDistance: 0.2
-  maxSpeed: 4
-  acceleration: 4
-  deceleration: 6
+  maxSpeed: 3
+  acceleration: 8
+  deceleration: 10
   detectionRadius: 4
   npcLayer:
     serializedVersion: 2
@@ -434,11 +436,15 @@ MonoBehaviour:
   targetPriority: 0
   changeTarget: 1
   investigatePoint: {x: 0, y: 0}
+  hurtClip: {fileID: 8300000, guid: cb154a84bc49e754297f98ef47ec7468, type: 3}
+  helpClip: {fileID: 8300000, guid: 9f584aa71142c9143b483142beddce74, type: 3}
   escapeMode: 0
   safetyRadius: 2.5
   followingStopDistance: 1.1
   followingLostDistance: 4
-  fearLevel: 65
+  navigationSpeed: 2.5
+  slowDownDistance: 0.25
+  fearLevel: 98
   fearIncreaseRate: 5
   fearDecreaseRate: 0
   timeFearDecayRate: 0
@@ -474,7 +480,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CivilDijkstraNavigator
   grid: {fileID: 0}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   showRoute: 1
+  waypointReachedDistance: 0.2
 --- !u!1 &4340642946919723408
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,17 +776,17 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 20
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: ce725ff2753900e4299f7c31d3b2d721, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
 --- !u!1 &7491257594830052468

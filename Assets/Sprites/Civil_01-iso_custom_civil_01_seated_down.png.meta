@@ -1,0 +1,769 @@
+fileFormatVersion: 2
+guid: cfd79cee1bb0c4141bba00055eb2ec33
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1539732489242880106
+    second: Civil_01-iso_custom_civil_01_seated_down_0
+  - first:
+      213: -8150689832992186752
+    second: Civil_01-iso_custom_civil_01_seated_down_1
+  - first:
+      213: -2147045922915889704
+    second: Civil_01-iso_custom_civil_01_seated_down_2
+  - first:
+      213: 7746351613367762558
+    second: Civil_01-iso_custom_civil_01_seated_down_3
+  - first:
+      213: 7335027738284999065
+    second: Civil_01-iso_custom_civil_01_seated_down_4
+  - first:
+      213: 4196560963256472361
+    second: Civil_01-iso_custom_civil_01_seated_down_5
+  - first:
+      213: 3504486762624702206
+    second: Civil_01-iso_custom_civil_01_seated_down_6
+  - first:
+      213: 3969708938879527621
+    second: Civil_01-iso_custom_civil_01_seated_down_7
+  - first:
+      213: -7636019522791483864
+    second: Civil_01-iso_custom_civil_01_seated_down_8
+  - first:
+      213: 7743675932607507803
+    second: Civil_01-iso_custom_civil_01_seated_down_9
+  - first:
+      213: 4919426121640874217
+    second: Civil_01-iso_custom_civil_01_seated_down_10
+  - first:
+      213: -6742582132083738829
+    second: Civil_01-iso_custom_civil_01_seated_down_11
+  - first:
+      213: 6122934187425275035
+    second: Civil_01-iso_custom_civil_01_seated_down_12
+  - first:
+      213: 3718996826999651941
+    second: Civil_01-iso_custom_civil_01_seated_down_13
+  - first:
+      213: 4766846682537797355
+    second: Civil_01-iso_custom_civil_01_seated_down_14
+  - first:
+      213: -6074005968154876981
+    second: Civil_01-iso_custom_civil_01_seated_down_15
+  - first:
+      213: 3263977275107607239
+    second: Civil_01-iso_custom_civil_01_seated_down_16
+  - first:
+      213: 8390304381969022545
+    second: Civil_01-iso_custom_civil_01_seated_down_17
+  - first:
+      213: 1609318098182912091
+    second: Civil_01-iso_custom_civil_01_seated_down_18
+  - first:
+      213: 890544961923289800
+    second: Civil_01-iso_custom_civil_01_seated_down_19
+  - first:
+      213: 8644995447995127774
+    second: Civil_01-iso_custom_civil_01_seated_down_20
+  - first:
+      213: 4865237762602203308
+    second: Civil_01-iso_custom_civil_01_seated_down_21
+  - first:
+      213: -7636131263974312106
+    second: Civil_01-iso_custom_civil_01_seated_down_22
+  - first:
+      213: 6322599955746271992
+    second: Civil_01-iso_custom_civil_01_seated_down_23
+  - first:
+      213: 223506870546442817
+    second: Civil_01-iso_custom_civil_01_seated_down_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Civil_01-iso_custom_civil_01_seated_down_0
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 1090
+        width: 70
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6823768a8a3e5510800000000000000
+      internalID: 1539732489242880106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_01-iso_custom_civil_01_seated_down_1
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 1090
+        width: 71
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08edc16f7cee2ee80800000000000000
+      internalID: -8150689832992186752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_01-iso_custom_civil_01_seated_down_2
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 1090
+        width: 71
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ddc520db192432e0800000000000000
+      internalID: -2147045922915889704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_01-iso_custom_civil_01_seated_down_3
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 1090
+        width: 71
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7e3f0c10c1908b60800000000000000
+      internalID: 7746351613367762558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_01-iso_custom_civil_01_seated_down_4
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 1090
+        width: 71
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9914d168dd04bc560800000000000000
+      internalID: 7335027738284999065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_01-iso_custom_civil_01_seated_down_5
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 834
+        width: 71
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9235c2536fd2d3a30800000000000000
+      internalID: 4196560963256472361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_01-iso_custom_civil_01_seated_down_6
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 834
+        width: 71
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef6dd4e942072a030800000000000000
+      internalID: 3504486762624702206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_01-iso_custom_civil_01_seated_down_7
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 834
+        width: 71
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ca6b9b5f3d371730800000000000000
+      internalID: 3969708938879527621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_01-iso_custom_civil_01_seated_down_8
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 834
+        width: 70
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 826d01e83b8670690800000000000000
+      internalID: -7636019522791483864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_01-iso_custom_civil_01_seated_down_9
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 834
+        width: 70
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5defc2ab30177b60800000000000000
+      internalID: 7743675932607507803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_01-iso_custom_civil_01_seated_down_10
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 578
+        width: 70
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e09e2f4eff454440800000000000000
+      internalID: 4919426121640874217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_01-iso_custom_civil_01_seated_down_11
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 578
+        width: 70
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 337b04c46498d62a0800000000000000
+      internalID: -6742582132083738829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_01-iso_custom_civil_01_seated_down_12
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 578
+        width: 70
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9c1498e33809f450800000000000000
+      internalID: 6122934187425275035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_01-iso_custom_civil_01_seated_down_13
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 578
+        width: 70
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56e7e1af8e78c9330800000000000000
+      internalID: 3718996826999651941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_01-iso_custom_civil_01_seated_down_14
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 578
+        width: 71
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be62a6b4dcd372240800000000000000
+      internalID: 4766846682537797355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_01-iso_custom_civil_01_seated_down_15
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 322
+        width: 70
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc3a680e0cbc4bba0800000000000000
+      internalID: -6074005968154876981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_01-iso_custom_civil_01_seated_down_16
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 322
+        width: 70
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c28cb5d90afb4d20800000000000000
+      internalID: 3263977275107607239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_01-iso_custom_civil_01_seated_down_17
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 322
+        width: 70
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15ebaa4b169507470800000000000000
+      internalID: 8390304381969022545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_01-iso_custom_civil_01_seated_down_18
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 322
+        width: 70
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b58bcc4a842755610800000000000000
+      internalID: 1609318098182912091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_01-iso_custom_civil_01_seated_down_19
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 322
+        width: 71
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c293fface9db5c00800000000000000
+      internalID: 890544961923289800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_01-iso_custom_civil_01_seated_down_20
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 66
+        width: 71
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed75e9a8e8139f770800000000000000
+      internalID: 8644995447995127774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_01-iso_custom_civil_01_seated_down_21
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 66
+        width: 71
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca878bbc7fbc48340800000000000000
+      internalID: 4865237762602203308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_01-iso_custom_civil_01_seated_down_22
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 66
+        width: 71
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6577e88c213070690800000000000000
+      internalID: -7636131263974312106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_01-iso_custom_civil_01_seated_down_23
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 66
+        width: 71
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f2382349236eb750800000000000000
+      internalID: 6322599955746271992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Civil_01-iso_custom_civil_01_seated_down_24
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 66
+        width: 71
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14aa7c7805e0a1300800000000000000
+      internalID: 223506870546442817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Civil_01-iso_custom_civil_01_seated_down_0: 1539732489242880106
+      Civil_01-iso_custom_civil_01_seated_down_1: -8150689832992186752
+      Civil_01-iso_custom_civil_01_seated_down_10: 4919426121640874217
+      Civil_01-iso_custom_civil_01_seated_down_11: -6742582132083738829
+      Civil_01-iso_custom_civil_01_seated_down_12: 6122934187425275035
+      Civil_01-iso_custom_civil_01_seated_down_13: 3718996826999651941
+      Civil_01-iso_custom_civil_01_seated_down_14: 4766846682537797355
+      Civil_01-iso_custom_civil_01_seated_down_15: -6074005968154876981
+      Civil_01-iso_custom_civil_01_seated_down_16: 3263977275107607239
+      Civil_01-iso_custom_civil_01_seated_down_17: 8390304381969022545
+      Civil_01-iso_custom_civil_01_seated_down_18: 1609318098182912091
+      Civil_01-iso_custom_civil_01_seated_down_19: 890544961923289800
+      Civil_01-iso_custom_civil_01_seated_down_2: -2147045922915889704
+      Civil_01-iso_custom_civil_01_seated_down_20: 8644995447995127774
+      Civil_01-iso_custom_civil_01_seated_down_21: 4865237762602203308
+      Civil_01-iso_custom_civil_01_seated_down_22: -7636131263974312106
+      Civil_01-iso_custom_civil_01_seated_down_23: 6322599955746271992
+      Civil_01-iso_custom_civil_01_seated_down_24: 223506870546442817
+      Civil_01-iso_custom_civil_01_seated_down_3: 7746351613367762558
+      Civil_01-iso_custom_civil_01_seated_down_4: 7335027738284999065
+      Civil_01-iso_custom_civil_01_seated_down_5: 4196560963256472361
+      Civil_01-iso_custom_civil_01_seated_down_6: 3504486762624702206
+      Civil_01-iso_custom_civil_01_seated_down_7: 3969708938879527621
+      Civil_01-iso_custom_civil_01_seated_down_8: -7636019522791483864
+      Civil_01-iso_custom_civil_01_seated_down_9: 7743675932607507803
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -21,6 +21,10 @@ public class Civilian : AIBase
         Unconscious,       // Desmayado
         Rescued            // Llegó a la zona segura
     }
+    
+    [Header("Ayuda de Van Helsing")]
+    [SerializeField, Range(0f, 100f)]
+    private float fearReductionOnHelp = 20f;
 
     [Header("Voces")]
     public AudioClip hurtClip;
@@ -408,34 +412,58 @@ public class Civilian : AIBase
             saltCircleVisual.SetActive(false);
     }
 
+
     public void HelpByVanHelsing()
     {
         if (isUnconscious || currentState == EnemyState.Die ||
             escapeMode == CivilEscapeMode.Rescued)
             return;
 
-        // El miedo NO disminuye nunca.
+        // Evitar que Van Helsing reduzca el miedo
+        // repetidamente mientras el civil ya está escapando.
+        if (escapeMode != CivilEscapeMode.Unassisted &&
+            escapeMode != CivilEscapeMode.SaltProtected)
+            return;
+
+        // Registrar la ayuda recibida.
         bool firstHelp = !hasReceivedHelp;
         hasReceivedHelp = true;
+
         if (nearestPlayer != null)
             followingPlayer = nearestPlayer.transform;
 
+        // NUEVO: reducir 10 puntos de miedo.
+        fearLevel = Mathf.Max(
+            0f,
+            fearLevel - fearReductionOnHelp
+        );
+
+        // Liberar al civil de su círculo de sal.
         DeactivateSalt();
+
+        // Restaurar su capacidad de movimiento.
         maxSpeed = baseMaxSpeed;
         target = null;
         currentState = EnemyState.Idle;
         warnedMissingRoute = false;
 
+        // Elegir comportamiento según el miedo restante.
         escapeMode = fearLevel < 60f
             ? CivilEscapeMode.Independent
             : CivilEscapeMode.FollowingPlayer;
 
-        Debug.Log($"{name}: ayuda recibida; miedo {fearLevel:0.0}%; " +
-            $"modo {escapeMode}.");
+        Debug.Log(
+            $"{name}: ayuda recibida; miedo {fearLevel:0.0}%; " +
+            $"modo {escapeMode}."
+        );
 
-        if (firstHelp && AudioManager.Instance != null)
+        if (firstHelp && AudioManager.Instance != null &&
+            helpClip != null)
+        {
             AudioManager.Instance.PlaySFX(helpClip);
+        }
     }
+
 
     private void TryFaint()
     {
